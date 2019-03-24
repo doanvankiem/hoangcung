@@ -55,7 +55,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
             </a>
             <ul class="treeview-menu">
-                <?= $admin->showMenu("Trang chủ", "index", "man") ?>
+                <?php $admin->showMenu("Trang chủ", "index", "man") ?>
                 <?= $admin->showMenu("Giới thiệu", "baiviet", "edit", "1", "gallery=0&title=0&desc=1&img=0&content=1") ?>
                 <?= $admin->showMenu("Tuyển dụng", "baiviet", "edit", "2", "gallery=0&title=0&desc=0&img=0&content=1") ?>
                 <?= $admin->showMenu("Tin tức", "content", "man", "", "type=news&class=0&gallery=0&title=1&desc=1&img=1&content=1") ?>

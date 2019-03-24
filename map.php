@@ -16,15 +16,16 @@
 	?><link href="assets/css/lienhe.css" type="text/css" rel="stylesheet" />
 <link href="assets/css/map.css" type="text/css" rel="stylesheet" />
 			<script type="text/javascript" src="assets/js/jquery-1.11.2.min.js"></script>
-			<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDIcgayYKPPDnRhRPUdgsCi63XC3-VB12k&sensor=false"></script>
+			<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAphV5eKQ6yQz3upRI3XUDH9rdAJCAngfo&sensor=false"></script>
 
 		   <script type="text/javascript">
 		   var map;
 		   var infowindow;
-		   var marker= new Array();
+		   var marker= [];
 		   var old_id= 0;
-		   var infoWindowArray= new Array();
-		   var infowindow_array= new Array();function initialize(){
+		   var infoWindowArray= [];
+		   var infowindow_array= [];
+		   function initialize(){
 			   var defaultLatLng = new google.maps.LatLng(<?=$lienhe_rs['map_x']?>,<?=$lienhe_rs['map_y']?>);
 			   var myOptions= {
 				   zoom: 16,
@@ -45,7 +46,7 @@
 			   <?php if(isset($_GET['info'])){?>
 			   var popup = myInfoWindow;infowindow_array[id] = new google.maps.InfoWindow({ content: popup});
 			   <?php } ?>
-			   google.maps.event.addListener(marker[id], 'mouseover', function() {if (id == old_id) return;
+			   google.maps.event.addListener(marker[id], 'mouseover', function() {if (id === old_id) return;
 			   if (old_id > 0) infowindow_array[old_id].close();infowindow_array[id].open(map, marker[id]);old_id = id;});
 			   google.maps.event.addListener(infowindow_array[id], 'closeclick', function() {old_id = 0;});
 			   }function moveToMaker(id){

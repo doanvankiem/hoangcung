@@ -44,10 +44,14 @@
 	<div class="row">
 			 
 			<div class="form-group">
-				<label for="inputEmail3" class="col-sm-4  control-label">Mã sản phẩm</label>
+				<label for="phanloai" class="col-sm-4  control-label">Phân loại</label>
 				<div class="col-sm-6">
-				
-				  <input type="text" name="maso"  value="<?=@$item['maso']?>" class="form-control  " id="inputEmail3">
+                    <select name="phanloai" id="phanloai" class="form-control" required>
+                        <option value="indoor" <?=$item['phanloai'] == '' ? 'selected' : ''?>>Chọn loại</option>
+                        <option value="indoor" <?=$item['phanloai'] == 'indoor' ? 'selected' : ''?>>InDoor</option>
+                        <option value="outdoor" <?=$item['phanloai'] == 'outdoor' ? 'selected' : ''?>>OutDoor</option>
+                        <option value="printing" <?=$item['phanloai'] == 'printing' ? 'selected' : ''?>>Printing</option>
+                    </select>
 				</div>
 			</div>
 			 <div class="form-group hide">
@@ -58,7 +62,7 @@
 				</div>
 		</div>
 	
-			 <div class="form-group">
+			 <div class="form-group hide">
 				<label for="inputEmail3" class="col-sm-4  control-label">Giá</label>
 				<div class="col-sm-6">
 				

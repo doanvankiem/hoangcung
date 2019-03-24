@@ -1,18 +1,23 @@
 <?php
-	$sql = "Select p.id, p.ten_$lang, p.tenkhongdau, p.photo, pdm.ten_$lang as tencap1 from #_product p inner join #_product_danhmuc pdm on p.id_danhmuc = pdm.id where p.hienthi=1 and p.noibat=1 order by p.id desc";
-	$query = $d->query($sql);
-	$rs_product = $d->result_array();
 	$d->reset();
 	$sql = "Select id, ten_$lang, tenkhongdau from #_product_danhmuc where hienthi=1 and noibat =1 order by id desc";
 	$query = $d->query($sql);
 	$rs_danhmuc = $d->result_array();
 ?>
+<script src="assets/plugins/filter/filter.js"></script>
 <div id="box-product">
+    <div class="btn-filter">
+        <ul>
+            <li><button class="btn btn-outline filter-btn active-work" data-filter="all">Tất cả</button></li>
+            <li><button class="btn btn-outline filter-btn" data-filter=".indoor">InDoor</button></li>
+            <li><button class="btn btn-outline filter-btn" data-filter=".outdoor">OutDoor</button></li>
+            <li><button class="btn btn-outline filter-btn" data-filter=".printing">Printing</button></li>
+        </ul>
+    </div>
 	<div class="">
 		<?php if (count($product)) { ?>
-			<div class="">
-				<?php foreach($product as $k=>$v){ showProduct($v, array("class" => "col-xs-12 col-sm-6 col-md-3 col-lg-3 item-product"));} ?>
-				<div class="clearfix"></div>
+			<div class="product-list clearfix">
+				<?php foreach($product as $k=>$v){ showProductIndex($v, array("class" => "col-xs-12 col-sm-6 col-md-3 col-lg-3 item-product " . $v['phanloai']));} ?>
 			</div>
 			<?=$paging[ 'paging']?>
 		<?php } else {
@@ -41,3 +46,17 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.product-list').filterData({
+            aspectRatio: '8:5',
+            nOfRow : 3,
+            itemDistance : 0
+        });
+        $('.btn-filter .btn-outline').on('click',function(){
+            $('.btn-filter .btn-outline').removeClass('active-work');
+            $(this).addClass('active-work');
+        });
+    });
+</script>

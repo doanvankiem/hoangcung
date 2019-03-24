@@ -4,7 +4,7 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 $config['base_url'] = "http://".$_SERVER['HTTP_HOST'];
 $config['base_url'] .=  str_replace(basename($_SERVER['SCRIPT_NAME']),"", $_SERVER['SCRIPT_NAME']);
 $config['base_url']  = substr($config['base_url'],0,-1);
-$f = "hoangcung/";
+$f = "";
 $config_url =  "http://".$_SERVER['HTTP_HOST'].$f;
 $relative_url = str_replace('/admin','',$config['base_url']);
 /* lang config */

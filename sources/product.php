@@ -134,9 +134,6 @@ else
     $paging = paging_home($product, $url, $curPage, $maxR, $maxP);
 	
     $product = $paging['source'];
- 
-	
-
 }
 
 

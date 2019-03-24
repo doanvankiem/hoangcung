@@ -224,6 +224,7 @@ function save_item()
             $data['tenkhongdau'] = changeTitle($_POST['ten_' . $v]);
         }
     }
+    $data['phanloai'] = $_POST['phanloai'];
     $data['maso'] = $_POST['maso'];
     $data['gia'] = str_replace(".", "", $_POST['gia']);
     //$data['gia'] = $_POST['gia'];

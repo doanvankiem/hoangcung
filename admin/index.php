@@ -96,7 +96,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>NINA | Dashboard</title>
+    <title>Dashboard</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.4 -->
 	<link href='http://fonts.googleapis.com/css?family=Roboto:500,400italic,700italic,300,700,500italic,300italic,400&subset=latin,vietnamese' rel='stylesheet' type='text/css'>
@@ -148,9 +148,9 @@
         <!-- Logo -->
         <a href="index2.html" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
-          <span class="logo-mini"><b>NINA</b></span>
+          <span class="logo-mini"><b>Admin</b></span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg"><b>NINA</b> Administrator</span>
+          <span class="logo-lg"><b>Administrator</b></span>
         </a>
 
         <!-- Header Navbar: style can be found in header.less -->

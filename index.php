@@ -48,7 +48,7 @@ $img = ($tintuc_detail) ? $config_url."/"._upload_news_l.$tintuc_detail['thumb']
 <meta property="og:site_name" content="<?=$title?>" />
 <title><?=$title_bar?><?=$title?></title>
 <script>var base_url = '<?=$config_url?>';  </script>
-<script src="assets/js/jquery-1.11.2.min.js" type="text/javascript" ></script>
+<script src="assets/js/jquery-1.12.4.min.js" type="text/javascript" ></script>
 <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript" ></script>
 <script src="assets/plugins/wow/dist/wow.min.js" type="text/javascript" ></script>
 <script>
