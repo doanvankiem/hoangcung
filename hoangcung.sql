@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.4.6.1
--- http://www.phpmyadmin.net
+-- version 4.6.6deb5
+-- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Mar 05, 2017 at 03:36 PM
--- Server version: 5.6.24
--- PHP Version: 5.6.9
+-- Máy chủ: localhost:3306
+-- Thời gian đã tạo: Th3 24, 2019 lúc 06:51 PM
+-- Phiên bản máy phục vụ: 5.7.25-0ubuntu0.18.04.2
+-- Phiên bản PHP: 5.6.40-5+ubuntu18.04.1+deb.sury.org+1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,27 +14,27 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `mienxanh`
+-- Cơ sở dữ liệu: `hoangcung`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_about`
+-- Cấu trúc bảng cho bảng `table_about`
 --
 
-CREATE TABLE IF NOT EXISTS `table_about` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_about` (
+  `id` int(10) UNSIGNED NOT NULL,
   `ten_vi` varchar(225) NOT NULL,
   `tenkhongdau` varchar(255) NOT NULL,
   `mota_vi` text NOT NULL,
   `noidung_vi` text NOT NULL,
   `photo` varchar(100) NOT NULL,
   `thumb` varchar(255) NOT NULL,
-  `stt` int(10) unsigned NOT NULL DEFAULT '1',
+  `stt` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1',
   `ngaytao` int(11) NOT NULL DEFAULT '0',
   `ngaysua` int(11) NOT NULL DEFAULT '0',
@@ -49,40 +49,40 @@ CREATE TABLE IF NOT EXISTS `table_about` (
   `id_danhmuc` int(11) NOT NULL,
   `id_list` int(11) NOT NULL,
   `noibat` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_about`
+-- Đang đổ dữ liệu cho bảng `table_about`
 --
 
 INSERT INTO `table_about` (`id`, `ten_vi`, `tenkhongdau`, `mota_vi`, `noidung_vi`, `photo`, `thumb`, `stt`, `hienthi`, `ngaytao`, `ngaysua`, `ten_en`, `mota_en`, `noidung_en`, `seo_title`, `seo_keyword`, `seo_description`, `download_enable`, `download`, `id_danhmuc`, `id_list`, `noibat`) VALUES
-(7, 'Thư ngỏ', 'thu-ngo', 'Abu Bilal al-Homsi, 28 tuổi, người Syria từng là một chuyên gia IT, bắt đầu ủng hộ IS từ đầu năm 2013 và đến giữa năm 2014, anh ta chính thức trở thành chiến binh của tổ chức này, chiến đấu ở thành phố quê hương Homs, miền Trung Syria. Anh ta vừa vượt qua nhiều nguy hiểm, từ mặt trận trở về thành phố Raqqa, thủ phủ của IS -  để hưởng tuần trăng mật với cô dâu người Tunisia mà anh ta chưa từng gặp mặt.\r\nNhư các chiến binh IS khác, tuần trăng mật của Abu Bilal al-Homsi là những ngày tạm gác súng, hưởng thụ cuộc sống nhàn nhã với những bữa tối đầy ắp thịt nướng trong các nhà hàng lớn ở Raqqa, đi dạo dọc sông Euphrates và ăn kem cùng cô dâu mới cưới.', '<div style="box-sizing: border-box; font-family: ''segoe ui'', ''Helvetica Neue'', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; text-align: justify;">Abu Bilal al-Homsi, 28 tuổi, người Syria từng l&agrave; một chuy&ecirc;n gia IT, bắt đầu ủng hộ IS từ đầu năm 2013 v&agrave; đến giữa năm 2014, anh ta ch&iacute;nh thức trở th&agrave;nh chiến binh của tổ chức n&agrave;y, chiến đấu ở th&agrave;nh phố qu&ecirc; hương Homs, miền Trung Syria. Anh ta vừa vượt qua nhiều nguy hiểm, từ mặt trận trở về th&agrave;nh phố Raqqa, thủ phủ của IS -&nbsp; để hưởng tuần trăng mật với c&ocirc; d&acirc;u người Tunisia m&agrave; anh ta chưa từng gặp mặt.</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div style="box-sizing: border-box; font-family: ''segoe ui'', ''Helvetica Neue'', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; text-align: justify;">\r\n<p>Như c&aacute;c chiến binh IS kh&aacute;c, tuần trăng mật của Abu Bilal al-Homsi l&agrave; những ng&agrave;y tạm g&aacute;c s&uacute;ng, hưởng thụ cuộc sống nh&agrave;n nh&atilde; với những bữa tối đầy ắp thịt nướng trong c&aacute;c nh&agrave; h&agrave;ng lớn ở Raqqa, đi dạo dọc s&ocirc;ng Euphrates v&agrave; ăn kem c&ugrave;ng c&ocirc; d&acirc;u mới cưới.</p>\r\n</div>\r\n\r\n<p style="text-align:center"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></p>\r\n', '66965980.png', '66965980_326.08695652174x300.png', 6, 1, 1411767983, 1433320048, '', '', '', 'Thư ngỏ', 'Thư ngỏ', 'Thư ngỏ', 0, '', 0, 0, 1),
+(7, 'Thư ngỏ', 'thu-ngo', 'Abu Bilal al-Homsi, 28 tuổi, người Syria từng là một chuyên gia IT, bắt đầu ủng hộ IS từ đầu năm 2013 và đến giữa năm 2014, anh ta chính thức trở thành chiến binh của tổ chức này, chiến đấu ở thành phố quê hương Homs, miền Trung Syria. Anh ta vừa vượt qua nhiều nguy hiểm, từ mặt trận trở về thành phố Raqqa, thủ phủ của IS -  để hưởng tuần trăng mật với cô dâu người Tunisia mà anh ta chưa từng gặp mặt.\r\nNhư các chiến binh IS khác, tuần trăng mật của Abu Bilal al-Homsi là những ngày tạm gác súng, hưởng thụ cuộc sống nhàn nhã với những bữa tối đầy ắp thịt nướng trong các nhà hàng lớn ở Raqqa, đi dạo dọc sông Euphrates và ăn kem cùng cô dâu mới cưới.', '<div style=\"box-sizing: border-box; font-family: \'segoe ui\', \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; text-align: justify;\">Abu Bilal al-Homsi, 28 tuổi, người Syria từng l&agrave; một chuy&ecirc;n gia IT, bắt đầu ủng hộ IS từ đầu năm 2013 v&agrave; đến giữa năm 2014, anh ta ch&iacute;nh thức trở th&agrave;nh chiến binh của tổ chức n&agrave;y, chiến đấu ở th&agrave;nh phố qu&ecirc; hương Homs, miền Trung Syria. Anh ta vừa vượt qua nhiều nguy hiểm, từ mặt trận trở về th&agrave;nh phố Raqqa, thủ phủ của IS -&nbsp; để hưởng tuần trăng mật với c&ocirc; d&acirc;u người Tunisia m&agrave; anh ta chưa từng gặp mặt.</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<div style=\"box-sizing: border-box; font-family: \'segoe ui\', \'Helvetica Neue\', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; text-align: justify;\">\r\n<p>Như c&aacute;c chiến binh IS kh&aacute;c, tuần trăng mật của Abu Bilal al-Homsi l&agrave; những ng&agrave;y tạm g&aacute;c s&uacute;ng, hưởng thụ cuộc sống nh&agrave;n nh&atilde; với những bữa tối đầy ắp thịt nướng trong c&aacute;c nh&agrave; h&agrave;ng lớn ở Raqqa, đi dạo dọc s&ocirc;ng Euphrates v&agrave; ăn kem c&ugrave;ng c&ocirc; d&acirc;u mới cưới.</p>\r\n</div>\r\n\r\n<p style=\"text-align:center\"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong></p>\r\n', '66965980.png', '66965980_326.08695652174x300.png', 6, 1, 1411767983, 1433320048, '', '', '', 'Thư ngỏ', 'Thư ngỏ', 'Thư ngỏ', 0, '', 0, 0, 1),
 (8, 'Thông tin chung', 'thong-tin-chung', '', '', '61002860.jpg', '61002860_400x266.08695652174.jpg', 5, 1, 1411768045, 1414140356, '', '', '', 'Thông tin chung', 'Thông tin chung', 'Thông tin chung', 0, '', 0, 0, 1),
-(6, 'Giới thiệu Doanh nghiệp', 'gioi-thieu-doanh-nghiep', ' CÔNG TY CỔ PHẦN SẢN XUẤT THƯƠNG MẠI TÂN TIẾN THẮNG SG  là một đơn vị hoạt động trong lĩnh vực tư vấn,  trang trí nội, ngoại thất xây dựng,…', '<p>&nbsp; <span style="font-size:14px">&nbsp;</span></p>\r\n\r\n<h3>Giới thiệu về c&ocirc;ng ty</h3>\r\n\r\n<p>&nbsp;C&Ocirc;NG TY CỔ PHẦN SẢN XUẤT THƯƠNG MẠI T&Acirc;N TIẾN THẮNG SG &nbsp;l&agrave; một đơn vị hoạt động trong lĩnh vực tư v&acirc;́n, &nbsp;trang tr&iacute; n&ocirc;̣i, ngoại th&acirc;́t x&acirc;y dựng,&hellip;</p>\r\n\r\n<p>L&agrave; một trong những c&ocirc;ng ty c&oacute; nhiều uy t&iacute;n v&agrave; thương hiệu tr&ecirc;n thị trường, <strong>Tiến Thắng SG&nbsp;</strong>đ&atilde; đạt được những th&agrave;nh tựu rất đ&aacute;ng tự h&agrave;o trong lĩnh vực hoạt động của m&igrave;nh. Để c&oacute; được điều đ&oacute;, ngo&agrave;i sự cố gắng, nỗ lực, phấn đấu kh&ocirc;ng ngừng của to&agrave;n thể c&aacute;n bộ nh&acirc;n vi&ecirc;n trong c&ocirc;ng ty, phải kể đến sự ủng hộ, tin tưởng của Qu&yacute; kh&aacute;ch h&agrave;ng cũng như c&aacute;c đối t&aacute;c tin cậy của&nbsp;<strong>Tiến Thắng SG</strong>.</p>\r\n\r\n<p>Trong c&aacute;c lĩnh vực hoạt động,<strong>&nbsp;Tiến Thắng SG&nbsp;</strong>lu&ocirc;n hướng tới sự ph&aacute;t triển to&agrave;n diện, đ&oacute; l&agrave; trở th&agrave;nh nh&agrave; tư v&acirc;́n, thi c&ocirc;ng, lắp đặt ho&agrave;n thi&ecirc;̣n c&ocirc;ng tr&igrave;nh to&agrave;n di&ecirc;̣n v&agrave; chuy&ecirc;n nghiệp nhất. Bằng sự nhanh nhạy trong nắm bắt nhu cầu, &yacute; tưởng cũng như sự chuy&ecirc;n nghiệp trong tổ chức sản xuất v&agrave; ho&agrave;n th&agrave;nh sản phẩm,&nbsp;<strong>Tiến Thắng SG</strong>&nbsp;lu&ocirc;n khẳng định những bước đi vững chắc trong mọi lĩnh vực m&agrave; m&igrave;nh đảm nhi&ecirc;̣m, đ&aacute;p ứng tốt nhất mọi nhu cầu của kh&aacute;ch h&agrave;ng. Đặc biệt, với đội ngũ nh&acirc;n vi&ecirc;n kỹ thu&acirc;̣t trẻ trung, nhiệt th&agrave;nh v&agrave; năng động, được đ&agrave;o tạo chuy&ecirc;n nghiệp, b&agrave;i bản, lu&ocirc;n c&oacute; tinh thần tr&aacute;ch nhiệm cao trong c&ocirc;ng việc, chắc chắn sẽ đem lại sự h&agrave;i l&ograve;ng cho Qu&yacute; kh&aacute;ch h&agrave;ng.</p>\r\n\r\n<p>Trong qu&aacute; tr&igrave;nh tồn tại v&agrave; ph&aacute;t triển ch&uacute;ng t&ocirc;i lu&ocirc;n mong muốn được hợp t&aacute;c với tất cả c&aacute;c bạn v&igrave; sự ph&aacute;t triển v&agrave; thịnh vượng chung</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;<img alt="" height="450" src="http://demo3.nina.net.vn/tu/shopanhvan/upload/cua_kinh_khung_nhom_2.jpg" width="422" /></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style="background-color:rgb(249, 250, 251); color:rgb(249, 250, 251); font-family:arial,helvetica,sans-serif">&nbsp;</span><span style="font-size:24px">C&Ocirc;NG TY CỔ PHẦN SẢN XUẤT&nbsp;THƯƠNG MẠI&nbsp;T&Acirc;N TIẾN THẮNG SG</span></p>\r\n\r\n<p>Địa chỉ:&nbsp;B2/3A, ấp 2, X&atilde; T&acirc;n Ki&ecirc;n, Huyện B&igrave;nh Ch&aacute;nh, Th&agrave;nh phố Hồ Ch&iacute; Minh</p>\r\n\r\n<p>Điện thoại:&nbsp;08 3756 2083</p>\r\n\r\n<p>Hotline:&nbsp;0989 525 407</p>\r\n\r\n<p>Email: congtytienthang11@gmail.com</p>\r\n\r\n<p>Website:&nbsp;http://tienthangsg.com/</p>\r\n', '27164804.jpg', '27164804_400x266.08695652174.jpg', 1, 1, 1411767896, 1427613471, '', '', '', 'Giới thiệu chung', 'Giới thiệu chung', 'Giới thiệu chung', 0, '', 0, 0, 1);
+(6, 'Giới thiệu Doanh nghiệp', 'gioi-thieu-doanh-nghiep', ' CÔNG TY CỔ PHẦN SẢN XUẤT THƯƠNG MẠI TÂN TIẾN THẮNG SG  là một đơn vị hoạt động trong lĩnh vực tư vấn,  trang trí nội, ngoại thất xây dựng,…', '<p>&nbsp; <span style=\"font-size:14px\">&nbsp;</span></p>\r\n\r\n<h3>Giới thiệu về c&ocirc;ng ty</h3>\r\n\r\n<p>&nbsp;C&Ocirc;NG TY CỔ PHẦN SẢN XUẤT THƯƠNG MẠI T&Acirc;N TIẾN THẮNG SG &nbsp;l&agrave; một đơn vị hoạt động trong lĩnh vực tư v&acirc;́n, &nbsp;trang tr&iacute; n&ocirc;̣i, ngoại th&acirc;́t x&acirc;y dựng,&hellip;</p>\r\n\r\n<p>L&agrave; một trong những c&ocirc;ng ty c&oacute; nhiều uy t&iacute;n v&agrave; thương hiệu tr&ecirc;n thị trường, <strong>Tiến Thắng SG&nbsp;</strong>đ&atilde; đạt được những th&agrave;nh tựu rất đ&aacute;ng tự h&agrave;o trong lĩnh vực hoạt động của m&igrave;nh. Để c&oacute; được điều đ&oacute;, ngo&agrave;i sự cố gắng, nỗ lực, phấn đấu kh&ocirc;ng ngừng của to&agrave;n thể c&aacute;n bộ nh&acirc;n vi&ecirc;n trong c&ocirc;ng ty, phải kể đến sự ủng hộ, tin tưởng của Qu&yacute; kh&aacute;ch h&agrave;ng cũng như c&aacute;c đối t&aacute;c tin cậy của&nbsp;<strong>Tiến Thắng SG</strong>.</p>\r\n\r\n<p>Trong c&aacute;c lĩnh vực hoạt động,<strong>&nbsp;Tiến Thắng SG&nbsp;</strong>lu&ocirc;n hướng tới sự ph&aacute;t triển to&agrave;n diện, đ&oacute; l&agrave; trở th&agrave;nh nh&agrave; tư v&acirc;́n, thi c&ocirc;ng, lắp đặt ho&agrave;n thi&ecirc;̣n c&ocirc;ng tr&igrave;nh to&agrave;n di&ecirc;̣n v&agrave; chuy&ecirc;n nghiệp nhất. Bằng sự nhanh nhạy trong nắm bắt nhu cầu, &yacute; tưởng cũng như sự chuy&ecirc;n nghiệp trong tổ chức sản xuất v&agrave; ho&agrave;n th&agrave;nh sản phẩm,&nbsp;<strong>Tiến Thắng SG</strong>&nbsp;lu&ocirc;n khẳng định những bước đi vững chắc trong mọi lĩnh vực m&agrave; m&igrave;nh đảm nhi&ecirc;̣m, đ&aacute;p ứng tốt nhất mọi nhu cầu của kh&aacute;ch h&agrave;ng. Đặc biệt, với đội ngũ nh&acirc;n vi&ecirc;n kỹ thu&acirc;̣t trẻ trung, nhiệt th&agrave;nh v&agrave; năng động, được đ&agrave;o tạo chuy&ecirc;n nghiệp, b&agrave;i bản, lu&ocirc;n c&oacute; tinh thần tr&aacute;ch nhiệm cao trong c&ocirc;ng việc, chắc chắn sẽ đem lại sự h&agrave;i l&ograve;ng cho Qu&yacute; kh&aacute;ch h&agrave;ng.</p>\r\n\r\n<p>Trong qu&aacute; tr&igrave;nh tồn tại v&agrave; ph&aacute;t triển ch&uacute;ng t&ocirc;i lu&ocirc;n mong muốn được hợp t&aacute;c với tất cả c&aacute;c bạn v&igrave; sự ph&aacute;t triển v&agrave; thịnh vượng chung</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;<img alt=\"\" height=\"450\" src=\"http://demo3.nina.net.vn/tu/shopanhvan/upload/cua_kinh_khung_nhom_2.jpg\" width=\"422\" /></p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p><span style=\"background-color:rgb(249, 250, 251); color:rgb(249, 250, 251); font-family:arial,helvetica,sans-serif\">&nbsp;</span><span style=\"font-size:24px\">C&Ocirc;NG TY CỔ PHẦN SẢN XUẤT&nbsp;THƯƠNG MẠI&nbsp;T&Acirc;N TIẾN THẮNG SG</span></p>\r\n\r\n<p>Địa chỉ:&nbsp;B2/3A, ấp 2, X&atilde; T&acirc;n Ki&ecirc;n, Huyện B&igrave;nh Ch&aacute;nh, Th&agrave;nh phố Hồ Ch&iacute; Minh</p>\r\n\r\n<p>Điện thoại:&nbsp;08 3756 2083</p>\r\n\r\n<p>Hotline:&nbsp;0989 525 407</p>\r\n\r\n<p>Email: congtytienthang11@gmail.com</p>\r\n\r\n<p>Website:&nbsp;http://tienthangsg.com/</p>\r\n', '27164804.jpg', '27164804_400x266.08695652174.jpg', 1, 1, 1411767896, 1427613471, '', '', '', 'Giới thiệu chung', 'Giới thiệu chung', 'Giới thiệu chung', 0, '', 0, 0, 1);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_advs`
+-- Cấu trúc bảng cho bảng `table_advs`
 --
 
-CREATE TABLE IF NOT EXISTS `table_advs` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_advs` (
+  `id` int(10) UNSIGNED NOT NULL,
   `photo` varchar(225) NOT NULL,
   `ten` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `mota` text NOT NULL,
   `link` varchar(255) NOT NULL,
-  `stt` int(10) unsigned NOT NULL DEFAULT '1',
+  `stt` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM AUTO_INCREMENT=52 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_background`
+-- Cấu trúc bảng cho bảng `table_background`
 --
 
-CREATE TABLE IF NOT EXISTS `table_background` (
+CREATE TABLE `table_background` (
   `id` int(11) NOT NULL,
   `photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `ten` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -91,10 +91,10 @@ CREATE TABLE IF NOT EXISTS `table_background` (
   `color` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `type` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
   `attachment` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_background`
+-- Đang đổ dữ liệu cho bảng `table_background`
 --
 
 INSERT INTO `table_background` (`id`, `photo`, `ten`, `position`, `repeat`, `color`, `type`, `attachment`) VALUES
@@ -103,11 +103,11 @@ INSERT INTO `table_background` (`id`, `photo`, `ten`, `position`, `repeat`, `col
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_baiviet`
+-- Cấu trúc bảng cho bảng `table_baiviet`
 --
 
-CREATE TABLE IF NOT EXISTS `table_baiviet` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_baiviet` (
+  `id` int(10) UNSIGNED NOT NULL,
   `id_item` int(11) NOT NULL,
   `noibat` int(12) NOT NULL,
   `ten_vi` varchar(225) NOT NULL,
@@ -121,10 +121,10 @@ CREATE TABLE IF NOT EXISTS `table_baiviet` (
   `photo` varchar(100) NOT NULL,
   `thumb` varchar(255) NOT NULL,
   `thumb1` varchar(255) NOT NULL,
-  `stt` int(10) unsigned NOT NULL DEFAULT '1',
+  `stt` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1',
-  `ngaytao` int(10) unsigned NOT NULL DEFAULT '0',
-  `ngaysua` int(10) unsigned NOT NULL DEFAULT '0',
+  `ngaytao` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `ngaysua` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `start_event` datetime NOT NULL,
   `ten_cn` varchar(255) NOT NULL,
   `mota_cn` text NOT NULL,
@@ -135,35 +135,35 @@ CREATE TABLE IF NOT EXISTS `table_baiviet` (
   `id_danhmuc` int(11) NOT NULL,
   `link` varchar(255) NOT NULL,
   `gallery` text NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_baiviet`
+-- Đang đổ dữ liệu cho bảng `table_baiviet`
 --
 
 INSERT INTO `table_baiviet` (`id`, `id_item`, `noibat`, `ten_vi`, `ten_en`, `mota_en`, `noidung_en`, `tenkhongdau`, `mota_vi`, `noidung_vi`, `loaitin`, `photo`, `thumb`, `thumb1`, `stt`, `hienthi`, `ngaytao`, `ngaysua`, `start_event`, `ten_cn`, `mota_cn`, `noidung_cn`, `seo_title`, `seo_keyword`, `seo_description`, `id_danhmuc`, `link`, `gallery`) VALUES
-(1, 0, 0, 'Giới thiệu', 'Giới thiệu về công ty', 'Giới thiệu về công ty', '<p>Giới thiệu về c&ocirc;ng ty</p>\r\n', 'gioi-thieu', '<p style="text-align:justify"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CÔNG TY TNHH KỸ THUẬT MIỀN XANH</strong> là doanh nghiệp hoạt động trong lĩnh vực nước và môi trường. Ngoài ra, công ty còn hoạt động trên nhiều lĩnh vực như xây dựng, công nghiệp, dịch vụ kỹ thuật công nghệ và thương mại khác…</p>\r\n\r\n<p style="text-align:justify">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thành tín - là tôn chỉ hoạt động của <strong>Miền Xanh</strong>, kể từ khi thành lập chúng tôi đã không ngừng phát triển với đội ngũ chuyên gia tư vấn cao cấp từ ĐH Bách Khoa TP. HCM - Viện công nghệ, cùng với đội ngũ kỹ sư – chuyên viên có chuyên môn và giàu kinh nghiệm. Tất cả đều vì một mục đích mang lại chất lượng dịch vụ tốt nhất.</p>\r\n\r\n<p style="text-align:justify"><strong><em>“Quyền lợi và sự hài lòng của khách hàng là thước đo sự thành công của chúng tôi”</em></strong></p>\r\n\r\n<p style="text-align:justify">Chân trọng cảm ơn sự hợp tác!</p>\r\n', '<p>Đang cập nhật</p>\r\n', '', '49679598.jpg', '49679598_400x266.66666666667.jpg', '09356290_175x135.jpg', 0, 0, 1404356111, 1445592939, '0000-00-00 00:00:00', '', '', '', '', 'khuôn mẫu, khuôn ép nhựa, ', '', 0, '', '[]'),
+(1, 0, 0, 'Giới thiệu', 'Giới thiệu về công ty', 'Giới thiệu về công ty', '<p>Giới thiệu về c&ocirc;ng ty</p>\r\n', 'gioi-thieu', '<p style=\"text-align:justify\"><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CÔNG TY TNHH KỸ THUẬT MIỀN XANH</strong> là doanh nghiệp hoạt động trong lĩnh vực nước và môi trường. Ngoài ra, công ty còn hoạt động trên nhiều lĩnh vực như xây dựng, công nghiệp, dịch vụ kỹ thuật công nghệ và thương mại khác…</p>\r\n\r\n<p style=\"text-align:justify\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thành tín - là tôn chỉ hoạt động của <strong>Miền Xanh</strong>, kể từ khi thành lập chúng tôi đã không ngừng phát triển với đội ngũ chuyên gia tư vấn cao cấp từ ĐH Bách Khoa TP. HCM - Viện công nghệ, cùng với đội ngũ kỹ sư – chuyên viên có chuyên môn và giàu kinh nghiệm. Tất cả đều vì một mục đích mang lại chất lượng dịch vụ tốt nhất.</p>\r\n\r\n<p style=\"text-align:justify\"><strong><em>“Quyền lợi và sự hài lòng của khách hàng là thước đo sự thành công của chúng tôi”</em></strong></p>\r\n\r\n<p style=\"text-align:justify\">Chân trọng cảm ơn sự hợp tác!</p>\r\n', '<p>Đang cập nhật</p>\r\n', '', '49679598.jpg', '49679598_400x266.66666666667.jpg', '09356290_175x135.jpg', 0, 0, 1404356111, 1445592939, '0000-00-00 00:00:00', '', '', '', '', 'khuôn mẫu, khuôn ép nhựa, ', '', 0, '', '[]'),
 (2, 0, 0, 'Tuyển nhân viên thiết kế, đứng máy CNC.', '', '', '', 'tuyen-nhan-vien-thiet-ke-dung-may-cnc', '', '<p>Cty TNHH MTV Đặng Cường cần&nbsp;tuyển:</p>\r\n\r\n<ol>\r\n	<li>2 Nh&acirc;n vi&ecirc;n đứng m&aacute;y CNC.\r\n	<ol>\r\n		<li>Y&ecirc;u cầu biết điều khiển m&aacute;y CNC hệ Fanuc.</li>\r\n		<li>Ưu ti&ecirc;n tốt nghiệp trường nghề,</li>\r\n		<li>C&oacute; ch&iacute; cầu tiến.</li>\r\n		<li>C&oacute; tr&aacute;ch nhiệm.</li>\r\n	</ol>\r\n	</li>\r\n	<li>1 Nh&acirc;n vi&ecirc;n thiết kế, sử dụng ProE (Creo), kh&ocirc;ng cần kinh nghiệm.</li>\r\n	<li>Lương thỏa thuận.</li>\r\n</ol>\r\n', '', '03897912.jpg', '03897912_400x273.046875.jpg', '57050632_175x135.jpg', 0, 0, 1404356123, 1441885707, '0000-00-00 00:00:00', '', '', '', '', '', '', 0, '', '[]'),
-(7, 0, 0, '', '', '', '', '', '', '', '', '', '', '', 0, 0, 1408889857, 1439657606, '0000-00-00 00:00:00', '', '', '', 'Quy trình sản xuất', 'sản,xuất,trình,quy', 'Quy trình sản xuất', 0, '', '["/upload/user/images/1.jpg","/upload/user/images/2.jpg","/upload/user/images/3.jpg","/upload/user/images/4.jpg","/upload/user/images/5.jpg","/upload/user/images/6.jpg","/upload/user/images/7.jpg","/upload/user/images/8.jpg"]'),
-(9, 0, 0, '', '', '', '', '', '', '', '', '', '', '', 0, 0, 1409294225, 1439741162, '0000-00-00 00:00:00', '', '', '', '', '', '', 0, '', '["/upload/user/images/1.jpg","/upload/user/images/2.jpg","/upload/user/images/3.jpg","/upload/user/images/4.jpg"]'),
+(7, 0, 0, '', '', '', '', '', '', '', '', '', '', '', 0, 0, 1408889857, 1439657606, '0000-00-00 00:00:00', '', '', '', 'Quy trình sản xuất', 'sản,xuất,trình,quy', 'Quy trình sản xuất', 0, '', '[\"/upload/user/images/1.jpg\",\"/upload/user/images/2.jpg\",\"/upload/user/images/3.jpg\",\"/upload/user/images/4.jpg\",\"/upload/user/images/5.jpg\",\"/upload/user/images/6.jpg\",\"/upload/user/images/7.jpg\",\"/upload/user/images/8.jpg\"]'),
+(9, 0, 0, '', '', '', '', '', '', '', '', '', '', '', 0, 0, 1409294225, 1439741162, '0000-00-00 00:00:00', '', '', '', '', '', '', 0, '', '[\"/upload/user/images/1.jpg\",\"/upload/user/images/2.jpg\",\"/upload/user/images/3.jpg\",\"/upload/user/images/4.jpg\"]'),
 (10, 0, 0, '', '', '', '', '', '', '', '', '12213221.png', '12213221_306.12244897959x300.png', '', 0, 1, 1413428844, 1415945137, '0000-00-00 00:00:00', '', '', '', 'Popup', 'Popup', 'Popup', 0, 'http://abc', ''),
-(11, 0, 0, 'Chào mừng đến với khách sạn A1 Điện Biên', '', '', '', 'chao-mung-den-voi-khach-san-a1-dien-bien', 'Fully responsive - will adapt to any device.\r\nSeparate settings per breakpoint.\r\nGallery mode to create an image slideshow with thumbnails\r\nSupports swipe and mouseDrag\r\nAdd or remove slides dynamically.\r\nSmall file size, fully themed, simple to implement.', '<p>Kh&ocirc;ng c&oacute; biến động trong gi&aacute; cả xe hơi cũng như thu nhập người d&acirc;n, nhưng nửa đầu 2015 đang chứng kiến bước nhảy vọt trong ti&ecirc;u d&ugrave;ng &ocirc;t&ocirc; của người ti&ecirc;u d&ugrave;ng Việt Nam.</p>\r\n\r\n<p>Theo b&aacute;o c&aacute;o của Hiệp hội c&aacute;c nh&agrave; sản xuất &ocirc;t&ocirc; Việt Nam (VAMA), doanh số b&aacute;n h&agrave;ng to&agrave;n thị trường&nbsp;đến hết th&aacute;ng 6/2015 l&agrave; 103.500 xe, tăng 58% so với c&ugrave;ng kỳ năm 2014 (65.400 xe). Trong đ&oacute; xe con tăng 45%, xe thương mại tăng 75% v&agrave; xe chuy&ecirc;n dụng tăng 136%.</p>\r\n\r\n<table align="center" border="0" cellpadding="3" cellspacing="0" class="tplCaption" style="font-family:arial; font-size:14px; line-height:normal; margin:0px auto 10px; max-width:100%; padding:0px; width:470px">\r\n	<tbody>\r\n		<tr>\r\n			<td><img alt="Vios-Hue-1-4922-1397465111-789-7086-3259" src="http://m.f29.img.vnecdn.net/2015/07/15/Vios-Hue-1-4922-1397465111-789-7086-3259-1436955006.jpg" width="470" /></td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<p>Toyota Vios l&agrave; xe con b&aacute;n chạy nhất thị trường.</p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>Thị trường xe tải c&oacute; bước tăng đột biến phần lớn do quy định siết chặt trọng tải từ cuối 2014. Ri&ecirc;ng ở thị trường xe con, nơi kh&aacute;ch h&agrave;ng c&aacute; nh&acirc;n quan t&acirc;m nhất, mang tới doanh số v&agrave; lợi nhuận ch&iacute;nh cho c&aacute;c h&atilde;ng l&oacute;n tại Việt Nam, chứng kiến những thay đổi tiềm năng.</p>\r\n\r\n<p>Hết nửa đầu 2014, xe con tăng 36% so với c&ugrave;ng kỳ 2013, nhưng sang 2015 so với 2014 th&igrave; con số n&agrave;y tăng l&ecirc;n 45%. Trong đ&oacute; 10 xe được kh&aacute;ch h&agrave;ng ưa chuộng nhất, ti&ecirc;u biểu như những Toyota Vios, Fortuner, Mazda3, Honda CR-V... đều c&oacute; lượng tăng 50-100% so với c&ugrave;ng kỳ 2014.</p>\r\n\r\n<p>L&yacute; giải cho nguy&ecirc;n nh&acirc;n n&agrave;y, một chuy&ecirc;n gia từ Toyota Việt Nam cho biết mức l&atilde;i suất cho vay mua xe của c&aacute;c ng&acirc;n h&agrave;ng năm nay th&ocirc;ng tho&aacute;ng, dễ chịu hơn, đồng thời c&aacute;c mẫu xe tập trung v&agrave;o ph&acirc;n kh&uacute;c dễ mua hơn cho c&aacute;c kh&aacute;ch h&agrave;ng mua xe lần đầu.</p>\r\n\r\n<p>Tốc độ mua xe trong nước tăng nhanh hơn so với xe nhập khẩu. Nửa đầu 2015 so với nửa đầu 2014, sức mua xe lắp trong nước tăng 56%, xe nhập khẩu tăng 64%. Trong khi một năm trước c&aacute;c mức tăng n&agrave;y tương ứng l&agrave; 24% v&agrave; 60%.&nbsp;</p>\r\n\r\n<p>Xe nhập khẩu vẫn b&aacute;n chạy nhưng cơ cấu so s&aacute;nh tương đối đ&atilde; bắt đầu chậm hơn xe trong nước. Đ&acirc;y l&agrave; kết quả của việc c&aacute;c h&atilde;ng tập trung lắp r&aacute;p nhiều xe hơn, v&agrave; người ti&ecirc;u d&ugrave;ng bấp b&ecirc;nh trước những th&ocirc;ng tin về thuế ph&iacute; &aacute;p dụng cho xe nhập khẩu tới 2018.&nbsp;</p>\r\n\r\n<p>Đầu 2015, kh&ocirc;ng c&oacute; h&atilde;ng xe n&agrave;o thờ ơ, đứng ngo&agrave;i cuộc khi li&ecirc;n tiếp giới thiệu phi&ecirc;n bản mới, trong đ&oacute; c&aacute;c ph&acirc;n kh&uacute;c phổ th&ocirc;ng vẫn s&ocirc;i động nhất.&nbsp;</p>\r\n\r\n<p>Ở ph&acirc;n kh&uacute;c A, Kia Morning n&acirc;ng cấp bản Si với cả số s&agrave;n v&agrave; số tự động, trong khi đ&oacute; Hyundai i10 th&ecirc;m bản sedan n&acirc;ng t&ugrave;y chọn cho kh&aacute;ch h&agrave;ng. Ph&acirc;n kh&uacute;c B tiếp tục l&agrave; lựa chọn h&agrave;ng đầu cho những người mua xe lần đầu. Toyota Vios dẫn dắt thị trường với 6.233 xe b&aacute;n ra, c&aacute;c đối thủ Honda City, Ford Fiesta, Kia Rio cũng ki&ecirc;n tr&igrave; b&aacute;m đuổi ở ph&iacute;a sau. Mới đ&acirc;y, Trường Hải quyết định tham chiến ph&acirc;n kh&uacute;c s&ocirc;i động với mẫu Mazda2 ở cả bản sedan v&agrave; hatchback.&nbsp;</p>\r\n\r\n<p>Những sự xuất hiện đ&aacute;ng ch&uacute; &yacute; kh&aacute;c như Toyota Camry ở ph&acirc;n kh&uacute;c D. Sức &eacute;p của c&aacute;c h&atilde;ng xe H&agrave;n thay đổi qu&aacute; nhanh v&agrave; mới mẻ tr&ecirc;n thị trường to&agrave;n cầu khiến Toyota lần đầu thay đổi mạnh mẽ Camry khi đang ở giữa thế hệ. B&ecirc;n cạnh đ&oacute;, xe b&aacute;n tải thể hiện h&igrave;nh ảnh ph&acirc;n kh&uacute;c đang l&ecirc;n khi c&oacute; tới 3 đại diện mới với nhiều tham vọng chiếm ng&ocirc;i Ford Ranger l&agrave;&nbsp;Chevrolet Colorado, Mitsubishi Triton, Nissan NP 300 Navara.&nbsp;</p>\r\n\r\n<p>SUV từ cỡ nhỏ tới cỡ trung cũng nhộn nhịp kh&ocirc;ng k&eacute;m c&aacute;c ph&acirc;n kh&uacute;c kh&aacute;c. Thế độc t&ocirc;n của EcoSport sắp bị ph&aacute; vỡ bởi Hyundai chuẩn bị giới thiệu i20 Active tại Việt Nam. Ở ph&iacute;a tr&ecirc;n, cuộc cạnh tranh của Honda CR-V v&agrave; Mazda CX-5 đẩy những Kia Sportage, Hyundai Tucson v&agrave;o g&oacute;c tường. Cao hơn nữa, Toyota Fortuner thậm ch&iacute; trở th&agrave;nh chiếc SUV b&aacute;n chạy nhất với doanh số 4.629 xe qua nửa đầu 2015.&nbsp;</p>\r\n\r\n<p>Ở thị trường xe sang, cuộc đua c&ograve;n khốc liệt hơn bởi những kh&aacute;ch h&agrave;ng nhiều tiền nhưng cũng kh&oacute; t&iacute;nh. Nếu xe phổ th&ocirc;ng tập trung v&agrave;o ph&acirc;n kh&uacute;c cỡ nhỏ để nhiều người dễ mua th&igrave; xe sang cũng c&oacute; chiến lược tương tự, nhưng l&agrave; xu hướng c&aacute; t&iacute;nh h&oacute;a, chứ kh&ocirc;ng ho&agrave;n to&agrave;n v&igrave; mức gi&aacute;.&nbsp;</p>\r\n\r\n<table align="center" border="0" cellpadding="3" cellspacing="0" class="tplCaption" style="font-family:arial; font-size:14px; line-height:normal; margin:0px auto 10px; max-width:100%; padding:0px; width:470px">\r\n	<tbody>\r\n		<tr>\r\n			<td><img alt="DSC-0324-JPG-1811-1422528985.jpg" src="http://m.f29.img.vnecdn.net/2015/07/16/DSC-0324-JPG-1811-1422528985-7880-1437010910.jpg" width="470" /></td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<p>Mercedes-Maybach S600 gi&aacute; gần 10 tỷ tại Việt Nam b&aacute;n chạy hơn mong đợi.</p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>Lexus đưa về NX200t với mức gi&aacute; 2,4 tỷ để cạnh tranh với những Audi Q3, Mercedes GLA, BMW X1. Trong khi đ&oacute; &quot;ng&ocirc;i sao 3 c&aacute;nh&quot; Mercedes như chiến lược b&aacute;n h&agrave;ng v&agrave;i năm gần đ&acirc;y, hứa hẹn mang tới 20 mẫu xe mới nh&acirc;n kỷ niệm 20 năm c&oacute; mặt tại Việt Nam. Kết quả doanh số mảng xe con của Mercedes qua nửa đầu 2015 l&agrave; 1.522 xe, tăng 37,6% so với c&ugrave;ng kỳ 2014.</p>\r\n\r\n<p>Porsche cũng c&oacute; tiểu hổ Macan, Land Rover tiếp tục sử dụng Range Rover v&agrave; Evoque để chia sẻ thị trường. Audi, BMW ph&aacute;t triển truyền thống c&aacute;c h&atilde;ng xe Đức. Duy chỉ c&oacute; thị trường si&ecirc;u sang với Rolls-Royce v&agrave; Bentley c&oacute; vẻ trầm lắng hơn so với 2014.&nbsp;</p>\r\n\r\n<p>Theo c&aacute;c chuy&ecirc;n gia, năm nay thị trường xe hơi trong nước sẽ tăng trưởng mạnh nếu từ giờ tới cuối năm kh&ocirc;ng c&oacute; những biến động trong ch&iacute;nh s&aacute;ch thuế, ph&iacute;, ở ph&acirc;n kh&uacute;c xe con&nbsp;tốc độ tăng trưởng&nbsp;đạt khoảng 50%.&nbsp;</p>\r\n', '', '20871349.jpg', '20871349_400x266.66666666667.jpg', '', 0, 0, 1413433521, 1437028906, '0000-00-00 00:00:00', '', '', '', 'Quảng cáo áo cưới', 'Quảng cáo áo cưới', 'Quảng cáo áo cưới', 0, '', '["/upload/user/images/hotel/1.jpg","/upload/user/images/hotel/2.jpg","/upload/user/images/hotel/3.jpg","/upload/user/images/hotel/4.jpg","/upload/user/images/hotel/5.jpg","/upload/user/images/hotel/6.jpg","/upload/user/images/hotel/7.jpg","/upload/user/images/hotel/8.jpg","/upload/user/images/hotel/9.jpg","/upload/user/images/hotel/11.jpg","/upload/user/images/hotel/12.jpg","/upload/user/images/hotel/13.jpg"]'),
+(11, 0, 0, 'Chào mừng đến với khách sạn A1 Điện Biên', '', '', '', 'chao-mung-den-voi-khach-san-a1-dien-bien', 'Fully responsive - will adapt to any device.\r\nSeparate settings per breakpoint.\r\nGallery mode to create an image slideshow with thumbnails\r\nSupports swipe and mouseDrag\r\nAdd or remove slides dynamically.\r\nSmall file size, fully themed, simple to implement.', '<p>Kh&ocirc;ng c&oacute; biến động trong gi&aacute; cả xe hơi cũng như thu nhập người d&acirc;n, nhưng nửa đầu 2015 đang chứng kiến bước nhảy vọt trong ti&ecirc;u d&ugrave;ng &ocirc;t&ocirc; của người ti&ecirc;u d&ugrave;ng Việt Nam.</p>\r\n\r\n<p>Theo b&aacute;o c&aacute;o của Hiệp hội c&aacute;c nh&agrave; sản xuất &ocirc;t&ocirc; Việt Nam (VAMA), doanh số b&aacute;n h&agrave;ng to&agrave;n thị trường&nbsp;đến hết th&aacute;ng 6/2015 l&agrave; 103.500 xe, tăng 58% so với c&ugrave;ng kỳ năm 2014 (65.400 xe). Trong đ&oacute; xe con tăng 45%, xe thương mại tăng 75% v&agrave; xe chuy&ecirc;n dụng tăng 136%.</p>\r\n\r\n<table align=\"center\" border=\"0\" cellpadding=\"3\" cellspacing=\"0\" class=\"tplCaption\" style=\"font-family:arial; font-size:14px; line-height:normal; margin:0px auto 10px; max-width:100%; padding:0px; width:470px\">\r\n	<tbody>\r\n		<tr>\r\n			<td><img alt=\"Vios-Hue-1-4922-1397465111-789-7086-3259\" src=\"http://m.f29.img.vnecdn.net/2015/07/15/Vios-Hue-1-4922-1397465111-789-7086-3259-1436955006.jpg\" width=\"470\" /></td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<p>Toyota Vios l&agrave; xe con b&aacute;n chạy nhất thị trường.</p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>Thị trường xe tải c&oacute; bước tăng đột biến phần lớn do quy định siết chặt trọng tải từ cuối 2014. Ri&ecirc;ng ở thị trường xe con, nơi kh&aacute;ch h&agrave;ng c&aacute; nh&acirc;n quan t&acirc;m nhất, mang tới doanh số v&agrave; lợi nhuận ch&iacute;nh cho c&aacute;c h&atilde;ng l&oacute;n tại Việt Nam, chứng kiến những thay đổi tiềm năng.</p>\r\n\r\n<p>Hết nửa đầu 2014, xe con tăng 36% so với c&ugrave;ng kỳ 2013, nhưng sang 2015 so với 2014 th&igrave; con số n&agrave;y tăng l&ecirc;n 45%. Trong đ&oacute; 10 xe được kh&aacute;ch h&agrave;ng ưa chuộng nhất, ti&ecirc;u biểu như những Toyota Vios, Fortuner, Mazda3, Honda CR-V... đều c&oacute; lượng tăng 50-100% so với c&ugrave;ng kỳ 2014.</p>\r\n\r\n<p>L&yacute; giải cho nguy&ecirc;n nh&acirc;n n&agrave;y, một chuy&ecirc;n gia từ Toyota Việt Nam cho biết mức l&atilde;i suất cho vay mua xe của c&aacute;c ng&acirc;n h&agrave;ng năm nay th&ocirc;ng tho&aacute;ng, dễ chịu hơn, đồng thời c&aacute;c mẫu xe tập trung v&agrave;o ph&acirc;n kh&uacute;c dễ mua hơn cho c&aacute;c kh&aacute;ch h&agrave;ng mua xe lần đầu.</p>\r\n\r\n<p>Tốc độ mua xe trong nước tăng nhanh hơn so với xe nhập khẩu. Nửa đầu 2015 so với nửa đầu 2014, sức mua xe lắp trong nước tăng 56%, xe nhập khẩu tăng 64%. Trong khi một năm trước c&aacute;c mức tăng n&agrave;y tương ứng l&agrave; 24% v&agrave; 60%.&nbsp;</p>\r\n\r\n<p>Xe nhập khẩu vẫn b&aacute;n chạy nhưng cơ cấu so s&aacute;nh tương đối đ&atilde; bắt đầu chậm hơn xe trong nước. Đ&acirc;y l&agrave; kết quả của việc c&aacute;c h&atilde;ng tập trung lắp r&aacute;p nhiều xe hơn, v&agrave; người ti&ecirc;u d&ugrave;ng bấp b&ecirc;nh trước những th&ocirc;ng tin về thuế ph&iacute; &aacute;p dụng cho xe nhập khẩu tới 2018.&nbsp;</p>\r\n\r\n<p>Đầu 2015, kh&ocirc;ng c&oacute; h&atilde;ng xe n&agrave;o thờ ơ, đứng ngo&agrave;i cuộc khi li&ecirc;n tiếp giới thiệu phi&ecirc;n bản mới, trong đ&oacute; c&aacute;c ph&acirc;n kh&uacute;c phổ th&ocirc;ng vẫn s&ocirc;i động nhất.&nbsp;</p>\r\n\r\n<p>Ở ph&acirc;n kh&uacute;c A, Kia Morning n&acirc;ng cấp bản Si với cả số s&agrave;n v&agrave; số tự động, trong khi đ&oacute; Hyundai i10 th&ecirc;m bản sedan n&acirc;ng t&ugrave;y chọn cho kh&aacute;ch h&agrave;ng. Ph&acirc;n kh&uacute;c B tiếp tục l&agrave; lựa chọn h&agrave;ng đầu cho những người mua xe lần đầu. Toyota Vios dẫn dắt thị trường với 6.233 xe b&aacute;n ra, c&aacute;c đối thủ Honda City, Ford Fiesta, Kia Rio cũng ki&ecirc;n tr&igrave; b&aacute;m đuổi ở ph&iacute;a sau. Mới đ&acirc;y, Trường Hải quyết định tham chiến ph&acirc;n kh&uacute;c s&ocirc;i động với mẫu Mazda2 ở cả bản sedan v&agrave; hatchback.&nbsp;</p>\r\n\r\n<p>Những sự xuất hiện đ&aacute;ng ch&uacute; &yacute; kh&aacute;c như Toyota Camry ở ph&acirc;n kh&uacute;c D. Sức &eacute;p của c&aacute;c h&atilde;ng xe H&agrave;n thay đổi qu&aacute; nhanh v&agrave; mới mẻ tr&ecirc;n thị trường to&agrave;n cầu khiến Toyota lần đầu thay đổi mạnh mẽ Camry khi đang ở giữa thế hệ. B&ecirc;n cạnh đ&oacute;, xe b&aacute;n tải thể hiện h&igrave;nh ảnh ph&acirc;n kh&uacute;c đang l&ecirc;n khi c&oacute; tới 3 đại diện mới với nhiều tham vọng chiếm ng&ocirc;i Ford Ranger l&agrave;&nbsp;Chevrolet Colorado, Mitsubishi Triton, Nissan NP 300 Navara.&nbsp;</p>\r\n\r\n<p>SUV từ cỡ nhỏ tới cỡ trung cũng nhộn nhịp kh&ocirc;ng k&eacute;m c&aacute;c ph&acirc;n kh&uacute;c kh&aacute;c. Thế độc t&ocirc;n của EcoSport sắp bị ph&aacute; vỡ bởi Hyundai chuẩn bị giới thiệu i20 Active tại Việt Nam. Ở ph&iacute;a tr&ecirc;n, cuộc cạnh tranh của Honda CR-V v&agrave; Mazda CX-5 đẩy những Kia Sportage, Hyundai Tucson v&agrave;o g&oacute;c tường. Cao hơn nữa, Toyota Fortuner thậm ch&iacute; trở th&agrave;nh chiếc SUV b&aacute;n chạy nhất với doanh số 4.629 xe qua nửa đầu 2015.&nbsp;</p>\r\n\r\n<p>Ở thị trường xe sang, cuộc đua c&ograve;n khốc liệt hơn bởi những kh&aacute;ch h&agrave;ng nhiều tiền nhưng cũng kh&oacute; t&iacute;nh. Nếu xe phổ th&ocirc;ng tập trung v&agrave;o ph&acirc;n kh&uacute;c cỡ nhỏ để nhiều người dễ mua th&igrave; xe sang cũng c&oacute; chiến lược tương tự, nhưng l&agrave; xu hướng c&aacute; t&iacute;nh h&oacute;a, chứ kh&ocirc;ng ho&agrave;n to&agrave;n v&igrave; mức gi&aacute;.&nbsp;</p>\r\n\r\n<table align=\"center\" border=\"0\" cellpadding=\"3\" cellspacing=\"0\" class=\"tplCaption\" style=\"font-family:arial; font-size:14px; line-height:normal; margin:0px auto 10px; max-width:100%; padding:0px; width:470px\">\r\n	<tbody>\r\n		<tr>\r\n			<td><img alt=\"DSC-0324-JPG-1811-1422528985.jpg\" src=\"http://m.f29.img.vnecdn.net/2015/07/16/DSC-0324-JPG-1811-1422528985-7880-1437010910.jpg\" width=\"470\" /></td>\r\n		</tr>\r\n		<tr>\r\n			<td>\r\n			<p>Mercedes-Maybach S600 gi&aacute; gần 10 tỷ tại Việt Nam b&aacute;n chạy hơn mong đợi.</p>\r\n			</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>Lexus đưa về NX200t với mức gi&aacute; 2,4 tỷ để cạnh tranh với những Audi Q3, Mercedes GLA, BMW X1. Trong khi đ&oacute; &quot;ng&ocirc;i sao 3 c&aacute;nh&quot; Mercedes như chiến lược b&aacute;n h&agrave;ng v&agrave;i năm gần đ&acirc;y, hứa hẹn mang tới 20 mẫu xe mới nh&acirc;n kỷ niệm 20 năm c&oacute; mặt tại Việt Nam. Kết quả doanh số mảng xe con của Mercedes qua nửa đầu 2015 l&agrave; 1.522 xe, tăng 37,6% so với c&ugrave;ng kỳ 2014.</p>\r\n\r\n<p>Porsche cũng c&oacute; tiểu hổ Macan, Land Rover tiếp tục sử dụng Range Rover v&agrave; Evoque để chia sẻ thị trường. Audi, BMW ph&aacute;t triển truyền thống c&aacute;c h&atilde;ng xe Đức. Duy chỉ c&oacute; thị trường si&ecirc;u sang với Rolls-Royce v&agrave; Bentley c&oacute; vẻ trầm lắng hơn so với 2014.&nbsp;</p>\r\n\r\n<p>Theo c&aacute;c chuy&ecirc;n gia, năm nay thị trường xe hơi trong nước sẽ tăng trưởng mạnh nếu từ giờ tới cuối năm kh&ocirc;ng c&oacute; những biến động trong ch&iacute;nh s&aacute;ch thuế, ph&iacute;, ở ph&acirc;n kh&uacute;c xe con&nbsp;tốc độ tăng trưởng&nbsp;đạt khoảng 50%.&nbsp;</p>\r\n', '', '20871349.jpg', '20871349_400x266.66666666667.jpg', '', 0, 0, 1413433521, 1437028906, '0000-00-00 00:00:00', '', '', '', 'Quảng cáo áo cưới', 'Quảng cáo áo cưới', 'Quảng cáo áo cưới', 0, '', '[\"/upload/user/images/hotel/1.jpg\",\"/upload/user/images/hotel/2.jpg\",\"/upload/user/images/hotel/3.jpg\",\"/upload/user/images/hotel/4.jpg\",\"/upload/user/images/hotel/5.jpg\",\"/upload/user/images/hotel/6.jpg\",\"/upload/user/images/hotel/7.jpg\",\"/upload/user/images/hotel/8.jpg\",\"/upload/user/images/hotel/9.jpg\",\"/upload/user/images/hotel/11.jpg\",\"/upload/user/images/hotel/12.jpg\",\"/upload/user/images/hotel/13.jpg\"]'),
 (12, 0, 0, 'Bài viết tiệc cưới', '', '', '', 'bai-viet-tiec-cuoi', '', '<p>Đội b&oacute;ng của Lee Nguyễn khởi đầu kh&oacute; khăn trước thế tấn c&ocirc;ng như vũ b&atilde;o của chủ s&acirc;n BBVA Compass. Ph&uacute;t thứ 37, tiền vệ Giles Barnes cụ thể h&oacute;a thế trận &aacute;p đảo đ&oacute; bằng c&uacute; dứt điểm cự ly gần, đưa Houston Dynamo vượt l&ecirc;n dẫn trước.</p>\r\n\r\n<p>Trong bối cảnh kh&oacute; khăn, tiền vệ gốc Việt Nguyễn Thế Anh lại xuất hiện trong vai người h&ugrave;ng, giải cứu New Eangland.</p>\r\n\r\n<p>Ph&uacute;t thứ 65, đ&oacute;n c&uacute; trả ngược của đồng đội, Lee Nguyễn gạt một nhịp loại bỏ đối thủ rồi dứt điểm kỹ thuật v&agrave;o g&oacute;c cao khung th&agrave;nh của&nbsp;Houston Dynamo, gỡ h&ograve;a 1-1. Khi hiệp hai c&ograve;n chừng ba ph&uacute;t đ&aacute; ch&iacute;nh thức, cựu ng&ocirc;i sao của Ho&agrave;ng Anh Gia Lai v&agrave; B&igrave;nh Dương lại c&oacute; cơ hội trong cấm địa, sau đường đẩy b&oacute;ng của đồng đội. Kh&ocirc;ng lỡ thời cơ, anh dứt điểm nhanh th&agrave;nh b&agrave;n ấn định chiến thắng 2-1 cho đội b&oacute;ng bang Massachusetts.</p>\r\n', '', '', '', '', 0, 1, 1413435666, 1413519918, '0000-00-00 00:00:00', '', '', '', 'Bài viết tiệc cưới', 'Bài viết tiệc cưới', 'Bài viết tiệc cưới', 0, '', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_config`
+-- Cấu trúc bảng cho bảng `table_config`
 --
 
-CREATE TABLE IF NOT EXISTS `table_config` (
+CREATE TABLE `table_config` (
   `id` int(11) NOT NULL,
   `key` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `content` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_config`
+-- Đang đổ dữ liệu cho bảng `table_config`
 --
 
 INSERT INTO `table_config` (`id`, `key`, `content`) VALUES
@@ -173,11 +173,11 @@ INSERT INTO `table_config` (`id`, `key`, `content`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_contact`
+-- Cấu trúc bảng cho bảng `table_contact`
 --
 
-CREATE TABLE IF NOT EXISTS `table_contact` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_contact` (
+  `id` int(10) UNSIGNED NOT NULL,
   `id_sanpham` int(10) NOT NULL,
   `ten` varchar(50) NOT NULL,
   `diachi` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -186,14 +186,14 @@ CREATE TABLE IF NOT EXISTS `table_contact` (
   `noidung` text NOT NULL,
   `tieude` varchar(50) NOT NULL,
   `tensp` varchar(100) NOT NULL,
-  `stt` int(10) unsigned NOT NULL DEFAULT '1',
+  `stt` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1',
-  `ngaytao` int(10) unsigned NOT NULL DEFAULT '0',
-  `ngaysua` int(10) unsigned NOT NULL DEFAULT '0'
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+  `ngaytao` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `ngaysua` int(10) UNSIGNED NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_contact`
+-- Đang đổ dữ liệu cho bảng `table_contact`
 --
 
 INSERT INTO `table_contact` (`id`, `id_sanpham`, `ten`, `diachi`, `dienthoai`, `email`, `noidung`, `tieude`, `tensp`, `stt`, `hienthi`, `ngaytao`, `ngaysua`) VALUES
@@ -202,11 +202,11 @@ INSERT INTO `table_contact` (`id`, `id_sanpham`, `ten`, `diachi`, `dienthoai`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_content`
+-- Cấu trúc bảng cho bảng `table_content`
 --
 
-CREATE TABLE IF NOT EXISTS `table_content` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_content` (
+  `id` int(10) UNSIGNED NOT NULL,
   `noibat` int(12) NOT NULL,
   `ten_vi` varchar(225) NOT NULL,
   `ten_en` varchar(255) NOT NULL,
@@ -217,10 +217,10 @@ CREATE TABLE IF NOT EXISTS `table_content` (
   `noidung_vi` text NOT NULL,
   `photo` varchar(100) NOT NULL,
   `thumb` varchar(255) NOT NULL,
-  `stt` int(10) unsigned NOT NULL DEFAULT '1',
+  `stt` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1',
-  `ngaytao` int(10) unsigned NOT NULL DEFAULT '0',
-  `ngaysua` int(10) unsigned NOT NULL DEFAULT '0',
+  `ngaytao` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `ngaysua` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `ten_cn` varchar(255) NOT NULL,
   `mota_cn` text NOT NULL,
   `noidung_cn` text NOT NULL,
@@ -235,32 +235,32 @@ CREATE TABLE IF NOT EXISTS `table_content` (
   `is_index` int(11) NOT NULL,
   `icon` varchar(255) NOT NULL,
   `file` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_content`
+-- Đang đổ dữ liệu cho bảng `table_content`
 --
 
 INSERT INTO `table_content` (`id`, `noibat`, `ten_vi`, `ten_en`, `mota_en`, `noidung_en`, `tenkhongdau`, `mota_vi`, `noidung_vi`, `photo`, `thumb`, `stt`, `hienthi`, `ngaytao`, `ngaysua`, `ten_cn`, `mota_cn`, `noidung_cn`, `seo_title`, `seo_keyword`, `seo_description`, `id_danhmuc`, `id_list`, `type`, `gallery`, `price`, `is_index`, `icon`, `file`) VALUES
-(1, 0, 'Lễ hội hoa hồng: Mua vé không vào được do khách VIP đông', '', '', '', 'le-hoi-hoa-hong-mua-ve-khong-vao-duoc-do-khach-vip-dong', '  		Phản hồi lại những thông tin thất vọng về lễ hội hoa hồng, Ban tổ chức lại cho rằng lễ hội “đầy tính văn hóa và nghệ thuật”, “nghệ thuật hoa hồng tuyệt vời nhất”.', '<div class="text-conent" itemprop="articleBody">  		<script type="text/javascript">window.onload = function () {resizeNewsImage("news-image", 500);}</script> <p align="center"><img class="news-image" alt="Lễ hội hoa hồng: Mua vé không vào được do khách VIP đông - 1" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488716254-148871328476752-1488530020-148852778216793-le-hoi-hoa-hong-3.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Nhiều người thất vọng về Lễ hội hoa hồng Bulgaria ở <a class=''TextlinkBaiviet'' href=''http://www.24h.com.vn/tin-ha-noi-c414.html'' title=''Hà Nội''>Hà Nội</a> (ảnh: Hồng Phú)&nbsp;</p>    <p>Liên quan đến những thông tin về Lễ hội hoa hồng Bulgaria hỗn loạn, trưng bày nhiều hoa giả, không giống như quảng cáo, ngày 5.3, Ban tổ chức lễ hội này đã có báo cáo gửi Sở Văn hóa – Thể thao Hà Nội.</p>    <p>Về việc nhiều người mua vé nhưng không được vào trong, gây lên chen lấn, hỗn loạn ngay trong ngày đầu khai mạc, ban tổ chức cho hay, lễ hội có sự &nbsp;tham gia của đại diện UBND Tp Hà Nội, các sở ban ngành và 80 đại sứ quán các nước tại Hà Nội. “Do số lượng VIP tham gia đông, thời lượng khai mạc dài hơn dự kiến, bao gồm cả lễ kỷ niệm quốc khánh Bulgaria nên thời gian dành cho khách tham dự bị muộn từ 10h chuyển xuống 11h”.</p>    <p>Ban tổ chức cho rằng cảnh lộn xộn phía trước cổng một phần do các thành phần phe vé tạo ra gây hiệu ứng đám đông để trục lợi. Vé đã được BTC phân phối hầu hết qua các kênh online, các công ty lữ hành, các hội hữu nghị từ trước.</p>    <p>Trước phản ánh lễ hội trưng bày nhiều hoa hồng giả, không đúng như quảng cáo, BTC cho biết toàn lễ hội được trang trí bằng 300 giống hoa hồng đến từ khắp nơi trên thế giới và được nhiệt đới hóa cho phù hợp với khí hậu Việt Nam. Ngoại trừ cổng hoa trên cầu được kết bằng hoa lụa tạo hiệu ứng thẩm mỹ và để phù hợp với luật bảo vệ môi trường của Bulgaria, tất cả các bồn hoa, chậu cảnh, décor bên trong đều là hoa tươi được bổ sung và thay mới hàng ngày.</p>    <p>“Hầu hết khách tham dự đều cảm thấy hân hoan với một lễ hội hoa hồng lớn mang đầy tính văn hóa và nghệ thuật chứ không phải là một triển lãm hay hội chợ hoa đơn thuần.&nbsp; Đại sứ quán Bulgaria cùng đoàn nghệ sĩ Bulgaria sang tham dự Lễ hội đều cảm thấy đây là một lễ hội văn hóa, nghệ thuật Hoa hồng tuyệt vời nhất mà họ từng tham dự”, báo cáo của BTC nêu.</p>    <p>Trước đó, ngày 4.3, ông Tô Văn Động, giám đốc Sở Văn hóa và Thể thao (VH-TT) Hà Nội, cho hay, Sở đã có văn bản yêu cầu đơn vị tổ chức "Lễ hội hoa hồng Bulgaria và bạn bè" báo cáo về tình trạng lộn xộn tại đây.</p>    <p>Theo đó, qua phản ánh của các cơ quan báo chí, tại "Lễ hội hoa hồng Bulgaria và bạn bè" đã diễn ra cảnh chen lấn, xô đẩy, lộn xộn khi mua vé vào xem. Các nội dung trưng bày trong khu vực lễ hội không đúng như quảng cáo của đơn vị tổ chức, sử dụng nhiều hoa giả, nhiều khách mua vé nhưng không được vào tham dự vì Ban tổ chức không ghi rõ thời gian.</p>	  	</div>', '4137-1488716254-14887132618476-thumbnail.jpg', '4137-1488716254-14887132618476-thumbnail.jpg', 1, 1, 1488717290, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
-(2, 0, 'Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia', '', '', '', 'tan-thay-via-he-long-duong-thanh-bai-xe-cho-quan-bia', '  		Ở Hà Nội, cảnh hàng quán bày bàn ghế tràn ra vỉa hè phục vụ khách đã trở thành phổ biến. Có những nơi, vỉa hè được tận dụng dường như không còn một khoảng trống nào. Hàng loạt những hàng ăn và quán bia chật ních bàn ăn, lan cả ra lòng đường ở góc phố.', '<div class="text-conent" itemprop="articleBody">  		<script type="text/javascript">window.onload = function () {resizeNewsImage("news-image", 500);}</script> <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 1" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_1_bwxo.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Nhà Hàng bia Lã Vọng đầu phố Hoàng Cầu (Gần nút giao với đường La Thành - Hào Nam) phía trước mặt tiền luôn chật kín các phương tiện dừng đỗ.</p>    <p style="color:#0000FF;font-style:italic;text-align:center;"></p>    <p style="color:#0000FF;font-style:italic;text-align:center;"></p>    <p style="color:#0000FF;font-style:italic;text-align:center;"></p>    <p style="color:#0000FF;font-style:italic;text-align:center;"></p>    <p style="color:#0000FF;font-style:italic;text-align:center;"></p>    <p style="color:#0000FF;font-style:italic;text-align:center;"></p>    <p style="color:#0000FF;font-style:italic;text-align:center;"></p>    <p style="color:#0000FF;font-style:italic;text-align:center;"></p>    <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 2" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_2_gzbo.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;"></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Vỉa hè tại đây được tận dụng dường như không còn một khoảng trống nào.</p>    <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 3" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_3_clhw.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Ô tô dựng thành hàng 4 hàng 5 ra phía lòng đường.</p>    <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 4" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_4_zxzs.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Tại khu vực này là điểm giao cắt với một số tuyến đường như Ô Chợ Dừa, La Thành, Hoàng Cầu... nên thường xuyên có mật độ phương tiện tham gia giao thông rất lớn.</p>    <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 5" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_5_jzbi.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Phần vỉa hè ít ỏi còn lạ được nhà hàng tận dụng tối đa để xe máy cho khách và là khu vực nướng, quay đồ ăn. Hình ảnh khói mù bốc lên do nướng đồ diễn ra thường xuyên.</p>    <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 6" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_6_dgco.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Hàng dài ô tô đỗ dưới lòng đường tại khu vực đường Nguyễn Khánh Toàn, nơi tập chung nhiều quán bia và nhà hàng ăn uống.</p>    <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 7" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_7_mmgd.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;"></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Xe máy dựng hàng dài san sát khắp vỉa hè của khu vục này.</p>    <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 8" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_8_ajhf.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Lòng đường là nơi đỗ xe của nhà hàng bia hơi giữa phố Xã Đàn.</p>    <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 9" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_9_oigi.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Cảnh tượng chiếm dụng vỉa hè, lòng đường cũng diễn ra tại hàng loạt quán bia, nhà hàng ở góc phố Nguyễn Khánh Toàn - &nbsp;Nguyễn Văn Huyên.</p>    <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 10" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_10_ohgc.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Không những được tận dụng lòng đường ngay trước nhà hàng, ô tô còn được dừng đỗ thành hàng dài dưới lòng đường phía đối diện.</p>    <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 11" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_11_dprq.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Nhà hàng bia hơi góc phố Cửa Bắc - Yên Phụ cũng luôn chật kín vỉa hè.</p>    <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 12" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_12_xokq.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Dải phân cách cứng giữa đường cũng được nhà hàng này tận dụng làm nơi để xe máy cho thực khách.</p>    <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 13" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_13_zina.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Một đoạn phố Đào Tấn chật kín xe.</p>    <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 14" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_14_ajdv.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Hàng loạt&nbsp;những hàng ăn và quán bia chật ních bàn ăn, lan cả ra lòng đường ở góc phố Hào Nam - An Trạch.</p>    <p align="center" style="color:#0000FF;font-style:italic;text-align:center;"><img class="news-image" alt="Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 15" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_15_tjbu.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Lòng đường Ô Chợ Dừa cũng là điểm đỗ xe cho một số quán ăn, nhà hàng.</p>	  	</div>', '7698-1488705903-thumbnail.jpg', '7698-1488705903-thumbnail.jpg', 2, 1, 1488717290, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
-(3, 0, 'Xuất hiện 68 “mắt thần” trên cao tốc Long Thành', '', '', '', 'xuat-hien-68-mat-than-tren-cao-toc-long-thanh', '  		Hệ thống camera này sẽ tự động nhận diện các phương tiện vi phạm về tốc độ, dừng đỗ sai quy định,…', '<div class="text-conent" itemprop="articleBody">  		<script type="text/javascript">window.onload = function () {resizeNewsImage("news-image", 500);}</script> <p align="center"><img class="news-image" alt="Xuất hiện 68 “mắt thần” trên cao tốc Long Thành - 1" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488711291-148871105212488-anh1.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Cao tốc TP.HCM - Long Thành - Dầu Giây vừa lắp đặt 68 camera trên toàn tuyến. (Ảnh minh họa: Báo giao thông)</p>    <p>Ngày 5.3, Tổng Công ty Đầu tư phát triển đường cao tốc Việt Nam (VEC) cho biết, công ty đã đưa vào khai thác Trung tâm Quản lý điều hành giao thông thông minh (ITS) cho tuyến đường cao tốc TP.HCM - Long Thành - Dầu Giây với tổng vốn đầu tư hơn 1.068 tỉ đồng.</p>    <p>Hệ thống ITS gồm 68 camera được lắp đặt dọc tuyến, giúp nhân viên giám sát nhận biết mật độ phương tiện đang lưu thông, nhanh chóng phát hiện các sự cố giao thông xảy ra theo thời gian thực.</p>    <p>Toàn bộ dữ liệu hình ảnh, video trên tuyến được truyền về Trung tâm điều hành ITS đặt tại Km6+300 (thuộc phường Phú Hữu, quận 9, TP.HCM) và được nhân viên theo dõi 24/24. Ngoài ra, hệ thống còn cung cấp thông tin cho các tài xế về tình hình giao thông trên tuyến thông qua 2 màn hình khổ lớn được lắp đặt tại Km41+100.</p>    <p>Trao đổi với PV, ông Đỗ Chí Chung - Chánh Văn phòng VEC cho biết, hệ thống ITS có khả năng tự động phát hiện các trường hợp dừng đỗ xe sai quy định, vi phạm về tốc độ các vi phạm khác.</p>    <p>“Hệ thống có khả năng tự động chụp lại hình ảnh của các phương tiện vi phạm. Từ đó, nếu lực lượng cảnh sát giao thông có yêu cầu thì VEC sẽ cung cấp đầy đủ dữ liệu để họ ra quyết định xử phạt”, ông Chung nói.</p>    <p align="center"><img class="news-image" alt="Xuất hiện 68 “mắt thần” trên cao tốc Long Thành - 2" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488711291-14887110527002-anh2.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Giao diện xem tình trạng giao thông trực tuyến tại nhiều khu vực ở TP.HCM</p>    <p>Đại diện VEC cho biết thêm, kể từ tháng 4.2017 sẽ đưa vào sử dụng hệ thống thu phí kín bằng thẻ RFID. RFID là một loại thẻ lưu dữ liệu bằng chip nhớ và dữ liệu này có thể trao đổi với máy tính bằng sóng radio thông qua các thiết bị đọc</p>    <p>Công nghệ thu phí mới cho phép thu phí theo cơ chế tự động nhận dạng biển số xe bằng camera, tự động phân loại xe bằng hồng ngoại kết hợp vòng từ, và camera kiểm soát tại tất cả các làn ra, vào đường cao tốc. Theo đó, tất cả các phương tiện khi vào đường cao tốc đều được nhận dạng, mã hóa các dữ liệu trên, rồi lưu trên thẻ kiểm soát RFID.</p>    <p>Ngoài 33 làn thu phí sử dụng công nghệ RFID, trên tuyến cao tốc TP.Hồ Chí Minh - Long Thành - Dầu Giây còn bố trí 8 làn thu phí tự động không dừng (ETC).</p>    <p>Theo VEC, kể từ khi thông xe kỹ thuật 20km đầu tiên từ ngày 2.1.2014, tính đến nay, tuyến cao tốc TP.HCM - Long Thành - Dầu Giây đã phục vụ 30 triệu lượt phương tiện an toàn và thông suốt, với lưu lượng bình quân vào khoảng 37.000 - 40.000 lượt phương tiện/ngày đêm. Cao điểm trong dịp Tết Nguyên đán Đinh Dậu 2017 vừa qua, có ngày tuyến phục vụ tới 65.000 lượt phương tiện.</p>    <table align="center" cellpadding="3" cellspacing="0" style="border:1px solid #bbb;background-color:#DEF1C8;margin:5px;margin-left:auto;margin-right:auto" width="500">  	<tbody>  		<tr>  			<td style="text-align:justify" valign="top">  			<p><strong>Lên mạng quan sát giao thông TP.HCM</strong></p>    			<p>Sở GTVT TP.HCM vừa bổ sung vào bản đồ số giao thông một số camera lắp đặt tại các “điểm nóng” kẹt xe, như: Cầu Nhị Thiên Đường 1 (Q.8), khu vực xây dựng nút giao thông Gò Mây (Q.Bình Tân) trên Quốc lộ 1,&nbsp; khu vực xây dựng hầm chui An Sương (Q.12 và huyện Hóc Môn) trên đường Trường Chinh - Quốc lộ 1 và Quốc lộ 22, khu vực xây dựng công trình chống kẹt xe cho sân bay Tân Sơn Nhất vị trí cầu vượt Trường Sơn (Q.Tân Bình) và cầu vượt vòng xoay Nguyễn Kiệm - Nguyễn Thái Sơn (Q.Gò Vấp, Phú Nhuận).</p>    			<p>Để xem hình ảnh trực tiếp do các camera này ghi nhận được, người dân TP.HCM chỉ việc truy cập vào địa chỉ http://giaothong.hochiminhcity.gov.vn hoặc cài đặt ứng dụng “TTGT Tp Hồ Chí Minh” trên điện thoại thông minh chạy hệ điều hành Android và iOS.</p>  			</td>  		</tr>  	</tbody>  </table>    <p></p>	  	</div>', '3826-1488711290-14887110791401-thumbnail.jpg', '3826-1488711290-14887110791401-thumbnail.jpg', 3, 1, 1488717291, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
-(4, 0, 'Hà Nội: Bắt đầu kiểm tra hiện trạng biệt thự cổ', '', '', '', 'ha-noi-bat-dau-kiem-tra-hien-trang-biet-thu-co', '  		Trong tháng 3/2017, Tổ công tác liên ngành sẽ thực hiện kiểm tra hiện trạng các biệt thự thuộc đối tượng quản lý, sử dụng theo “Quy chế quản lý, sử dụng nhà biệt thự được xây dựng từ trước năm 1954 trên địa bàn TP” tại địa bàn quận Hai Bà Trưng.', '<div class="text-conent" itemprop="articleBody">  		<script type="text/javascript">window.onload = function () {resizeNewsImage("news-image", 500);}</script> <p style="color:#0000FF;font-style:italic;text-align:center;"></p>    <p align="center"><img class="news-image" alt="Hà Nội: Bắt đầu kiểm tra hiện trạng biệt thự cổ - 1" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488708273-nhungbietthuco1jpg.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Hà Nội sẽ tiến hành kiểm tra hiện trạng biệt thự cổ&nbsp;</p>    <p>Trước đó, ngày 1/3, Sở Xây dựng đã ban hành thông báo số 57/TB-SXD về kiểm tra hiện trạng nhà biệt thự trên địa bàn Thành phố Hà Nội.</p>    <p>Thực hiện chỉ đạo của UBND TP giao, Sở Xây dựng sẽ chủ trì cùng các sở, ngành, UBND các quận: Hoàn Kiếm, Hai Bà Trưng, Ba Đình, Tây Hồ và các đơn vị liên quan triển khai thực hiện việc rà soát danh mục biệt thự thuộc đối tượng quản lý, sử dụng theo “Quy chế quản lý, sử dụng nhà biệt thự được xây dựng từ trước năm 1954 trên địa bàn TP Hà Nội” và báo cáo UBND TP trước ngày 30/4/2017.</p>    <p>Trong tháng 3/2017, Tổ công tác liên ngành được thành lập theo Quyết định của Sở Xây dựng Hà Nội. Theo đó, sẽ thực hiện kiểm tra hiện trạng các biệt thự thuộc đối tượng quản lý, sử dụng được xây dựng từ trước năm 1954 tại địa bàn quận Hai Bà Trưng.</p>    <p>Theo số liệu thống kê tính đến năm 2015, trên địa bàn thành phố&nbsp; còn 1.565 biệt thự do Pháp để lại. Trong đó được chia làm 4 nhóm khác nhau, nhóm một có 225 biệt thự, nhóm hai có 282 biệt thự, nhóm ba có 646 biệt thự.</p>	  	</div>', '397-1488708289-thumbnail.jpg', '397-1488708289-thumbnail.jpg', 4, 1, 1488717291, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
-(5, 0, 'Không khí lạnh tràn về, Bắc Bộ lại sắp chuyển mưa rét', '', '', '', 'khong-khi-lanh-tran-ve-bac-bo-lai-sap-chuyen-mua-ret', '  		Do ảnh hưởng của không khí lạnh, các tỉnh Bắc Bộ trời rét và có mưa vài nơi.', '<div class="text-conent" itemprop="articleBody">  		<script type="text/javascript">window.onload = function () {resizeNewsImage("news-image", 500);}</script> <p align="center"><img class="news-image" alt="Không khí lạnh tràn về, Bắc Bộ lại sắp chuyển mưa rét - 1" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488695709-148869403973463-r.jpg" width="500" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Không khí lạnh tăng cường, Bắc Bộ sắp chuyển mưa rét (ảnh minh họa).</p>    <p>Hôm nay (5/3), các tỉnh Bắc Bộ vẫn tiếp tục duy trì kiểu thời tiết rét nhẹ về đêm và sáng sớm, còn ban ngày trời có nắng, nền nhiệt dao động 20-26 độ C.</p>    <p></p>    <p>Tuy nhiên, theo Trung tâm Dự báo khí tượng thủy văn Trung ương, hình thái thời tiết này sẽ chấm dứt vào&nbsp;chiều tối 6/3 khi miền Bắc đón đợt không khí lạnh mới.</p>    <p></p>    <p>Ngày mai (6/3), bộ phận không khí lạnh này sẽ ảnh hưởng yếu các tỉnh phía đông Bắc Bộ. Đến ngày 7/3, không khí lạnh được tăng cường và ảnh hưởng đến hầu hết các tỉnh Bắc Bộ và bắc Trung Bộ.</p>    <p></p>    <p>Do ảnh hưởng của không khí lạnh, ngày mai ở phía đông Bắc Bộ có mưa và mưa nhỏ rải rác; từ đêm mai Bắc Bộ và bắc Trung Bộ có mưa, mưa nhỏ. Gió trong đất liền chuyển hướng đông bắc cấp 2-3, vùng ven biển cấp 3. Phía đông Bắc Bộ từ chiều tối và đêm mai trời chuyển rét với nhiệt độ thấp nhất phổ biến 14-17 độ C.</p>    <p></p>    <p>Hà Nội từ ngày mai có mưa nhỏ; từ đêm mai trời chuyển rét với nhiệt độ thấp nhất vào đêm và sáng sớm phổ biến 15-17 độ C.</p>    <p></p>    <p>Trong khi đó, khu vực vùng núi thấp nhất phổ biến 14-16 độ C, mức nhiệt cao nhất trong ngày một số nơi không quá 20 độ C.</p>    <p></p>    <p>Đợt lạnh dự báo kéo dài 3 ngày, từ mùng 7 đến hết 9/3.</p>    <p></p>    <p>Từ chiều mai, ở Bắc Vịnh Bắc Bộ và phía Bắc khu vực Bắc Biển Đông có gió đông bắc mạnh cấp 5, có lúc cấp 6, giật cấp 7; biển động. Sóng biển cao từ 1,5-2,0m.</p>	  	</div>', '3393-1488695709-148869403231244-thumbnail.jpg', '3393-1488695709-148869403231244-thumbnail.jpg', 5, 1, 1488717292, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
-(6, 0, 'Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi', '', '', '', 'ho-tay-hoi-thoi-ngap-rac-sau-khi-thao-do-nha-hang-noi', '  		Theo dự kiến, toàn bộ số thuyền và nhà nổi Hồ Tây phải di dời khỏi khu vực giải tỏa trước 10/3. Tuy nhiên sau mấy ngày tiến hành tháo dỡ, toàn bộ khu vực đang ngập ngụa rác thải, mùi hôi thối ô nhiễm bốc lên nồng nặc. Phóng viên báo điện tử Tiền Phong ghi nhận một số hình ảnh vào sáng nay (5/3) tại bến thuyền Hồ Tây (góc đường Thanh Niên - Nguyễn Đình Thi).', '<div class="text-conent" itemprop="articleBody">  		<script type="text/javascript">window.onload = function () {resizeNewsImage("news-image", 500);}</script> <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 1" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--1-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Sau khi UBND TP <a class=''TextlinkBaiviet'' href=''http://www.24h.com.vn/tin-ha-noi-c414.html'' title=''Hà Nội''>Hà Nội</a> yêu cầu tháo dỡ và di dời toàn bộ cầu tàu ra các nhà hàng nổi trên mặt Hồ Tây. Nơi đây lộ ra là một bãi rác khổng lồ mà trước kia các cầu tàu đã che khuất.</p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 2" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--2-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Một số cầu tàu vẫn đang được tiến hành tháo dỡ và đập bỏ.</p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 3" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--3-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Rác thải sinh hoạt cùng vật liệu xây dựng đã bị thải xuống khu vực này lâu ngày.</p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 4" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--4-.jpg" /></p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 5" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--5-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Các cầu tàu sau khi được di dời, nơi đây lộ ra là một bãi bồi sình lầy bốc mùi hôi thối khó tả.</p>    <p style="color:#0000FF;font-style:italic;text-align:center;"></p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 6" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--6-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Người dân sống ở ngay sát khu vực này lại một lần nữa phải chịu đựng cảnh ô nhiễm sau vụ cá Hồ Tây chết với số lượng lớn vào năm ngoái.</p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 7" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--7-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Nước hồ ở khu vực nhà hàng luôn ô nhiễm và có màu đen sẫm kiểu ao tù.</p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 8" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--8-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Dường như đã rất lâu nay, tất cả nước thải và rác sinh hoạt đã không được chú ý.</p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 9" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--9-.jpg" /></p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 10" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--10-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Thùng xốp cũ nát vương vãi khắp nơi, cỏ dại mọc um tùm trên bãi rác sình lầy.</p>    <p style="color:#0000FF;font-style:italic;text-align:center;"></p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 11" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--11-.jpg" /></p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 12" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--12-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Rác thải kéo dài ôm sát bờ quanh khu vực bến thuyền này.</p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 13" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--13-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Cầu tàu sau khi di dời, lưới sắt tạm bợ được dựng lên để tránh nguy hiểm cho người dân.&nbsp;</p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 14" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--14-.jpg" /></p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 15" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--15-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Nhìn cảnh này, ít ai nghĩ trước kia mỗi ngày có tới hàng ngàn thực khách qua đây sử dụng dịch vụ ăn uống.</p>    <p style="color:#0000FF;font-style:italic;text-align:center;"></p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 16" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--16-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">&nbsp;Những nhà hàng nổi nằm vô hồn trên mặt nước sau khi được&nbsp;UBND TP Hà Nội yêu cầu dừng hoạt động.</p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 17" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--17-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">&nbsp;Nhà hoang cùng đồ đạc vương vãi khắp nơi.</p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 18" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--18-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Nhà hàng Tây Long 2 đang tiến hành táo dỡ cầy tàu bằng bê tông cốt thép chắc chắn.</p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 19" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--19-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Rác thải xây dựng vẫn ngổn ngang dọc vỉa hè ở khu vực góc đường Nguyễn Đình Thi.</p>    <p align="center"><img class="news-image" alt="Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 20" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--20-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Một số nhà hàng treo biển thanh lý đồ ngày tại khu vực tháo dỡ.</p>    <p></p>	  	</div>', '2291-1488696121-thumbnail.jpg', '2291-1488696121-thumbnail.jpg', 6, 1, 1488717293, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
-(7, 1, 'Trả 550 triệu, chủ nhân cá vàng óng ánh vẫn chưa bán', '', '', '', 'tra-550-trieu-chu-nhan-ca-vang-ong-anh-van-chua-ban', '  		Con cá lạ toàn thân vàng óng dài gần 1 m, nghi là cá sủ vàng, đã được thương lái trả giá hơn 550 triệu đồng nhưng anh Đậu Văn Sử (Nghệ An) vẫn chưa bán.', '<div class="text-conent" itemprop="articleBody">  		<script type="text/javascript">window.onload = function () {resizeNewsImage("news-image", 500);}</script> <p align="center"><img class="news-image" alt="Trả 550 triệu, chủ nhân cá vàng óng ánh vẫn chưa bán - 1" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696921-ca-vang--1-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Con cá lạ toàn thân màu vàng óng nghi cá sủ vàng do anh Đậu Văn Sử đánh bắt được</p>    <p></p>    <p>Sáng ngày 5-3, trao đổi với phóng viên Báo&nbsp;Người Lao Động,&nbsp;anh Đậu Văn Sử (24 tuổi, trú phường Nghi Tân, thị xã Cửa Lò, tỉnh Nghệ An), cho biết: “Hiện con cá toàn thân màu vàng óng dài gần 1 m, nặng hơn 8 kg, nghi là&nbsp;cá sủ vàng&nbsp;mà tôi bắt được trước đó hiện đang được nuôi nhốt trên sông. Cá vẫn khỏe mạnh bình thường. Hai ngày nay, có một số người đến trả tôi con cá trên với giá 550 triệu đồng nhưng tôi chưa bán”.</p>    <p>Khi được hỏi dự kiến anh sẽ bán con cá nghi cá sủ vàng trên với giá bao nhiêu, anh Sử cho biết nếu có người trả với giá trên 600 triệu đồng anh sẽ bán.</p>    <p align="center"><img class="news-image" alt="Trả 550 triệu, chủ nhân cá vàng óng ánh vẫn chưa bán - 2" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696921-ca-vang--2-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Hiện tại con cá lạ anh Sử bắt được vẫn sống khỏe</p>    <p></p>    <p>Trước đó, như&nbsp;đã đưa tin, vào khoảng 6 giờ sáng ngày 3-3, trong lúc thả lưới đánh bắt cá trên sông Cấm (đoạn qua địa bàn huyện Nghi Lộc, tỉnh Nghệ An), anh Đậu Văn Sử đã bắt được con cá lạ nặng hơn 8 kg, dài gần 1 m.</p>    <p>Khi đưa con cá lên thuyền, phát hiện con cá toàn thân màu vàng óng, nghi là&nbsp;cá sủ vàng&nbsp;nên anh Sử đã để cá ngoài thuyền trên sông để đảm bảo cá còn sống khỏe mạnh.</p>    <p align="center"><img class="news-image" alt="Trả 550 triệu, chủ nhân cá vàng óng ánh vẫn chưa bán - 3" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696921-ca-vang--3-.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Một số thương lái trả con cá lạ trên 550 triệu đồng nhưng anh Sử chưa bán</p>    <p></p>    <p>Biết tin anh Sử bắt được con cá lớn, nghi là cá sủ vàng nên nhiều ngày nay, mỗi ngày có hàng trăm người dân khắp nơi kéo đến để được tận mắt chứng kiến con cá lạ này.</p>    <p>Được biết, cá sủ vàng có tên khoa học là Otolithoides biauritus, rất quý hiếm, đặc biệt giá trị lớn trong lĩnh vực y học. Bong bóng cá được sử dụng làm nguyên liệu hữu cơ sản xuất chỉ tự tiêu, có khả năng tự hủy sau khi phẫu thuật, không gây tổn thương đối với mô, giảm thiểu nguy cơ viêm nhiễm nên giá cao. Trước đây, một số ngư dân ở <a class=''TextlinkBaiviet'' href=''http://www.24h.com.vn/nghe-an-c46e4361.html'' title=''Nghệ An''>Nghệ An</a> đã từng bắt được loại cá này và được các thương lái mua với giá hàng trăm triệu đồng một con.</p>    <p></p>    <p></p>	  	</div>', '7643-1488696875-thumbnail.jpg', '7643-1488696875-thumbnail.jpg', 7, 1, 1488717293, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
-(8, 1, 'Ông Đoàn Ngọc Hải: Quận 1 sẽ “phạt nguội” người lấn chiếm vỉa hè', '', '', '', 'ong-doan-ngoc-hai-quan-1-se-phat-nguoi-nguoi-lan-chiem-via-he', '  		Đây là một trong những giải pháp “dài hơi” nhằm thực hiện “chiến dịch” lập lại trật tự lòng đường, vỉa hè.', '<div class="text-conent" itemprop="articleBody">  		<script type="text/javascript">window.onload = function () {resizeNewsImage("news-image", 500);}</script> <p align="center"><img class="news-image" alt="Ông Đoàn Ngọc Hải: Quận 1 sẽ “phạt nguội” người lấn chiếm vỉa hè - 1" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488695234-148869518712591-v.jpg" width="500" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Những ngày qua, ông Đoàn Ngọc Hải đã trực tiếp xuống đường chỉ đạo công tác lập lại trật tự lòng đường, vỉa hè.</p>    <p>Trao đổi với PV sáng 5.3, ông Đoàn Ngọc Hải - Phó Chủ tịch UBND quận 1 (Q.1) cho biết, sau một thời gian trực tiếp chỉ đạo công tác lập lại trật tự lòng đường, vỉa hè thì ông nhận ra đây là công việc không dễ dàng như ông nghĩ. Có nhiều trường hợp, đoàn vừa ra quân kiểm tra, xử lý thì những người kinh doanh lấn chiếm vỉa hè đã kịp thời dẹp đi; tới khi đoàn rời đi thì họ lại bày ra buôn bán.</p>    <p>Do đó, ông Hải cho biết, Q.1 sẽ có những giải pháp “dài hơi” cho việc này. Đầu tiên là công tác tuyên truyền vẫn tiếp tục được đẩy mạnh để “đánh” vào ý thức của người dân. Sau là công tác cán bộ, phải quán triệt tinh thần “quyết tâm, quyết liệt” tới các cán bộ và sẵn sàng xử lý những cán bộ dưới quyền chưa hoàn thành chức trách, nhiệm vụ.</p>    <p>Tuy nhiên, Phó Chủ tịch UBND Q.1 cũng nhìn nhận, giải pháp hiệu quả nhất hiện nay là lực lượng chức năng trực tiếp đi kiểm tra và phạt nặng người vi phạm. “Tôi thấy cách này là nhanh nhất, đánh vào túi tiền và tâm lý của người dân. Từ đó, mỗi người phải tự điều chỉnh hành vi của mình ngay, còn nếu không thì phải chấp nhận nộp phạt”, ông Hải nói.</p>    <p>Bên cạnh đó, về giải pháp lâu dài, ông Hải cho biết, lực lượng chức năng quận sẽ có phương án “phạt nguội” các trường hợp lấn chiếm lòng đường, vỉa hè. “Về phương án phạt nguội, các chiến sĩ, cán bộ CSGT là nắm vững và nắm rõ nhất”, ông Hải nói.</p>    <p>Trao đổi với PV, thiếu tá Lưu Minh Sỹ - Đội phó Đội CSGT Q.1 cho biết, để triển khai công tác phạt nguội, CSGT Q.1 phải có thiết bị kỹ thuật do cơ quan có thẩm quyền cung cấp và phải có kiểm định.</p>    <p>“Camera hay máy chụp hình phải do Bộ Công an kiểm định thì mới có đủ cơ sở để xử lý phạt nguội. Về chương trình quay phim, chụp ảnh các lỗi vi phạm để phạt nguội trên địa bàn thành phố, hiện chỉ mới có Phòng CSGT TP.HCM triển khai”, thiếu tá Sỹ nói.</p>    <p>“Nếu dùng hình ảnh từ camera để phạt nguội lỗi lấn chiếm lòng đường, vỉa hè thì thông tin đó phải thể hiện được hết số nhà, tên đường, có biển báo cấm hay không,... và thiết bị ghi hình phải là phương tiện kỹ thuật chuyên dụng dùng để quyết định xử phạt”, thiếu tá Sỹ thông tin thêm.</p>    <p>Theo ông Sỹ, Q.1 có gần 140 tuyến đường và nhu cầu đậu đỗ xe của người dân rất cao. Do đó, khi lực lượng chức năng xử lý đầu này thì đầu kia lại có người vi phạm.</p>    <p>“Vậy nên điều quan trọng nhất là ở ý thức của người dân và các hàng quán phải sắp xếp chỗ để xe thế nào cho hợp lý. Hiện, CSGT quận chủ yếu xử phạt các lỗi xảy ra dưới lòng đường, còn các lỗi vi phạm trên vỉa hè thì do công an phường, quận xử phạt”, ông Sỹ nói.</p>	  	</div>', '7091-1488695234-148869518174575-thumbnail.jpg', '7091-1488695234-148869518174575-thumbnail.jpg', 8, 1, 1488717294, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
-(9, 1, 'Phát hiện thi thể tóc bạc trắng, nổi lập lờ dưới kênh', '', '', '', 'phat-hien-thi-the-toc-bac-trang-noi-lap-lo-duoi-kenh', '  		Nhiều người ở trung tâm TP. Cần Thơ hoảng hốt khi phát hiện thi thể phụ nữ nổi lập lờ dưới kênh nước. Vụ việc thu hút nhiều người đến xem khiến giao thông qua khu vực gặp khó khăn.', '<div class="text-conent" itemprop="articleBody">  		<script type="text/javascript">window.onload = function () {resizeNewsImage("news-image", 500);}</script> <p align="center"><img class="news-image" alt="Phát hiện thi thể tóc bạc trắng, nổi lập lờ dưới kênh - 1" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488694683-14886946286803-hi--nh-1.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">&nbsp;Hiện trường &nbsp;vụ việc</p>    <p>Thông tin ban đầu, khoảng 9h30 ngày 5/3, người dân hoảng hốt khi phát phát hiện thi thể một&nbsp;người phụ nữ nổi lập lờ trên kênh&nbsp;Cái Khế, đoạn dưới chân cầu Nhị Kiều (phường An Nghiệp, quận Ninh Kiều, TP Cần Thơ). Vụ việc sau đó được trình báo lực lượng chức năng.</p>    <p>Ghi nhận ban đầu, nạn nhân là nữ giới, tóc bạc trắng, khoảng 60 tuổi, mặc đồ bộ bông&nbsp;đỏ, thi thể đang trong giai đoạn phân huỷ. Công an phường An Nghiệp cùng đơn vị chức năng quận Ninh Kiều đã có mặt ghi nhận&nbsp;vụ&nbsp;việc,&nbsp;điều&nbsp;tra nguyên nhân tử vong của nạn nhân.</p>    <p align="center"><img class="news-image" alt="Phát hiện thi thể tóc bạc trắng, nổi lập lờ dưới kênh - 2" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488694684-148869462832119-hi--nh-2.jpg" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Thi thể nạn nhân được đưa đi khám nghiệm&nbsp;</p>    <p>Do vụ việc xảy ra giữa trung tâm TP Cần Thơ nên đông người dân đứng xem khiến xe cộ qua khu vực di chuyển khó khăn. Lực lượng chức năng địa phương đã túc trực để điều tiết giao thông.</p>    <p>Đến khoảng 11h cùng, thi thể nạn nhân được đưa đi khám nghiệm, điều tra làm rõ nguyên nhân cái chết.</p>    <p>Công an đang tiếp tục làm rõ vụ việc.</p>	  	</div>', '1068-1488694683-148869461983908-thumbnail.jpg', '1068-1488694683-148869461983908-thumbnail.jpg', 9, 1, 1488717294, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', '');
+(1, 0, 'Lễ hội hoa hồng: Mua vé không vào được do khách VIP đông', '', '', '', 'le-hoi-hoa-hong-mua-ve-khong-vao-duoc-do-khach-vip-dong', '  		Phản hồi lại những thông tin thất vọng về lễ hội hoa hồng, Ban tổ chức lại cho rằng lễ hội “đầy tính văn hóa và nghệ thuật”, “nghệ thuật hoa hồng tuyệt vời nhất”.', '<div class=\"text-conent\" itemprop=\"articleBody\">  		<script type=\"text/javascript\">window.onload = function () {resizeNewsImage(\"news-image\", 500);}</script> <p align=\"center\"><img class=\"news-image\" alt=\"Lễ hội hoa hồng: Mua vé không vào được do khách VIP đông - 1\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488716254-148871328476752-1488530020-148852778216793-le-hoi-hoa-hong-3.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Nhiều người thất vọng về Lễ hội hoa hồng Bulgaria ở <a class=\'TextlinkBaiviet\' href=\'http://www.24h.com.vn/tin-ha-noi-c414.html\' title=\'Hà Nội\'>Hà Nội</a> (ảnh: Hồng Phú)&nbsp;</p>    <p>Liên quan đến những thông tin về Lễ hội hoa hồng Bulgaria hỗn loạn, trưng bày nhiều hoa giả, không giống như quảng cáo, ngày 5.3, Ban tổ chức lễ hội này đã có báo cáo gửi Sở Văn hóa – Thể thao Hà Nội.</p>    <p>Về việc nhiều người mua vé nhưng không được vào trong, gây lên chen lấn, hỗn loạn ngay trong ngày đầu khai mạc, ban tổ chức cho hay, lễ hội có sự &nbsp;tham gia của đại diện UBND Tp Hà Nội, các sở ban ngành và 80 đại sứ quán các nước tại Hà Nội. “Do số lượng VIP tham gia đông, thời lượng khai mạc dài hơn dự kiến, bao gồm cả lễ kỷ niệm quốc khánh Bulgaria nên thời gian dành cho khách tham dự bị muộn từ 10h chuyển xuống 11h”.</p>    <p>Ban tổ chức cho rằng cảnh lộn xộn phía trước cổng một phần do các thành phần phe vé tạo ra gây hiệu ứng đám đông để trục lợi. Vé đã được BTC phân phối hầu hết qua các kênh online, các công ty lữ hành, các hội hữu nghị từ trước.</p>    <p>Trước phản ánh lễ hội trưng bày nhiều hoa hồng giả, không đúng như quảng cáo, BTC cho biết toàn lễ hội được trang trí bằng 300 giống hoa hồng đến từ khắp nơi trên thế giới và được nhiệt đới hóa cho phù hợp với khí hậu Việt Nam. Ngoại trừ cổng hoa trên cầu được kết bằng hoa lụa tạo hiệu ứng thẩm mỹ và để phù hợp với luật bảo vệ môi trường của Bulgaria, tất cả các bồn hoa, chậu cảnh, décor bên trong đều là hoa tươi được bổ sung và thay mới hàng ngày.</p>    <p>“Hầu hết khách tham dự đều cảm thấy hân hoan với một lễ hội hoa hồng lớn mang đầy tính văn hóa và nghệ thuật chứ không phải là một triển lãm hay hội chợ hoa đơn thuần.&nbsp; Đại sứ quán Bulgaria cùng đoàn nghệ sĩ Bulgaria sang tham dự Lễ hội đều cảm thấy đây là một lễ hội văn hóa, nghệ thuật Hoa hồng tuyệt vời nhất mà họ từng tham dự”, báo cáo của BTC nêu.</p>    <p>Trước đó, ngày 4.3, ông Tô Văn Động, giám đốc Sở Văn hóa và Thể thao (VH-TT) Hà Nội, cho hay, Sở đã có văn bản yêu cầu đơn vị tổ chức \"Lễ hội hoa hồng Bulgaria và bạn bè\" báo cáo về tình trạng lộn xộn tại đây.</p>    <p>Theo đó, qua phản ánh của các cơ quan báo chí, tại \"Lễ hội hoa hồng Bulgaria và bạn bè\" đã diễn ra cảnh chen lấn, xô đẩy, lộn xộn khi mua vé vào xem. Các nội dung trưng bày trong khu vực lễ hội không đúng như quảng cáo của đơn vị tổ chức, sử dụng nhiều hoa giả, nhiều khách mua vé nhưng không được vào tham dự vì Ban tổ chức không ghi rõ thời gian.</p>	  	</div>', '4137-1488716254-14887132618476-thumbnail.jpg', '4137-1488716254-14887132618476-thumbnail.jpg', 1, 1, 1488717290, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
+(2, 0, 'Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia', '', '', '', 'tan-thay-via-he-long-duong-thanh-bai-xe-cho-quan-bia', '  		Ở Hà Nội, cảnh hàng quán bày bàn ghế tràn ra vỉa hè phục vụ khách đã trở thành phổ biến. Có những nơi, vỉa hè được tận dụng dường như không còn một khoảng trống nào. Hàng loạt những hàng ăn và quán bia chật ních bàn ăn, lan cả ra lòng đường ở góc phố.', '<div class=\"text-conent\" itemprop=\"articleBody\">  		<script type=\"text/javascript\">window.onload = function () {resizeNewsImage(\"news-image\", 500);}</script> <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 1\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_1_bwxo.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Nhà Hàng bia Lã Vọng đầu phố Hoàng Cầu (Gần nút giao với đường La Thành - Hào Nam) phía trước mặt tiền luôn chật kín các phương tiện dừng đỗ.</p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\"></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\"></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\"></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\"></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\"></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\"></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\"></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\"></p>    <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 2\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_2_gzbo.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\"></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Vỉa hè tại đây được tận dụng dường như không còn một khoảng trống nào.</p>    <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 3\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_3_clhw.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Ô tô dựng thành hàng 4 hàng 5 ra phía lòng đường.</p>    <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 4\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_4_zxzs.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Tại khu vực này là điểm giao cắt với một số tuyến đường như Ô Chợ Dừa, La Thành, Hoàng Cầu... nên thường xuyên có mật độ phương tiện tham gia giao thông rất lớn.</p>    <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 5\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_5_jzbi.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Phần vỉa hè ít ỏi còn lạ được nhà hàng tận dụng tối đa để xe máy cho khách và là khu vực nướng, quay đồ ăn. Hình ảnh khói mù bốc lên do nướng đồ diễn ra thường xuyên.</p>    <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 6\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_6_dgco.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Hàng dài ô tô đỗ dưới lòng đường tại khu vực đường Nguyễn Khánh Toàn, nơi tập chung nhiều quán bia và nhà hàng ăn uống.</p>    <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 7\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_7_mmgd.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\"></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Xe máy dựng hàng dài san sát khắp vỉa hè của khu vục này.</p>    <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 8\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_8_ajhf.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Lòng đường là nơi đỗ xe của nhà hàng bia hơi giữa phố Xã Đàn.</p>    <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 9\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_9_oigi.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Cảnh tượng chiếm dụng vỉa hè, lòng đường cũng diễn ra tại hàng loạt quán bia, nhà hàng ở góc phố Nguyễn Khánh Toàn - &nbsp;Nguyễn Văn Huyên.</p>    <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 10\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_10_ohgc.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Không những được tận dụng lòng đường ngay trước nhà hàng, ô tô còn được dừng đỗ thành hàng dài dưới lòng đường phía đối diện.</p>    <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 11\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_11_dprq.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Nhà hàng bia hơi góc phố Cửa Bắc - Yên Phụ cũng luôn chật kín vỉa hè.</p>    <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 12\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_12_xokq.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Dải phân cách cứng giữa đường cũng được nhà hàng này tận dụng làm nơi để xe máy cho thực khách.</p>    <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 13\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_13_zina.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Một đoạn phố Đào Tấn chật kín xe.</p>    <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 14\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_14_ajdv.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Hàng loạt&nbsp;những hàng ăn và quán bia chật ních bàn ăn, lan cả ra lòng đường ở góc phố Hào Nam - An Trạch.</p>    <p align=\"center\" style=\"color:#0000FF;font-style:italic;text-align:center;\"><img class=\"news-image\" alt=\"Tận thấy vỉa hè, lòng đường thành bãi xe cho... quán bia - 15\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488705715-quan_bia_lan_chiem_via_he_15_tjbu.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Lòng đường Ô Chợ Dừa cũng là điểm đỗ xe cho một số quán ăn, nhà hàng.</p>	  	</div>', '7698-1488705903-thumbnail.jpg', '7698-1488705903-thumbnail.jpg', 2, 1, 1488717290, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
+(3, 0, 'Xuất hiện 68 “mắt thần” trên cao tốc Long Thành', '', '', '', 'xuat-hien-68-mat-than-tren-cao-toc-long-thanh', '  		Hệ thống camera này sẽ tự động nhận diện các phương tiện vi phạm về tốc độ, dừng đỗ sai quy định,…', '<div class=\"text-conent\" itemprop=\"articleBody\">  		<script type=\"text/javascript\">window.onload = function () {resizeNewsImage(\"news-image\", 500);}</script> <p align=\"center\"><img class=\"news-image\" alt=\"Xuất hiện 68 “mắt thần” trên cao tốc Long Thành - 1\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488711291-148871105212488-anh1.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Cao tốc TP.HCM - Long Thành - Dầu Giây vừa lắp đặt 68 camera trên toàn tuyến. (Ảnh minh họa: Báo giao thông)</p>    <p>Ngày 5.3, Tổng Công ty Đầu tư phát triển đường cao tốc Việt Nam (VEC) cho biết, công ty đã đưa vào khai thác Trung tâm Quản lý điều hành giao thông thông minh (ITS) cho tuyến đường cao tốc TP.HCM - Long Thành - Dầu Giây với tổng vốn đầu tư hơn 1.068 tỉ đồng.</p>    <p>Hệ thống ITS gồm 68 camera được lắp đặt dọc tuyến, giúp nhân viên giám sát nhận biết mật độ phương tiện đang lưu thông, nhanh chóng phát hiện các sự cố giao thông xảy ra theo thời gian thực.</p>    <p>Toàn bộ dữ liệu hình ảnh, video trên tuyến được truyền về Trung tâm điều hành ITS đặt tại Km6+300 (thuộc phường Phú Hữu, quận 9, TP.HCM) và được nhân viên theo dõi 24/24. Ngoài ra, hệ thống còn cung cấp thông tin cho các tài xế về tình hình giao thông trên tuyến thông qua 2 màn hình khổ lớn được lắp đặt tại Km41+100.</p>    <p>Trao đổi với PV, ông Đỗ Chí Chung - Chánh Văn phòng VEC cho biết, hệ thống ITS có khả năng tự động phát hiện các trường hợp dừng đỗ xe sai quy định, vi phạm về tốc độ các vi phạm khác.</p>    <p>“Hệ thống có khả năng tự động chụp lại hình ảnh của các phương tiện vi phạm. Từ đó, nếu lực lượng cảnh sát giao thông có yêu cầu thì VEC sẽ cung cấp đầy đủ dữ liệu để họ ra quyết định xử phạt”, ông Chung nói.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Xuất hiện 68 “mắt thần” trên cao tốc Long Thành - 2\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488711291-14887110527002-anh2.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Giao diện xem tình trạng giao thông trực tuyến tại nhiều khu vực ở TP.HCM</p>    <p>Đại diện VEC cho biết thêm, kể từ tháng 4.2017 sẽ đưa vào sử dụng hệ thống thu phí kín bằng thẻ RFID. RFID là một loại thẻ lưu dữ liệu bằng chip nhớ và dữ liệu này có thể trao đổi với máy tính bằng sóng radio thông qua các thiết bị đọc</p>    <p>Công nghệ thu phí mới cho phép thu phí theo cơ chế tự động nhận dạng biển số xe bằng camera, tự động phân loại xe bằng hồng ngoại kết hợp vòng từ, và camera kiểm soát tại tất cả các làn ra, vào đường cao tốc. Theo đó, tất cả các phương tiện khi vào đường cao tốc đều được nhận dạng, mã hóa các dữ liệu trên, rồi lưu trên thẻ kiểm soát RFID.</p>    <p>Ngoài 33 làn thu phí sử dụng công nghệ RFID, trên tuyến cao tốc TP.Hồ Chí Minh - Long Thành - Dầu Giây còn bố trí 8 làn thu phí tự động không dừng (ETC).</p>    <p>Theo VEC, kể từ khi thông xe kỹ thuật 20km đầu tiên từ ngày 2.1.2014, tính đến nay, tuyến cao tốc TP.HCM - Long Thành - Dầu Giây đã phục vụ 30 triệu lượt phương tiện an toàn và thông suốt, với lưu lượng bình quân vào khoảng 37.000 - 40.000 lượt phương tiện/ngày đêm. Cao điểm trong dịp Tết Nguyên đán Đinh Dậu 2017 vừa qua, có ngày tuyến phục vụ tới 65.000 lượt phương tiện.</p>    <table align=\"center\" cellpadding=\"3\" cellspacing=\"0\" style=\"border:1px solid #bbb;background-color:#DEF1C8;margin:5px;margin-left:auto;margin-right:auto\" width=\"500\">  	<tbody>  		<tr>  			<td style=\"text-align:justify\" valign=\"top\">  			<p><strong>Lên mạng quan sát giao thông TP.HCM</strong></p>    			<p>Sở GTVT TP.HCM vừa bổ sung vào bản đồ số giao thông một số camera lắp đặt tại các “điểm nóng” kẹt xe, như: Cầu Nhị Thiên Đường 1 (Q.8), khu vực xây dựng nút giao thông Gò Mây (Q.Bình Tân) trên Quốc lộ 1,&nbsp; khu vực xây dựng hầm chui An Sương (Q.12 và huyện Hóc Môn) trên đường Trường Chinh - Quốc lộ 1 và Quốc lộ 22, khu vực xây dựng công trình chống kẹt xe cho sân bay Tân Sơn Nhất vị trí cầu vượt Trường Sơn (Q.Tân Bình) và cầu vượt vòng xoay Nguyễn Kiệm - Nguyễn Thái Sơn (Q.Gò Vấp, Phú Nhuận).</p>    			<p>Để xem hình ảnh trực tiếp do các camera này ghi nhận được, người dân TP.HCM chỉ việc truy cập vào địa chỉ http://giaothong.hochiminhcity.gov.vn hoặc cài đặt ứng dụng “TTGT Tp Hồ Chí Minh” trên điện thoại thông minh chạy hệ điều hành Android và iOS.</p>  			</td>  		</tr>  	</tbody>  </table>    <p></p>	  	</div>', '3826-1488711290-14887110791401-thumbnail.jpg', '3826-1488711290-14887110791401-thumbnail.jpg', 3, 1, 1488717291, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
+(4, 0, 'Hà Nội: Bắt đầu kiểm tra hiện trạng biệt thự cổ', '', '', '', 'ha-noi-bat-dau-kiem-tra-hien-trang-biet-thu-co', '  		Trong tháng 3/2017, Tổ công tác liên ngành sẽ thực hiện kiểm tra hiện trạng các biệt thự thuộc đối tượng quản lý, sử dụng theo “Quy chế quản lý, sử dụng nhà biệt thự được xây dựng từ trước năm 1954 trên địa bàn TP” tại địa bàn quận Hai Bà Trưng.', '<div class=\"text-conent\" itemprop=\"articleBody\">  		<script type=\"text/javascript\">window.onload = function () {resizeNewsImage(\"news-image\", 500);}</script> <p style=\"color:#0000FF;font-style:italic;text-align:center;\"></p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hà Nội: Bắt đầu kiểm tra hiện trạng biệt thự cổ - 1\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488708273-nhungbietthuco1jpg.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Hà Nội sẽ tiến hành kiểm tra hiện trạng biệt thự cổ&nbsp;</p>    <p>Trước đó, ngày 1/3, Sở Xây dựng đã ban hành thông báo số 57/TB-SXD về kiểm tra hiện trạng nhà biệt thự trên địa bàn Thành phố Hà Nội.</p>    <p>Thực hiện chỉ đạo của UBND TP giao, Sở Xây dựng sẽ chủ trì cùng các sở, ngành, UBND các quận: Hoàn Kiếm, Hai Bà Trưng, Ba Đình, Tây Hồ và các đơn vị liên quan triển khai thực hiện việc rà soát danh mục biệt thự thuộc đối tượng quản lý, sử dụng theo “Quy chế quản lý, sử dụng nhà biệt thự được xây dựng từ trước năm 1954 trên địa bàn TP Hà Nội” và báo cáo UBND TP trước ngày 30/4/2017.</p>    <p>Trong tháng 3/2017, Tổ công tác liên ngành được thành lập theo Quyết định của Sở Xây dựng Hà Nội. Theo đó, sẽ thực hiện kiểm tra hiện trạng các biệt thự thuộc đối tượng quản lý, sử dụng được xây dựng từ trước năm 1954 tại địa bàn quận Hai Bà Trưng.</p>    <p>Theo số liệu thống kê tính đến năm 2015, trên địa bàn thành phố&nbsp; còn 1.565 biệt thự do Pháp để lại. Trong đó được chia làm 4 nhóm khác nhau, nhóm một có 225 biệt thự, nhóm hai có 282 biệt thự, nhóm ba có 646 biệt thự.</p>	  	</div>', '397-1488708289-thumbnail.jpg', '397-1488708289-thumbnail.jpg', 4, 1, 1488717291, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
+(5, 0, 'Không khí lạnh tràn về, Bắc Bộ lại sắp chuyển mưa rét', '', '', '', 'khong-khi-lanh-tran-ve-bac-bo-lai-sap-chuyen-mua-ret', '  		Do ảnh hưởng của không khí lạnh, các tỉnh Bắc Bộ trời rét và có mưa vài nơi.', '<div class=\"text-conent\" itemprop=\"articleBody\">  		<script type=\"text/javascript\">window.onload = function () {resizeNewsImage(\"news-image\", 500);}</script> <p align=\"center\"><img class=\"news-image\" alt=\"Không khí lạnh tràn về, Bắc Bộ lại sắp chuyển mưa rét - 1\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488695709-148869403973463-r.jpg\" width=\"500\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Không khí lạnh tăng cường, Bắc Bộ sắp chuyển mưa rét (ảnh minh họa).</p>    <p>Hôm nay (5/3), các tỉnh Bắc Bộ vẫn tiếp tục duy trì kiểu thời tiết rét nhẹ về đêm và sáng sớm, còn ban ngày trời có nắng, nền nhiệt dao động 20-26 độ C.</p>    <p></p>    <p>Tuy nhiên, theo Trung tâm Dự báo khí tượng thủy văn Trung ương, hình thái thời tiết này sẽ chấm dứt vào&nbsp;chiều tối 6/3 khi miền Bắc đón đợt không khí lạnh mới.</p>    <p></p>    <p>Ngày mai (6/3), bộ phận không khí lạnh này sẽ ảnh hưởng yếu các tỉnh phía đông Bắc Bộ. Đến ngày 7/3, không khí lạnh được tăng cường và ảnh hưởng đến hầu hết các tỉnh Bắc Bộ và bắc Trung Bộ.</p>    <p></p>    <p>Do ảnh hưởng của không khí lạnh, ngày mai ở phía đông Bắc Bộ có mưa và mưa nhỏ rải rác; từ đêm mai Bắc Bộ và bắc Trung Bộ có mưa, mưa nhỏ. Gió trong đất liền chuyển hướng đông bắc cấp 2-3, vùng ven biển cấp 3. Phía đông Bắc Bộ từ chiều tối và đêm mai trời chuyển rét với nhiệt độ thấp nhất phổ biến 14-17 độ C.</p>    <p></p>    <p>Hà Nội từ ngày mai có mưa nhỏ; từ đêm mai trời chuyển rét với nhiệt độ thấp nhất vào đêm và sáng sớm phổ biến 15-17 độ C.</p>    <p></p>    <p>Trong khi đó, khu vực vùng núi thấp nhất phổ biến 14-16 độ C, mức nhiệt cao nhất trong ngày một số nơi không quá 20 độ C.</p>    <p></p>    <p>Đợt lạnh dự báo kéo dài 3 ngày, từ mùng 7 đến hết 9/3.</p>    <p></p>    <p>Từ chiều mai, ở Bắc Vịnh Bắc Bộ và phía Bắc khu vực Bắc Biển Đông có gió đông bắc mạnh cấp 5, có lúc cấp 6, giật cấp 7; biển động. Sóng biển cao từ 1,5-2,0m.</p>	  	</div>', '3393-1488695709-148869403231244-thumbnail.jpg', '3393-1488695709-148869403231244-thumbnail.jpg', 5, 1, 1488717292, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
+(6, 0, 'Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi', '', '', '', 'ho-tay-hoi-thoi-ngap-rac-sau-khi-thao-do-nha-hang-noi', '  		Theo dự kiến, toàn bộ số thuyền và nhà nổi Hồ Tây phải di dời khỏi khu vực giải tỏa trước 10/3. Tuy nhiên sau mấy ngày tiến hành tháo dỡ, toàn bộ khu vực đang ngập ngụa rác thải, mùi hôi thối ô nhiễm bốc lên nồng nặc. Phóng viên báo điện tử Tiền Phong ghi nhận một số hình ảnh vào sáng nay (5/3) tại bến thuyền Hồ Tây (góc đường Thanh Niên - Nguyễn Đình Thi).', '<div class=\"text-conent\" itemprop=\"articleBody\">  		<script type=\"text/javascript\">window.onload = function () {resizeNewsImage(\"news-image\", 500);}</script> <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 1\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--1-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Sau khi UBND TP <a class=\'TextlinkBaiviet\' href=\'http://www.24h.com.vn/tin-ha-noi-c414.html\' title=\'Hà Nội\'>Hà Nội</a> yêu cầu tháo dỡ và di dời toàn bộ cầu tàu ra các nhà hàng nổi trên mặt Hồ Tây. Nơi đây lộ ra là một bãi rác khổng lồ mà trước kia các cầu tàu đã che khuất.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 2\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--2-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Một số cầu tàu vẫn đang được tiến hành tháo dỡ và đập bỏ.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 3\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--3-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Rác thải sinh hoạt cùng vật liệu xây dựng đã bị thải xuống khu vực này lâu ngày.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 4\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--4-.jpg\" /></p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 5\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--5-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Các cầu tàu sau khi được di dời, nơi đây lộ ra là một bãi bồi sình lầy bốc mùi hôi thối khó tả.</p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\"></p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 6\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--6-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Người dân sống ở ngay sát khu vực này lại một lần nữa phải chịu đựng cảnh ô nhiễm sau vụ cá Hồ Tây chết với số lượng lớn vào năm ngoái.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 7\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--7-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Nước hồ ở khu vực nhà hàng luôn ô nhiễm và có màu đen sẫm kiểu ao tù.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 8\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--8-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Dường như đã rất lâu nay, tất cả nước thải và rác sinh hoạt đã không được chú ý.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 9\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--9-.jpg\" /></p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 10\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--10-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Thùng xốp cũ nát vương vãi khắp nơi, cỏ dại mọc um tùm trên bãi rác sình lầy.</p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\"></p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 11\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--11-.jpg\" /></p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 12\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--12-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Rác thải kéo dài ôm sát bờ quanh khu vực bến thuyền này.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 13\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--13-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Cầu tàu sau khi di dời, lưới sắt tạm bợ được dựng lên để tránh nguy hiểm cho người dân.&nbsp;</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 14\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--14-.jpg\" /></p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 15\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--15-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Nhìn cảnh này, ít ai nghĩ trước kia mỗi ngày có tới hàng ngàn thực khách qua đây sử dụng dịch vụ ăn uống.</p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\"></p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 16\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--16-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">&nbsp;Những nhà hàng nổi nằm vô hồn trên mặt nước sau khi được&nbsp;UBND TP Hà Nội yêu cầu dừng hoạt động.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 17\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--17-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">&nbsp;Nhà hoang cùng đồ đạc vương vãi khắp nơi.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 18\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--18-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Nhà hàng Tây Long 2 đang tiến hành táo dỡ cầy tàu bằng bê tông cốt thép chắc chắn.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 19\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--19-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Rác thải xây dựng vẫn ngổn ngang dọc vỉa hè ở khu vực góc đường Nguyễn Đình Thi.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Hồ Tây hôi thối, ngập rác sau khi tháo dỡ nhà hàng nổi - 20\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696134-nha-hang-noi--20-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Một số nhà hàng treo biển thanh lý đồ ngày tại khu vực tháo dỡ.</p>    <p></p>	  	</div>', '2291-1488696121-thumbnail.jpg', '2291-1488696121-thumbnail.jpg', 6, 1, 1488717293, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
+(7, 1, 'Trả 550 triệu, chủ nhân cá vàng óng ánh vẫn chưa bán', '', '', '', 'tra-550-trieu-chu-nhan-ca-vang-ong-anh-van-chua-ban', '  		Con cá lạ toàn thân vàng óng dài gần 1 m, nghi là cá sủ vàng, đã được thương lái trả giá hơn 550 triệu đồng nhưng anh Đậu Văn Sử (Nghệ An) vẫn chưa bán.', '<div class=\"text-conent\" itemprop=\"articleBody\">  		<script type=\"text/javascript\">window.onload = function () {resizeNewsImage(\"news-image\", 500);}</script> <p align=\"center\"><img class=\"news-image\" alt=\"Trả 550 triệu, chủ nhân cá vàng óng ánh vẫn chưa bán - 1\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696921-ca-vang--1-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Con cá lạ toàn thân màu vàng óng nghi cá sủ vàng do anh Đậu Văn Sử đánh bắt được</p>    <p></p>    <p>Sáng ngày 5-3, trao đổi với phóng viên Báo&nbsp;Người Lao Động,&nbsp;anh Đậu Văn Sử (24 tuổi, trú phường Nghi Tân, thị xã Cửa Lò, tỉnh Nghệ An), cho biết: “Hiện con cá toàn thân màu vàng óng dài gần 1 m, nặng hơn 8 kg, nghi là&nbsp;cá sủ vàng&nbsp;mà tôi bắt được trước đó hiện đang được nuôi nhốt trên sông. Cá vẫn khỏe mạnh bình thường. Hai ngày nay, có một số người đến trả tôi con cá trên với giá 550 triệu đồng nhưng tôi chưa bán”.</p>    <p>Khi được hỏi dự kiến anh sẽ bán con cá nghi cá sủ vàng trên với giá bao nhiêu, anh Sử cho biết nếu có người trả với giá trên 600 triệu đồng anh sẽ bán.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Trả 550 triệu, chủ nhân cá vàng óng ánh vẫn chưa bán - 2\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696921-ca-vang--2-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Hiện tại con cá lạ anh Sử bắt được vẫn sống khỏe</p>    <p></p>    <p>Trước đó, như&nbsp;đã đưa tin, vào khoảng 6 giờ sáng ngày 3-3, trong lúc thả lưới đánh bắt cá trên sông Cấm (đoạn qua địa bàn huyện Nghi Lộc, tỉnh Nghệ An), anh Đậu Văn Sử đã bắt được con cá lạ nặng hơn 8 kg, dài gần 1 m.</p>    <p>Khi đưa con cá lên thuyền, phát hiện con cá toàn thân màu vàng óng, nghi là&nbsp;cá sủ vàng&nbsp;nên anh Sử đã để cá ngoài thuyền trên sông để đảm bảo cá còn sống khỏe mạnh.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Trả 550 triệu, chủ nhân cá vàng óng ánh vẫn chưa bán - 3\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488696921-ca-vang--3-.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Một số thương lái trả con cá lạ trên 550 triệu đồng nhưng anh Sử chưa bán</p>    <p></p>    <p>Biết tin anh Sử bắt được con cá lớn, nghi là cá sủ vàng nên nhiều ngày nay, mỗi ngày có hàng trăm người dân khắp nơi kéo đến để được tận mắt chứng kiến con cá lạ này.</p>    <p>Được biết, cá sủ vàng có tên khoa học là Otolithoides biauritus, rất quý hiếm, đặc biệt giá trị lớn trong lĩnh vực y học. Bong bóng cá được sử dụng làm nguyên liệu hữu cơ sản xuất chỉ tự tiêu, có khả năng tự hủy sau khi phẫu thuật, không gây tổn thương đối với mô, giảm thiểu nguy cơ viêm nhiễm nên giá cao. Trước đây, một số ngư dân ở <a class=\'TextlinkBaiviet\' href=\'http://www.24h.com.vn/nghe-an-c46e4361.html\' title=\'Nghệ An\'>Nghệ An</a> đã từng bắt được loại cá này và được các thương lái mua với giá hàng trăm triệu đồng một con.</p>    <p></p>    <p></p>	  	</div>', '7643-1488696875-thumbnail.jpg', '7643-1488696875-thumbnail.jpg', 7, 1, 1488717293, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
+(8, 1, 'Ông Đoàn Ngọc Hải: Quận 1 sẽ “phạt nguội” người lấn chiếm vỉa hè', '', '', '', 'ong-doan-ngoc-hai-quan-1-se-phat-nguoi-nguoi-lan-chiem-via-he', '  		Đây là một trong những giải pháp “dài hơi” nhằm thực hiện “chiến dịch” lập lại trật tự lòng đường, vỉa hè.', '<div class=\"text-conent\" itemprop=\"articleBody\">  		<script type=\"text/javascript\">window.onload = function () {resizeNewsImage(\"news-image\", 500);}</script> <p align=\"center\"><img class=\"news-image\" alt=\"Ông Đoàn Ngọc Hải: Quận 1 sẽ “phạt nguội” người lấn chiếm vỉa hè - 1\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488695234-148869518712591-v.jpg\" width=\"500\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Những ngày qua, ông Đoàn Ngọc Hải đã trực tiếp xuống đường chỉ đạo công tác lập lại trật tự lòng đường, vỉa hè.</p>    <p>Trao đổi với PV sáng 5.3, ông Đoàn Ngọc Hải - Phó Chủ tịch UBND quận 1 (Q.1) cho biết, sau một thời gian trực tiếp chỉ đạo công tác lập lại trật tự lòng đường, vỉa hè thì ông nhận ra đây là công việc không dễ dàng như ông nghĩ. Có nhiều trường hợp, đoàn vừa ra quân kiểm tra, xử lý thì những người kinh doanh lấn chiếm vỉa hè đã kịp thời dẹp đi; tới khi đoàn rời đi thì họ lại bày ra buôn bán.</p>    <p>Do đó, ông Hải cho biết, Q.1 sẽ có những giải pháp “dài hơi” cho việc này. Đầu tiên là công tác tuyên truyền vẫn tiếp tục được đẩy mạnh để “đánh” vào ý thức của người dân. Sau là công tác cán bộ, phải quán triệt tinh thần “quyết tâm, quyết liệt” tới các cán bộ và sẵn sàng xử lý những cán bộ dưới quyền chưa hoàn thành chức trách, nhiệm vụ.</p>    <p>Tuy nhiên, Phó Chủ tịch UBND Q.1 cũng nhìn nhận, giải pháp hiệu quả nhất hiện nay là lực lượng chức năng trực tiếp đi kiểm tra và phạt nặng người vi phạm. “Tôi thấy cách này là nhanh nhất, đánh vào túi tiền và tâm lý của người dân. Từ đó, mỗi người phải tự điều chỉnh hành vi của mình ngay, còn nếu không thì phải chấp nhận nộp phạt”, ông Hải nói.</p>    <p>Bên cạnh đó, về giải pháp lâu dài, ông Hải cho biết, lực lượng chức năng quận sẽ có phương án “phạt nguội” các trường hợp lấn chiếm lòng đường, vỉa hè. “Về phương án phạt nguội, các chiến sĩ, cán bộ CSGT là nắm vững và nắm rõ nhất”, ông Hải nói.</p>    <p>Trao đổi với PV, thiếu tá Lưu Minh Sỹ - Đội phó Đội CSGT Q.1 cho biết, để triển khai công tác phạt nguội, CSGT Q.1 phải có thiết bị kỹ thuật do cơ quan có thẩm quyền cung cấp và phải có kiểm định.</p>    <p>“Camera hay máy chụp hình phải do Bộ Công an kiểm định thì mới có đủ cơ sở để xử lý phạt nguội. Về chương trình quay phim, chụp ảnh các lỗi vi phạm để phạt nguội trên địa bàn thành phố, hiện chỉ mới có Phòng CSGT TP.HCM triển khai”, thiếu tá Sỹ nói.</p>    <p>“Nếu dùng hình ảnh từ camera để phạt nguội lỗi lấn chiếm lòng đường, vỉa hè thì thông tin đó phải thể hiện được hết số nhà, tên đường, có biển báo cấm hay không,... và thiết bị ghi hình phải là phương tiện kỹ thuật chuyên dụng dùng để quyết định xử phạt”, thiếu tá Sỹ thông tin thêm.</p>    <p>Theo ông Sỹ, Q.1 có gần 140 tuyến đường và nhu cầu đậu đỗ xe của người dân rất cao. Do đó, khi lực lượng chức năng xử lý đầu này thì đầu kia lại có người vi phạm.</p>    <p>“Vậy nên điều quan trọng nhất là ở ý thức của người dân và các hàng quán phải sắp xếp chỗ để xe thế nào cho hợp lý. Hiện, CSGT quận chủ yếu xử phạt các lỗi xảy ra dưới lòng đường, còn các lỗi vi phạm trên vỉa hè thì do công an phường, quận xử phạt”, ông Sỹ nói.</p>	  	</div>', '7091-1488695234-148869518174575-thumbnail.jpg', '7091-1488695234-148869518174575-thumbnail.jpg', 8, 1, 1488717294, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', ''),
+(9, 1, 'Phát hiện thi thể tóc bạc trắng, nổi lập lờ dưới kênh', '', '', '', 'phat-hien-thi-the-toc-bac-trang-noi-lap-lo-duoi-kenh', '  		Nhiều người ở trung tâm TP. Cần Thơ hoảng hốt khi phát hiện thi thể phụ nữ nổi lập lờ dưới kênh nước. Vụ việc thu hút nhiều người đến xem khiến giao thông qua khu vực gặp khó khăn.', '<div class=\"text-conent\" itemprop=\"articleBody\">  		<script type=\"text/javascript\">window.onload = function () {resizeNewsImage(\"news-image\", 500);}</script> <p align=\"center\"><img class=\"news-image\" alt=\"Phát hiện thi thể tóc bạc trắng, nổi lập lờ dưới kênh - 1\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488694683-14886946286803-hi--nh-1.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">&nbsp;Hiện trường &nbsp;vụ việc</p>    <p>Thông tin ban đầu, khoảng 9h30 ngày 5/3, người dân hoảng hốt khi phát phát hiện thi thể một&nbsp;người phụ nữ nổi lập lờ trên kênh&nbsp;Cái Khế, đoạn dưới chân cầu Nhị Kiều (phường An Nghiệp, quận Ninh Kiều, TP Cần Thơ). Vụ việc sau đó được trình báo lực lượng chức năng.</p>    <p>Ghi nhận ban đầu, nạn nhân là nữ giới, tóc bạc trắng, khoảng 60 tuổi, mặc đồ bộ bông&nbsp;đỏ, thi thể đang trong giai đoạn phân huỷ. Công an phường An Nghiệp cùng đơn vị chức năng quận Ninh Kiều đã có mặt ghi nhận&nbsp;vụ&nbsp;việc,&nbsp;điều&nbsp;tra nguyên nhân tử vong của nạn nhân.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Phát hiện thi thể tóc bạc trắng, nổi lập lờ dưới kênh - 2\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488694684-148869462832119-hi--nh-2.jpg\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Thi thể nạn nhân được đưa đi khám nghiệm&nbsp;</p>    <p>Do vụ việc xảy ra giữa trung tâm TP Cần Thơ nên đông người dân đứng xem khiến xe cộ qua khu vực di chuyển khó khăn. Lực lượng chức năng địa phương đã túc trực để điều tiết giao thông.</p>    <p>Đến khoảng 11h cùng, thi thể nạn nhân được đưa đi khám nghiệm, điều tra làm rõ nguyên nhân cái chết.</p>    <p>Công an đang tiếp tục làm rõ vụ việc.</p>	  	</div>', '1068-1488694683-148869461983908-thumbnail.jpg', '1068-1488694683-148869461983908-thumbnail.jpg', 9, 1, 1488717294, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', '');
 INSERT INTO `table_content` (`id`, `noibat`, `ten_vi`, `ten_en`, `mota_en`, `noidung_en`, `tenkhongdau`, `mota_vi`, `noidung_vi`, `photo`, `thumb`, `stt`, `hienthi`, `ngaytao`, `ngaysua`, `ten_cn`, `mota_cn`, `noidung_cn`, `seo_title`, `seo_keyword`, `seo_description`, `id_danhmuc`, `id_list`, `type`, `gallery`, `price`, `is_index`, `icon`, `file`) VALUES
-(10, 1, 'Lãnh đạo phường, xã ngủ không ngon giấc', '', '', '', 'lanh-dao-phuong-xa-ngu-khong-ngon-giac', '  		Công việc của chính quyền phường bình thường đã rất nhiều, giờ dồn sức cho việc lập lại trật tự vỉa hè và vệ sinh an toàn thực phẩm nữa thì rất căng thẳng.', '<div class="text-conent" itemprop="articleBody">  		<script type="text/javascript">window.onload = function () {resizeNewsImage("news-image", 500);}</script> <p>Vừa qua, một số bộ, ngành, lãnh đạo các TP lớn đặt vấn đề trách nhiệm của chủ tịch UBND phường, xã nếu để tái chiếm vỉa hè và không bảo đảm vệ sinh an toàn thực phẩm (ATTP) trên địa bàn. Liên quan đến vấn đề này, nhiều lãnh đạo UBND phường, xã ở TP HCM, Hà Nội, Đà Nẵng cho biết lâu nay địa phương vẫn làm, lần này có điểm mới là quy trách nhiệm mạnh hơn cho người đứng đầu.</p>    <p><strong>Sức ép từ mọi phía</strong></p>    <p>Phó chủ tịch UBND một phường ở quận 1, TP HCM cho rằng xung quanh vấn đề vỉa hè, lòng lề đường phải làm dài hơi chứ không chỉ dẹp cho gọn gàng. Đặc biệt, cấp trên phải ủng hộ để địa phương làm quyết liệt và liên tục nhằm nâng cao nhận thức người dân để họ thấy được lần này làm thực sự, làm quyết liệt và tới cùng chứ không phải “đá ném ao bèo”. Trước mắt, cần tập trung vào những hộ nhà mặt tiền lấn chiếm vỉa hè như treo bảng hiệu, mái che, bục đệm cho đến cây cảnh, bồn hoa… Với những hộ này, thông qua tuyên truyền, vận động và áp dụng các quy định pháp luật để yêu cầu họ thực hiện. Tiếp đó, chấn chỉnh những người bán hàng rong, người nghèo bán hàng trên vỉa hè.</p>    <p align="center"><img class="news-image" alt="Lãnh đạo phường, xã ngủ không ngon giấc - 1" onclick="return openNewImage(this, '''')" src="http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488679983-chot-7-1488636825250.jpg" width="500" /></p>    <p style="color:#0000FF;font-style:italic;text-align:center;">Khu vực chung cư Lý Thường Kiệt (quận 10, TP HCM) vẫn bị lấn chiếm trong ngày 4-3 Ảnh: Hoàng Triều</p>    <p>Theo nhận định của phó chủ tịch này, những đối tượng nói trên sẽ tạo ra rất nhiều thách thức hơn vì không chỉ trật tự đô thị được tái lập mà còn liên quan đến vấn đề an sinh xã hội. Họ sẽ có những phản ứng khó lường do nguồn sống bị ảnh hưởng. Vị này kể lại tình huống khó xử khi thu giữ xe bánh mì của một phụ nữ bán hàng rong trên vỉa hè, người này đã cầm kéo và dọa tự đâm vào người nếu bị thu xe. Thậm chí, UBND phường đã phải làm việc với địa phương nơi người bán hàng rong cư trú để yêu cầu họ mời dân của họ về để chăm lo. Sau khi “giành” lại được vỉa hè thì phải giữ, không để tái chiếm. Muốn thế, lúc này cần có lực lượng và phải bảo đảm cuộc sống cho những người giữ vỉa hè. Hiện lực lượng trật tự đô thị ở phường, xã đang vướng ở chỗ không có trong biên chế, lương thấp (2 triệu đồng/tháng), không được đóng BHXH… nên phải chăm lo cho lực lượng này.</p>    <p>Đồng quan điểm, chủ tịch UBND một phường ở&nbsp;quận Thủ Đức, TP HCM cho biết giữ được vỉa hè sẽ rất khó và cần bổ sung thêm trách nhiệm cho các lực lượng khác chứ không thể phụ thuộc vào lực lượng trật tự đô thị. Đơn cử, công an khu vực nắm rõ địa bàn, biết được nhà nào lấn chiếm và nhắc nhở kịp thời. Trong mắt người dân, họ sợ lực lượng công an hơn cán bộ UBND phường và trật tự đô thị. “Bộ Công an đã chỉ đạo lực lượng công an phối hợp chính quyền địa phương và lực lượng chức năng tăng cường tuần tra, kịp thời xử lý nghiêm các trường hợp lấn chiếm vỉa hè, lòng đường, vi phạm trật tự an toàn giao thông,&nbsp;trật tự công cộng, kiên quyết không để tái diễn vi phạm. Nếu có thêm lực lượng công an thì việc giữ vỉa hè sẽ thuận lợi hơn” - vị này nhận định và nói rõ thêm là tất nhiên các lực lượng khác như bảo vệ dân phố, trưởng khu phố, tổ dân phố cũng phải có trách nhiệm tuyên truyền, vận động người dân không được lấn chiếm vỉa hè.</p>    <p>Trong khi đó, chủ tịch UBND một phường thuộc&nbsp;quận Bình Thạnh, TP HCM thừa nhận khi lực lượng chức năng ra xử lý thì các quán nhậu dọc vỉa hè&nbsp;đường Phạm Văn Đồng&nbsp;(đoạn qua quận này) dẹp bàn ghế vào nhưng sau đó lại kéo ra, rất khó xử lý nếu không có thêm các lực lượng khác hỗ trợ. Còn để xử lý vi phạm vệ sinh ATTP thì rất khó kiểm tra và bắt quả tang bởi các quán nhậu, cơ sở sản xuất hoạt động rất tinh vi. “Công việc của các UBND phường bình thường đã rất nhiều, giờ đặt thêm nhiệm vụ và quy trách nhiệm khiến chúng tôi rất áp lực” - vị chủ tịch này cho biết.</p>    <p></p>    <p></p>    <p><strong>Phải quyết liệt hơn</strong></p>    <p>Theo ông Lê Anh - Chủ tịch UBND quận Hải Châu, TP Đà Nẵng - những năm trước, quận này cũng đã triển khai lập lại vỉa hè nhưng chưa quyết liệt, làm xong thì tái diễn nên bây giờ phải quyết liệt hơn. Các tuyến đường nào triển khai xong thì giao lại cho phường quản lý. Hễ phường quản lý không được, để tái chiếm thì không chỉ phạt người vi phạm mà chủ tịch UBND phường cũng phải chịu trách nhiệm. Sắp tới, quận Hải Châu sẽ có đề án sắp xếp lại vỉa hè. Những tuyến đường có vỉa hè rộng mới bố trí cho các hộ kinh doanh không có mặt bằng buôn bán. Đề án này sẽ được thông qua HĐND TP trong tháng 6.</p>    <p>Tại Hà Nội, ông Nguyễn Văn Thắng, Bí thư quận Tây Hồ, cho biết Quận ủy Tây Hồ đã giao cho UBND quận chỉ đạo các đơn vị liên quan thường xuyên kiểm tra, xử lý những trường hợp vi phạm lấn chiếm vỉa hè, lòng lề đường và vi phạm vệ sinh ATTP. Cả 2 vấn đề đều không thể hôm nay làm tốt, mai không làm để tái diễn tình trạng cũ. Thời gian tới, quận sẽ đôn đốc các đơn vị thường xuyên kiểm tra và xử lý vi phạm trong 2 lĩnh vực này. Ông Thắng cũng đề nghị lãnh đạo quận, phường phải trực tiếp kiểm tra công tác vệ sinh ATTP và tình trạng lấn chiếm vỉa hè, phân định rõ khu vực được và không được kinh doanh để dành vỉa hè cho người đi bộ.</p>    <p>“Thực hiện theo chỉ đạo của Thành ủy, chúng tôi yêu cầu các phường sẽ kiểm tra chồng chéo và học hỏi nhau về cách làm. Trường hợp không xử lý được những trường hợp vi phạm lấn chiếm lòng lề đường, vứt rác ra môi trường thì sẽ quy trách nhiệm cho những lãnh đạo đứng đầu địa phương” - ông Thắng nêu rõ.</p>    <table align="center" cellpadding="3" cellspacing="0" style="border:1px solid #bbb;background-color:#DEF1C8;margin:5px;margin-left:auto;margin-right:auto" width="500">  	<tbody>  		<tr>  			<td style="text-align:justify" valign="top">  			<p><strong>Lo bị truy xét trách nhiệm cá nhân</strong></p>    			<p>Ông Nguyễn Văn Lăm, Chủ tịch UBND phường Tân Tạo (quận Bình Tân, TP HCM), cho biết hiện địa phương có một nỗi khổ là chợ tự phát quanh KCN Pou Yuen và rất khó dẹp hẳn. “Mỗi ngày, khi công nhân tan ca là hàng trăm người tràn ra đường lấn chiếm để bán hàng. Lực lượng chức năng cấp phường rất ít nên khó xử lý. Với trách nhiệm được giao từ đây đến cuối năm 2017 phải giải quyết dứt điểm lấn chiếm lòng đường vỉa hè, tôi e rất khó khăn và đang lo bị truy xét trách nhiệm cá nhân” - ông Lăm nói và cho biết UBND phường Tân Tạo đã kiến nghị UBND quận đề nghị hỗ trợ.</p>  			</td>  		</tr>  	</tbody>  </table>    <p></p>    <p></p>    <table align="center" cellpadding="3" cellspacing="0" style="border:1px solid #bbb;background-color:#DEF1C8;margin:5px;margin-left:auto;margin-right:auto" width="500">  	<tbody>  		<tr>  			<td style="text-align:justify" valign="top">  			<p>Ông&nbsp;Nguyễn Phúc Bảo Nam, Phó Chủ tịch UBND phường Hải Châu 1, quận Hải Châu, TP Đà Nẵng:</p>    			<p><strong>Chủ tịch cũng xuống đường</strong></p>    			<p>Tại phường Hải Châu 1, việc ra quân dọn dẹp vỉa hè được thực hiện từ năm 2013 nên đã có 50% tuyến đường đi vào ổn định, trả lại vỉa hè cho người đi bộ. Mỗi ngày, từ lúc 5 giờ, đội quy tắc đô thị của phường đã bắt đầu làm việc, tuần tra khắp các tuyến phố để bảo đảm trật tự vỉa hè. Quan điểm của phường là vừa bảo đảm mỹ quan đô thị vừa hợp lòng dân nên trước khi ra quân kiểm tra, phường gửi thông báo đến các hộ kinh doanh ở vỉa hè trong thời gian 10 ngày. Chính vì thế, khi đội quy tắc đô thị làm việc với những hộ lấn chiếm thì không xảy ra xô xát vì đa phần họ chấp nhận do đã có thông báo trước. Với những hộ có hoàn cảnh khó khăn, phường linh động sắp xếp chỗ kinh doanh mới cho họ (ví dụ trong hẻm) nhằm không ảnh hưởng đến mỹ quan đô thị. Việc lập lại trật tự vỉa hè là việc phải làm thường xuyên và lâu dài. Ngoài đội quy tắc đô thị, lãnh đạo phường phải ra quân hằng ngày vào các giờ cao điểm. Chủ tịch quận còn phải xuống đường huống chi là phường. Muốn vỉa hè thông thoáng thì lãnh đạo phường cùng đội ngũ quy tắc đô thị phải quyết tâm và quyết liệt dữ lắm. Mỗi tuyến đường đều cắt cử cán bộ túc trực hằng giờ để bảo đảm không có việc đội quy tắc đi qua thì vỉa hè lại bị lấn chiếm. Ngoài ra, phường cũng quyết liệt trong vấn đề bảo đảm vệ sinh ATTP, nhất là ở các quán ăn đường phố. Hằng tuần, phường đều cử đội kiểm tra đi test nhanh thực phẩm trong các quán ăn, nhà hàng để bảo vệ mục tiêu vệ sinh ATTP của TP.</p>    			<p style="text-align: center;">-----------------------</p>    			<p>Ông&nbsp;Hoàng Anh Tú, Chánh Văn phòng UBND huyện Gia Lâm, TP Hà Nội:</p>    			<p><strong>Thường xuyên giám soát</strong></p>    			<p>Gần đây, trên địa bàn huyện Gia Lâm không xảy ra vụ ngộ độc thực phẩm nào nghiêm trọng do UBND huyện đã chỉ đạo các đơn vị chức năng thường xuyên kiểm tra, rà soát các cơ sở buôn bán kinh doanh thực phẩm. Qua đó, các chủ cơ sở sản xuất phải có đủ phương tiện theo đúng tiêu chuẩn để vận chuyển, bảo quản thực phẩm; bảo đảm an toàn lao động; tổ chức tuyên truyền, hướng dẫn người buôn bán, nuôi trồng có kiến thức, chứng chỉ về vệ sinh ATTP mới được kinh doanh. Cơ sở kinh doanh phải nêu rõ nguồn gốc sản phẩm, có địa chỉ, điện thoại cụ thể để thuận lợi cho việc giám sát.</p>    			<p>Những đơn vị kinh doanh thực phẩm không rõ nguồn gốc, thực phẩm bẩn sẽ bị xử lý nghiêm. Tùy từng trường hợp, nhẹ có thể bị đình chỉ kinh doanh, nghiêm trọng sẽ bị cấm kinh doanh vĩnh viễn.</p>    			<p style="text-align: center;">--------------------</p>    			<p>Ông&nbsp;Nguyễn Quốc Thái, Phó Chủ tịch UBND quận Tân Phú, TP HCM:</p>    			<p><strong>Xác định trọng tâm theo thời điểm</strong></p>    			<p>Hiện nay, các chủ tịch UBND phường mỗi ngày xử lý hàng trăm hồ sơ, phụ trách và chịu trách nhiệm rất nhiều nhiệm vụ. Nếu làm theo kiểu bao quát hết sẽ không có kết quả khả quan. Vì vậy, UBND quận Tân Phú đưa ra chỉ đạo phải xác định các mục tiêu trọng tâm theo từng thời điểm. Cụ thể, ngay lúc này, TP HCM quyết tâm lấy lại vỉa hè và bảo đảm vệ sinh ATTP, vì thế từ hôm nay đến tháng 6, chúng tôi sẽ tổ chức sơ kết tình hình thực hiện 6 tháng đầu năm và từ đó kiểm tra kết quả, phân loại để hỗ trợ, đốc thúc các chủ tịch UBND phường thực hiện tốt hơn.</p>  			</td>  		</tr>  	</tbody>  </table>    <p></p>    <p></p>	  	</div>', '4443-1488680005-thumbnail.jpg', '4443-1488680005-thumbnail.jpg', 10, 1, 1488717295, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', '');
+(10, 1, 'Lãnh đạo phường, xã ngủ không ngon giấc', '', '', '', 'lanh-dao-phuong-xa-ngu-khong-ngon-giac', '  		Công việc của chính quyền phường bình thường đã rất nhiều, giờ dồn sức cho việc lập lại trật tự vỉa hè và vệ sinh an toàn thực phẩm nữa thì rất căng thẳng.', '<div class=\"text-conent\" itemprop=\"articleBody\">  		<script type=\"text/javascript\">window.onload = function () {resizeNewsImage(\"news-image\", 500);}</script> <p>Vừa qua, một số bộ, ngành, lãnh đạo các TP lớn đặt vấn đề trách nhiệm của chủ tịch UBND phường, xã nếu để tái chiếm vỉa hè và không bảo đảm vệ sinh an toàn thực phẩm (ATTP) trên địa bàn. Liên quan đến vấn đề này, nhiều lãnh đạo UBND phường, xã ở TP HCM, Hà Nội, Đà Nẵng cho biết lâu nay địa phương vẫn làm, lần này có điểm mới là quy trách nhiệm mạnh hơn cho người đứng đầu.</p>    <p><strong>Sức ép từ mọi phía</strong></p>    <p>Phó chủ tịch UBND một phường ở quận 1, TP HCM cho rằng xung quanh vấn đề vỉa hè, lòng lề đường phải làm dài hơi chứ không chỉ dẹp cho gọn gàng. Đặc biệt, cấp trên phải ủng hộ để địa phương làm quyết liệt và liên tục nhằm nâng cao nhận thức người dân để họ thấy được lần này làm thực sự, làm quyết liệt và tới cùng chứ không phải “đá ném ao bèo”. Trước mắt, cần tập trung vào những hộ nhà mặt tiền lấn chiếm vỉa hè như treo bảng hiệu, mái che, bục đệm cho đến cây cảnh, bồn hoa… Với những hộ này, thông qua tuyên truyền, vận động và áp dụng các quy định pháp luật để yêu cầu họ thực hiện. Tiếp đó, chấn chỉnh những người bán hàng rong, người nghèo bán hàng trên vỉa hè.</p>    <p align=\"center\"><img class=\"news-image\" alt=\"Lãnh đạo phường, xã ngủ không ngon giấc - 1\" onclick=\"return openNewImage(this, \'\')\" src=\"http://image.24h.com.vn/upload/1-2017/images/2017-03-05/1488679983-chot-7-1488636825250.jpg\" width=\"500\" /></p>    <p style=\"color:#0000FF;font-style:italic;text-align:center;\">Khu vực chung cư Lý Thường Kiệt (quận 10, TP HCM) vẫn bị lấn chiếm trong ngày 4-3 Ảnh: Hoàng Triều</p>    <p>Theo nhận định của phó chủ tịch này, những đối tượng nói trên sẽ tạo ra rất nhiều thách thức hơn vì không chỉ trật tự đô thị được tái lập mà còn liên quan đến vấn đề an sinh xã hội. Họ sẽ có những phản ứng khó lường do nguồn sống bị ảnh hưởng. Vị này kể lại tình huống khó xử khi thu giữ xe bánh mì của một phụ nữ bán hàng rong trên vỉa hè, người này đã cầm kéo và dọa tự đâm vào người nếu bị thu xe. Thậm chí, UBND phường đã phải làm việc với địa phương nơi người bán hàng rong cư trú để yêu cầu họ mời dân của họ về để chăm lo. Sau khi “giành” lại được vỉa hè thì phải giữ, không để tái chiếm. Muốn thế, lúc này cần có lực lượng và phải bảo đảm cuộc sống cho những người giữ vỉa hè. Hiện lực lượng trật tự đô thị ở phường, xã đang vướng ở chỗ không có trong biên chế, lương thấp (2 triệu đồng/tháng), không được đóng BHXH… nên phải chăm lo cho lực lượng này.</p>    <p>Đồng quan điểm, chủ tịch UBND một phường ở&nbsp;quận Thủ Đức, TP HCM cho biết giữ được vỉa hè sẽ rất khó và cần bổ sung thêm trách nhiệm cho các lực lượng khác chứ không thể phụ thuộc vào lực lượng trật tự đô thị. Đơn cử, công an khu vực nắm rõ địa bàn, biết được nhà nào lấn chiếm và nhắc nhở kịp thời. Trong mắt người dân, họ sợ lực lượng công an hơn cán bộ UBND phường và trật tự đô thị. “Bộ Công an đã chỉ đạo lực lượng công an phối hợp chính quyền địa phương và lực lượng chức năng tăng cường tuần tra, kịp thời xử lý nghiêm các trường hợp lấn chiếm vỉa hè, lòng đường, vi phạm trật tự an toàn giao thông,&nbsp;trật tự công cộng, kiên quyết không để tái diễn vi phạm. Nếu có thêm lực lượng công an thì việc giữ vỉa hè sẽ thuận lợi hơn” - vị này nhận định và nói rõ thêm là tất nhiên các lực lượng khác như bảo vệ dân phố, trưởng khu phố, tổ dân phố cũng phải có trách nhiệm tuyên truyền, vận động người dân không được lấn chiếm vỉa hè.</p>    <p>Trong khi đó, chủ tịch UBND một phường thuộc&nbsp;quận Bình Thạnh, TP HCM thừa nhận khi lực lượng chức năng ra xử lý thì các quán nhậu dọc vỉa hè&nbsp;đường Phạm Văn Đồng&nbsp;(đoạn qua quận này) dẹp bàn ghế vào nhưng sau đó lại kéo ra, rất khó xử lý nếu không có thêm các lực lượng khác hỗ trợ. Còn để xử lý vi phạm vệ sinh ATTP thì rất khó kiểm tra và bắt quả tang bởi các quán nhậu, cơ sở sản xuất hoạt động rất tinh vi. “Công việc của các UBND phường bình thường đã rất nhiều, giờ đặt thêm nhiệm vụ và quy trách nhiệm khiến chúng tôi rất áp lực” - vị chủ tịch này cho biết.</p>    <p></p>    <p></p>    <p><strong>Phải quyết liệt hơn</strong></p>    <p>Theo ông Lê Anh - Chủ tịch UBND quận Hải Châu, TP Đà Nẵng - những năm trước, quận này cũng đã triển khai lập lại vỉa hè nhưng chưa quyết liệt, làm xong thì tái diễn nên bây giờ phải quyết liệt hơn. Các tuyến đường nào triển khai xong thì giao lại cho phường quản lý. Hễ phường quản lý không được, để tái chiếm thì không chỉ phạt người vi phạm mà chủ tịch UBND phường cũng phải chịu trách nhiệm. Sắp tới, quận Hải Châu sẽ có đề án sắp xếp lại vỉa hè. Những tuyến đường có vỉa hè rộng mới bố trí cho các hộ kinh doanh không có mặt bằng buôn bán. Đề án này sẽ được thông qua HĐND TP trong tháng 6.</p>    <p>Tại Hà Nội, ông Nguyễn Văn Thắng, Bí thư quận Tây Hồ, cho biết Quận ủy Tây Hồ đã giao cho UBND quận chỉ đạo các đơn vị liên quan thường xuyên kiểm tra, xử lý những trường hợp vi phạm lấn chiếm vỉa hè, lòng lề đường và vi phạm vệ sinh ATTP. Cả 2 vấn đề đều không thể hôm nay làm tốt, mai không làm để tái diễn tình trạng cũ. Thời gian tới, quận sẽ đôn đốc các đơn vị thường xuyên kiểm tra và xử lý vi phạm trong 2 lĩnh vực này. Ông Thắng cũng đề nghị lãnh đạo quận, phường phải trực tiếp kiểm tra công tác vệ sinh ATTP và tình trạng lấn chiếm vỉa hè, phân định rõ khu vực được và không được kinh doanh để dành vỉa hè cho người đi bộ.</p>    <p>“Thực hiện theo chỉ đạo của Thành ủy, chúng tôi yêu cầu các phường sẽ kiểm tra chồng chéo và học hỏi nhau về cách làm. Trường hợp không xử lý được những trường hợp vi phạm lấn chiếm lòng lề đường, vứt rác ra môi trường thì sẽ quy trách nhiệm cho những lãnh đạo đứng đầu địa phương” - ông Thắng nêu rõ.</p>    <table align=\"center\" cellpadding=\"3\" cellspacing=\"0\" style=\"border:1px solid #bbb;background-color:#DEF1C8;margin:5px;margin-left:auto;margin-right:auto\" width=\"500\">  	<tbody>  		<tr>  			<td style=\"text-align:justify\" valign=\"top\">  			<p><strong>Lo bị truy xét trách nhiệm cá nhân</strong></p>    			<p>Ông Nguyễn Văn Lăm, Chủ tịch UBND phường Tân Tạo (quận Bình Tân, TP HCM), cho biết hiện địa phương có một nỗi khổ là chợ tự phát quanh KCN Pou Yuen và rất khó dẹp hẳn. “Mỗi ngày, khi công nhân tan ca là hàng trăm người tràn ra đường lấn chiếm để bán hàng. Lực lượng chức năng cấp phường rất ít nên khó xử lý. Với trách nhiệm được giao từ đây đến cuối năm 2017 phải giải quyết dứt điểm lấn chiếm lòng đường vỉa hè, tôi e rất khó khăn và đang lo bị truy xét trách nhiệm cá nhân” - ông Lăm nói và cho biết UBND phường Tân Tạo đã kiến nghị UBND quận đề nghị hỗ trợ.</p>  			</td>  		</tr>  	</tbody>  </table>    <p></p>    <p></p>    <table align=\"center\" cellpadding=\"3\" cellspacing=\"0\" style=\"border:1px solid #bbb;background-color:#DEF1C8;margin:5px;margin-left:auto;margin-right:auto\" width=\"500\">  	<tbody>  		<tr>  			<td style=\"text-align:justify\" valign=\"top\">  			<p>Ông&nbsp;Nguyễn Phúc Bảo Nam, Phó Chủ tịch UBND phường Hải Châu 1, quận Hải Châu, TP Đà Nẵng:</p>    			<p><strong>Chủ tịch cũng xuống đường</strong></p>    			<p>Tại phường Hải Châu 1, việc ra quân dọn dẹp vỉa hè được thực hiện từ năm 2013 nên đã có 50% tuyến đường đi vào ổn định, trả lại vỉa hè cho người đi bộ. Mỗi ngày, từ lúc 5 giờ, đội quy tắc đô thị của phường đã bắt đầu làm việc, tuần tra khắp các tuyến phố để bảo đảm trật tự vỉa hè. Quan điểm của phường là vừa bảo đảm mỹ quan đô thị vừa hợp lòng dân nên trước khi ra quân kiểm tra, phường gửi thông báo đến các hộ kinh doanh ở vỉa hè trong thời gian 10 ngày. Chính vì thế, khi đội quy tắc đô thị làm việc với những hộ lấn chiếm thì không xảy ra xô xát vì đa phần họ chấp nhận do đã có thông báo trước. Với những hộ có hoàn cảnh khó khăn, phường linh động sắp xếp chỗ kinh doanh mới cho họ (ví dụ trong hẻm) nhằm không ảnh hưởng đến mỹ quan đô thị. Việc lập lại trật tự vỉa hè là việc phải làm thường xuyên và lâu dài. Ngoài đội quy tắc đô thị, lãnh đạo phường phải ra quân hằng ngày vào các giờ cao điểm. Chủ tịch quận còn phải xuống đường huống chi là phường. Muốn vỉa hè thông thoáng thì lãnh đạo phường cùng đội ngũ quy tắc đô thị phải quyết tâm và quyết liệt dữ lắm. Mỗi tuyến đường đều cắt cử cán bộ túc trực hằng giờ để bảo đảm không có việc đội quy tắc đi qua thì vỉa hè lại bị lấn chiếm. Ngoài ra, phường cũng quyết liệt trong vấn đề bảo đảm vệ sinh ATTP, nhất là ở các quán ăn đường phố. Hằng tuần, phường đều cử đội kiểm tra đi test nhanh thực phẩm trong các quán ăn, nhà hàng để bảo vệ mục tiêu vệ sinh ATTP của TP.</p>    			<p style=\"text-align: center;\">-----------------------</p>    			<p>Ông&nbsp;Hoàng Anh Tú, Chánh Văn phòng UBND huyện Gia Lâm, TP Hà Nội:</p>    			<p><strong>Thường xuyên giám soát</strong></p>    			<p>Gần đây, trên địa bàn huyện Gia Lâm không xảy ra vụ ngộ độc thực phẩm nào nghiêm trọng do UBND huyện đã chỉ đạo các đơn vị chức năng thường xuyên kiểm tra, rà soát các cơ sở buôn bán kinh doanh thực phẩm. Qua đó, các chủ cơ sở sản xuất phải có đủ phương tiện theo đúng tiêu chuẩn để vận chuyển, bảo quản thực phẩm; bảo đảm an toàn lao động; tổ chức tuyên truyền, hướng dẫn người buôn bán, nuôi trồng có kiến thức, chứng chỉ về vệ sinh ATTP mới được kinh doanh. Cơ sở kinh doanh phải nêu rõ nguồn gốc sản phẩm, có địa chỉ, điện thoại cụ thể để thuận lợi cho việc giám sát.</p>    			<p>Những đơn vị kinh doanh thực phẩm không rõ nguồn gốc, thực phẩm bẩn sẽ bị xử lý nghiêm. Tùy từng trường hợp, nhẹ có thể bị đình chỉ kinh doanh, nghiêm trọng sẽ bị cấm kinh doanh vĩnh viễn.</p>    			<p style=\"text-align: center;\">--------------------</p>    			<p>Ông&nbsp;Nguyễn Quốc Thái, Phó Chủ tịch UBND quận Tân Phú, TP HCM:</p>    			<p><strong>Xác định trọng tâm theo thời điểm</strong></p>    			<p>Hiện nay, các chủ tịch UBND phường mỗi ngày xử lý hàng trăm hồ sơ, phụ trách và chịu trách nhiệm rất nhiều nhiệm vụ. Nếu làm theo kiểu bao quát hết sẽ không có kết quả khả quan. Vì vậy, UBND quận Tân Phú đưa ra chỉ đạo phải xác định các mục tiêu trọng tâm theo từng thời điểm. Cụ thể, ngay lúc này, TP HCM quyết tâm lấy lại vỉa hè và bảo đảm vệ sinh ATTP, vì thế từ hôm nay đến tháng 6, chúng tôi sẽ tổ chức sơ kết tình hình thực hiện 6 tháng đầu năm và từ đó kiểm tra kết quả, phân loại để hỗ trợ, đốc thúc các chủ tịch UBND phường thực hiện tốt hơn.</p>  			</td>  		</tr>  	</tbody>  </table>    <p></p>    <p></p>	  	</div>', '4443-1488680005-thumbnail.jpg', '4443-1488680005-thumbnail.jpg', 10, 1, 1488717295, 0, '', '', '', '', '', '', 0, 0, 'news', '', '', 0, '', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_content_danhmuc`
+-- Cấu trúc bảng cho bảng `table_content_danhmuc`
 --
 
-CREATE TABLE IF NOT EXISTS `table_content_danhmuc` (
+CREATE TABLE `table_content_danhmuc` (
   `id` int(11) NOT NULL,
   `ten_vi` varchar(255) NOT NULL,
   `tenkhongdau` varchar(255) NOT NULL,
@@ -285,10 +285,10 @@ CREATE TABLE IF NOT EXISTS `table_content_danhmuc` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_content_list`
+-- Cấu trúc bảng cho bảng `table_content_list`
 --
 
-CREATE TABLE IF NOT EXISTS `table_content_list` (
+CREATE TABLE `table_content_list` (
   `id` int(11) NOT NULL,
   `ten_vi` varchar(255) NOT NULL,
   `tenkhongdau` varchar(255) NOT NULL,
@@ -309,10 +309,10 @@ CREATE TABLE IF NOT EXISTS `table_content_list` (
   `noidung_vi` text NOT NULL,
   `noidung_en` text NOT NULL,
   `noibat` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_content_list`
+-- Đang đổ dữ liệu cho bảng `table_content_list`
 --
 
 INSERT INTO `table_content_list` (`id`, `ten_vi`, `tenkhongdau`, `photo`, `thumb`, `stt`, `hienthi`, `id_danhmuc`, `ngaytao`, `ngaysua`, `ten_en`, `seo_title`, `seo_keyword`, `seo_description`, `type`, `mota_vi`, `mota_en`, `noidung_vi`, `noidung_en`, `noibat`) VALUES
@@ -341,11 +341,11 @@ INSERT INTO `table_content_list` (`id`, `ten_vi`, `tenkhongdau`, `photo`, `thumb
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_doitac`
+-- Cấu trúc bảng cho bảng `table_doitac`
 --
 
-CREATE TABLE IF NOT EXISTS `table_doitac` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_doitac` (
+  `id` int(10) UNSIGNED NOT NULL,
   `id_photo` int(10) NOT NULL,
   `height` int(10) NOT NULL,
   `photo` varchar(225) NOT NULL,
@@ -353,12 +353,12 @@ CREATE TABLE IF NOT EXISTS `table_doitac` (
   `thumb` varchar(225) NOT NULL,
   `ten` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `link` text NOT NULL,
-  `stt` int(10) unsigned NOT NULL DEFAULT '1',
+  `stt` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1'
-) ENGINE=MyISAM AUTO_INCREMENT=94 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_doitac`
+-- Đang đổ dữ liệu cho bảng `table_doitac`
 --
 
 INSERT INTO `table_doitac` (`id`, `id_photo`, `height`, `photo`, `vitri`, `thumb`, `ten`, `link`, `stt`, `hienthi`) VALUES
@@ -371,10 +371,10 @@ INSERT INTO `table_doitac` (`id`, `id_photo`, `height`, `photo`, `vitri`, `thumb
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_donhang`
+-- Cấu trúc bảng cho bảng `table_donhang`
 --
 
-CREATE TABLE IF NOT EXISTS `table_donhang` (
+CREATE TABLE `table_donhang` (
   `id` int(11) NOT NULL,
   `madonhang` varchar(20) NOT NULL,
   `hoten` varchar(255) NOT NULL,
@@ -392,59 +392,59 @@ CREATE TABLE IF NOT EXISTS `table_donhang` (
   `tinhtrang` int(11) NOT NULL,
   `thanhvien` int(11) NOT NULL,
   `chitiet` text NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=43 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_donhang`
+-- Đang đổ dữ liệu cho bảng `table_donhang`
 --
 
 INSERT INTO `table_donhang` (`id`, `madonhang`, `hoten`, `dienthoai`, `diachi`, `email`, `httt`, `tonggia`, `tieudethanhtoan`, `noidung`, `ghichu`, `donhang`, `ngaytao`, `trangthai`, `tinhtrang`, `thanhvien`, `chitiet`) VALUES
-(34, 'PIDR5L', 'Điện thoại Microsoft Lumia 5352', '0987654321', 'Tuyên Quang, Tuyên Quang', 'tuanbl90@yahoo.com', 0, 16920000, '', 'Báo cáo cho tôi', '', '{"1f3c16b668e61b50f360f779b64cc842":{"productid":"1446","qty":"132","color":"3","size":"3"},"172378803024581fcd8fce8f7b56b8f9":{"productid":"1446","qty":"5","color":"1","size":"1"},"a3ac6377f76f8dec5f9f5a9feea4b54d":{"productid":"1446","qty":"3","color":"3","size":"4"},"89a05a14a177b8b05b7716311f8d369b":{"productid":"1446","qty":"1","color":"3","size":"1"}}', 1430902327, 0, 1, 0, ''),
-(35, 'XQKTPY', 'TẤM INOX', '121212', '123 Quận 12 Hồ Chí Minh', 'tuanbl90@yahoo.com', 0, 65160000, '', '123 Quận 12 Hồ Chí Minh', '', ' <table id="giohang" class="table table-bordered " style="margin-top:10px"><thead><th align="center"></th><th>Tên sản phẩm</th><th align="center">Giá bán</th><th align="center">Số lượng</th><th align="center">Tổng giá</th></thead><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="upload/sanpham/927273_288x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Cam</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>M</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[e5416798c662ce90d1eb525226b3ebd8]" value="158" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">18.960.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="http://localhost/uyenchi/upload/user/images/1.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Vàng</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>M</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[9febff5e6cae7fb27b1318d31834e730]" value="13" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">1.560.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="http://localhost/uyenchi/upload/user/images/1.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Vàng</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>XL</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[4e2c8d48ec4ccfb43bf008213ed852d6]" value="134" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">16.080.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="http://localhost/uyenchi/upload/user/images/1.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Vàng</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>L</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[0c9689ccfce6b63384eeecd609639a5e]" value="2" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">240.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="http://localhost/uyenchi/upload/user/images/1.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Tím</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>M</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[89a05a14a177b8b05b7716311f8d369b]" value="2" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">240.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="http://localhost/uyenchi/upload/user/images/red/0009207_dam_ren_xoe_du_tiec_d3135.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Đỏ</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>M</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[172378803024581fcd8fce8f7b56b8f9]" value="234" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">28.080.000&nbsp;VNĐ</td></tr> <tr><td colspan="6" style="padding:0"><h3 class="all-cart-price">Tổng giá:65.160.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1430905645, 0, 1, 0, ''),
-(36, 'WIY1PB', 'Điện thoại Microsoft Lumia 5352', '121212', '123 Quận 12 Hồ Chí Minh', 'tuantran23.nina@gmail.com', 0, 840000, '', '123 Quận 12 Hồ Chí Minh', '', ' <table id="giohang" class="table table-bordered " style="margin-top:10px"><thead><th align="center"></th><th>Tên sản phẩm</th><th align="center">Giá bán</th><th align="center">Số lượng</th><th align="center">Tổng giá</th></thead><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="upload/sanpham/927273_288x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Cam</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>XXL</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[f85111546951f536b99c2ab075debe1d]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">120.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="upload/sanpham/927273_288x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Cam</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>XL</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[1408cbe52cf0beaba10d3c3d8539f464]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">120.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="upload/sanpham/927273_288x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Cam</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>L</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[0ed0eb33d65b7c99240b1979e927e962]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">120.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="upload/sanpham/927273_288x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Cam</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>M</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[e5416798c662ce90d1eb525226b3ebd8]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">120.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="http://localhost/uyenchi/upload/user/images/1.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Tím</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>M</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[89a05a14a177b8b05b7716311f8d369b]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">120.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="http://localhost/uyenchi/upload/user/images/1.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Vàng</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>M</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[9febff5e6cae7fb27b1318d31834e730]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">120.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="http://localhost/uyenchi/upload/user/images/red/0009207_dam_ren_xoe_du_tiec_d3135.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Đỏ</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>M</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[172378803024581fcd8fce8f7b56b8f9]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">120.000&nbsp;VNĐ</td></tr> <tr><td colspan="6" style="padding:0"><h3 class="all-cart-price">Tổng giá:840.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1430905707, 0, 1, 0, ''),
-(37, 'YIMRME', 'Điện thoại Microsoft Lumia 5352', '0987654321', '123 Quận 12 Hồ Chí Minh', 'email@gmai.com', 0, 360000, '', '123 Quận 12 Hồ Chí Minh', '', ' <table id="giohang" class="table table-bordered " style="margin-top:10px"><thead><th align="center"></th><th>Tên sản phẩm</th><th align="center">Giá bán</th><th align="center">Số lượng</th><th align="center">Tổng giá</th></thead><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="http://localhost/uyenchi/upload/user/images/1.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Tím</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>XL</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[1f3c16b668e61b50f360f779b64cc842]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">120.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="upload/sanpham/927273_288x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Cam</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>XL</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[1408cbe52cf0beaba10d3c3d8539f464]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">120.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="http://localhost/uyenchi/upload/user/images/1.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Vàng</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>XL</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[4e2c8d48ec4ccfb43bf008213ed852d6]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">120.000&nbsp;VNĐ</td></tr> <tr><td colspan="6" style="padding:0"><h3 class="all-cart-price">Tổng giá:360.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1430905912, 0, 1, 0, ''),
-(38, 'UT3T0D', 'Facebook', '0987654321', 'Tuyên Quang, Tuyên Quang', 'tuanbl90@yahoo.com', 0, 360000, '', 'Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang', '', ' <table id="giohang" class="table table-bordered " style="margin-top:10px"><thead><th align="center"></th><th>Tên sản phẩm</th><th align="center">Giá bán</th><th align="center">Số lượng</th><th align="center">Tổng giá</th></thead><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="http://localhost/uyenchi/upload/user/images/1.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Tím</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>XL</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[1f3c16b668e61b50f360f779b64cc842]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">120.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="http://localhost/uyenchi/upload/sanpham/927273_288x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Cam</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>XL</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[1408cbe52cf0beaba10d3c3d8539f464]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">120.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html"><img src="http://localhost/uyenchi/upload/user/images/1.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html">Váy xòe công chúa</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Vàng</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>XL</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">120.000 đ</div><td width="10%" align="center"><input type="text" name="product[4e2c8d48ec4ccfb43bf008213ed852d6]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">120.000&nbsp;VNĐ</td></tr> <tr><td colspan="6" style="padding:0"><h3 class="all-cart-price">Tổng giá:360.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1430906448, 0, 1, 0, ''),
-(39, 'F3ESIY', 'admin', '0987654321', '123 Quận 12 Hồ Chí Minh', 'tuanbl90@yahoo.com', 0, 2147483647, '', 'sdddddddddd', '', ' <table id="giohang" class="table table-bordered " style="margin-top:10px"><thead><th align="center"></th><th>Tên sản phẩm</th><th align="center">Giá bán</th><th align="center">Số lượng</th><th align="center">Tổng giá</th></thead><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1450/vay-xoe-da-hoi-8.html"><img src="http://localhost/comayca/upload/sanpham/474100_275.86206896552x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1450/vay-xoe-da-hoi-8.html">Váy xòe dạ hội 8</a></td><td width="10%" align="center"><div class="price-real">5.000.000 đ</div><td width="10%" align="center"><input type="text" name="product[4c499c242a59418fd0b8026a9b66f84e]" value="2" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">10.000.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1447/vay-xoe-da-hoi-2.html"><img src="http://localhost/comayca/upload/sanpham/185350_258.18181818182x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1447/vay-xoe-da-hoi-2.html">Váy xòe dạ hội 2</a></td><td width="10%" align="center"><div class="price-real">5.000.000 đ</div><td width="10%" align="center"><input type="text" name="product[650b616cdae8e1c4f7fe91dda7eea545]" value="71" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">355.000.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1452/vay-xoe-da-hoi-3.html"><img src="http://localhost/comayca/upload/sanpham/088538_266.66666666667x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1452/vay-xoe-da-hoi-3.html">Váy xòe dạ hội 3</a></td><td width="10%" align="center"><div class="price-real">5.000.000 đ</div><td width="10%" align="center"><input type="text" name="product[41a992ff0969ebced714871cf1d82a56]" value="9" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">45.000.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1464/vay-xoe-da-hoi-5.html"><img src="http://localhost/comayca/upload/sanpham/660070_276.73716012085x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1464/vay-xoe-da-hoi-5.html">Váy xòe dạ hội 5</a></td><td width="10%" align="center"><div class="price-real">5.000.000 đ</div><td width="10%" align="center"><input type="text" name="product[1d8f8b54cd9e162e4b4c4b5f2c6ab897]" value="7" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">35.000.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1454/vay-xoe-da-hoi-15.html"><img src="http://localhost/comayca/upload/sanpham/528376_269.54177897574x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1454/vay-xoe-da-hoi-15.html">Váy xòe dạ hội 15</a></td><td width="10%" align="center"><div class="price-real">5.000.000 đ</div><td width="10%" align="center"><input type="text" name="product[89aa45227c63be768a09663bdd4f9cf7]" value="1122" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">5.610.000.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1446/vay-xoe-da-hoi-6.html"><img src="http://localhost/comayca/upload/sanpham/402989_269.36026936027x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1446/vay-xoe-da-hoi-6.html">Váy xòe dạ hội 6</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Cam</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>XXL</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">5.000.000 đ</div><td width="10%" align="center"><input type="text" name="product[f85111546951f536b99c2ab075debe1d]" value="3" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">15.000.000&nbsp;VNĐ</td></tr> <tr><td colspan="6" style="padding:0"><h3 class="all-cart-price">Tổng giá:6.070.000.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1432887594, 0, 1, 153, ''),
-(40, 'ZC10RA', 'TẤM INOX', '0987654321', '123 Quận 12 Hồ Chí Minh', 'tuanbl90@yahoo.com', 0, 35000000, '', 'aaaaaaaaaaaaaaaaaaaaa', '', ' <table id="giohang" class="table table-bordered " style="margin-top:10px"><thead><th align="center"></th><th>Tên sản phẩm</th><th align="center">Giá bán</th><th align="center">Số lượng</th><th align="center">Tổng giá</th></thead><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1447/vay-xoe-da-hoi-2.html"><img src="http://localhost/comayca/upload/sanpham/185350_258.18181818182x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1447/vay-xoe-da-hoi-2.html">Váy xòe dạ hội 2</a></td><td width="10%" align="center"><div class="price-real">5.000.000 đ</div><td width="10%" align="center"><input type="text" name="product[c930eecd01935feef55942cc445f708f]" value="2" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">10.000.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1452/vay-xoe-da-hoi-3.html"><img src="http://localhost/comayca/upload/sanpham/088538_266.66666666667x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1452/vay-xoe-da-hoi-3.html">Váy xòe dạ hội 3</a></td><td width="10%" align="center"><div class="price-real">5.000.000 đ</div><td width="10%" align="center"><input type="text" name="product[6786f3c62fbf9021694f6e51cc07fe3c]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">5.000.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1446/vay-xoe-da-hoi-6.html"><img src="http://localhost/comayca/upload/sanpham/402989_269.36026936027x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1446/vay-xoe-da-hoi-6.html">Váy xòe dạ hội 6</a><div class="product-option"><label>Màu sắc: </label><strong class=''red''>Cam</strong><div class="clearfix"></div></div><div class="product-option"><label>Kích thước: </label><strong class=''red''>XXL</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-old">200.000 đ</div><div class="price-real">5.000.000 đ</div><td width="10%" align="center"><input type="text" name="product[f85111546951f536b99c2ab075debe1d]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">5.000.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1458/vay-xoe-da-hoi-4.html"><img src="http://localhost/comayca/upload/sanpham/968425_305.34351145038x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1458/vay-xoe-da-hoi-4.html">Váy xòe dạ hội 4</a></td><td width="10%" align="center"><div class="price-real">5.000.000 đ</div><td width="10%" align="center"><input type="text" name="product[4dcae38ee11d3a6606cc6cd636a3628b]" value="3" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">15.000.000&nbsp;VNĐ</td></tr> <tr><td colspan="6" style="padding:0"><h3 class="all-cart-price">Tổng giá:35.000.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1432887831, 0, 1, 153, '[{"id":"1447","id_list":"231","noibat":"1","hot":"0","photo":"185350.jpg","thumb":"185350_258.18181818182x400.jpg","ten_vi":"V\\u00e1y x\\u00f2e d\\u1ea1 h\\u1ed9i 2","tenkhongdau":"vay-xoe-da-hoi-2","mota_vi":"","maso":"OT 3","gia":"5000000","giacu":"","noidung_vi":"","tag":"","stt":"3","hienthi":"1","spmoi":"1","spnoibat":"0","ngaytao":"1427611824","ngaysua":"1432785493","luotxem":"305","id_danhmuc":"66","ten_en":"","noidung_en":"","mota_en":"","gallery":"[]","ten_cn":"","mota_cn":"","noidung_cn":"","cntb":"0","title":"","keyword":"","description":"","id_cat":"0","motangan_vi":"","motangan_en":"","xuatsu":"","spbanchay":"1","seo_title":"","seo_keyword":"gach op tuong, g\\u1ea1ch \\u1ed1p t\\u01b0\\u1eddng","seo_description":"gach op tuong, g\\u1ea1ch \\u1ed1p t\\u01b0\\u1eddng","khuyenmai":"1","chatlieu":"","kichthuoc":"","id_loaiphong":"0"},{"id":"1452","id_list":"230","noibat":"1","hot":"0","photo":"088538.jpg","thumb":"088538_266.66666666667x400.jpg","ten_vi":"V\\u00e1y x\\u00f2e d\\u1ea1 h\\u1ed9i 3","tenkhongdau":"vay-xoe-da-hoi-3","mota_vi":"","maso":"SN 3","gia":"5000000","giacu":"","noidung_vi":"","tag":"","stt":"3","hienthi":"1","spmoi":"1","spnoibat":"0","ngaytao":"1427612133","ngaysua":"1432785510","luotxem":"18","id_danhmuc":"67","ten_en":"","noidung_en":"","mota_en":"","gallery":"[]","ten_cn":"","mota_cn":"","noidung_cn":"","cntb":"0","title":"","keyword":"","description":"","id_cat":"0","motangan_vi":"","motangan_en":"","xuatsu":"","spbanchay":"1","seo_title":"","seo_keyword":"","seo_description":"","khuyenmai":"1","chatlieu":"","kichthuoc":"","id_loaiphong":"0"},{"id":"1446","id_list":"231","noibat":"1","hot":"0","photo":"402989.jpg","thumb":"402989_269.36026936027x400.jpg","ten_vi":"V\\u00e1y x\\u00f2e d\\u1ea1 h\\u1ed9i 6","tenkhongdau":"vay-xoe-da-hoi-6","mota_vi":"","maso":"OT 2","gia":"5000000","giacu":"200000","noidung_vi":"","tag":"","stt":"2","hienthi":"1","spmoi":"1","spnoibat":"0","ngaytao":"1427611762","ngaysua":"1432785528","luotxem":"199","id_danhmuc":"66","ten_en":"","noidung_en":"","mota_en":"","gallery":"[\\"\\/upload\\/user\\/images\\/1.jpg\\",\\"\\/upload\\/user\\/images\\/10.jpg\\",\\"\\/upload\\/user\\/images\\/11.jpg\\",\\"\\/upload\\/user\\/images\\/12.jpg\\",\\"\\/upload\\/user\\/images\\/3.jpg\\",\\"\\/upload\\/user\\/images\\/4.jpg\\",\\"\\/upload\\/user\\/images\\/5.jpg\\",\\"\\/upload\\/user\\/images\\/6.jpg\\"]","ten_cn":"","mota_cn":"","noidung_cn":"","cntb":"0","title":"","keyword":"","description":"","id_cat":"0","motangan_vi":"","motangan_en":"","xuatsu":"","spbanchay":"1","seo_title":"G\\u1ea1ch \\u1ed0p T\\u01b0\\u1eddng","seo_keyword":"gach op tuong, g\\u1ea1ch \\u1ed1p t\\u01b0\\u1eddng","seo_description":"gach op tuong, g\\u1ea1ch \\u1ed1p t\\u01b0\\u1eddng","khuyenmai":"1","chatlieu":"","kichthuoc":"","id_loaiphong":"0"},{"id":"1458","id_list":"228","noibat":"1","hot":"0","photo":"968425.jpg","thumb":"968425_305.34351145038x400.jpg","ten_vi":"V\\u00e1y x\\u00f2e d\\u1ea1 h\\u1ed9i 4","tenkhongdau":"vay-xoe-da-hoi-4","mota_vi":"","maso":"ON 3","gia":"5000000","giacu":"","noidung_vi":"","tag":"","stt":"3","hienthi":"1","spmoi":"1","spnoibat":"0","ngaytao":"1427612551","ngaysua":"1432785516","luotxem":"12","id_danhmuc":"66","ten_en":"","noidung_en":"","mota_en":"","gallery":"[]","ten_cn":"","mota_cn":"","noidung_cn":"","cntb":"0","title":"","keyword":"","description":"","id_cat":"0","motangan_vi":"","motangan_en":"","xuatsu":"","spbanchay":"1","seo_title":"","seo_keyword":"","seo_description":"","khuyenmai":"1","chatlieu":"","kichthuoc":"","id_loaiphong":"0"}]'),
-(41, 'ASGDA1', 'email@gmail.com', 'email@gmail.com', 'email@gmail.com', 'emailxxx@gmail.com', 0, 20000000, '', 'xxxxxxxxxxxxxx', '', ' <table id="giohang" class="table table-bordered " style="margin-top:10px"><thead><th align="center"></th><th>Tên sản phẩm</th><th align="center">Giá bán</th><th align="center">Số lượng</th><th align="center">Tổng giá</th></thead><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1459/vay-xoe-da-hoi-1.html"><img src="http://localhost/comayca/upload/sanpham/929376_269.54177897574x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1459/vay-xoe-da-hoi-1.html">Váy xòe dạ hội 1</a><div class="product-option"><label>Kích thước: </label><strong class=''red''>XXL</strong><div class="clearfix"></div></div></td><td width="10%" align="center"><div class="price-real">5.000.000 đ</div><td width="10%" align="center"><input type="text" name="product[2d9f2c24d2cc46cc548c763be6ae94d8]" value="4" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">20.000.000&nbsp;VNĐ</td></tr> <tr><td colspan="6" style="padding:0"><h3 class="all-cart-price">Tổng giá:20.000.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1432892590, 0, 1, 153, '[{"id":"1459","id_list":"230","noibat":"1","hot":"0","photo":"929376.jpg","thumb":"929376_269.54177897574x400.jpg","ten_vi":"V\\u00e1y x\\u00f2e d\\u1ea1 h\\u1ed9i 1","tenkhongdau":"vay-xoe-da-hoi-1","mota_vi":"","maso":"ON 4","gia":"5000000","giacu":"","noidung_vi":"","tag":"","stt":"4","hienthi":"1","spmoi":"1","spnoibat":"0","ngaytao":"1427612578","ngaysua":"1432785497","luotxem":"24","id_danhmuc":"67","ten_en":"","noidung_en":"","mota_en":"","gallery":"[]","ten_cn":"","mota_cn":"","noidung_cn":"","cntb":"0","title":"","keyword":"","description":"","id_cat":"0","motangan_vi":"","motangan_en":"","xuatsu":"","spbanchay":"1","seo_title":"","seo_keyword":"","seo_description":"","khuyenmai":"1","chatlieu":"","kichthuoc":"","id_loaiphong":"0"}]');
+(34, 'PIDR5L', 'Điện thoại Microsoft Lumia 5352', '0987654321', 'Tuyên Quang, Tuyên Quang', 'tuanbl90@yahoo.com', 0, 16920000, '', 'Báo cáo cho tôi', '', '{\"1f3c16b668e61b50f360f779b64cc842\":{\"productid\":\"1446\",\"qty\":\"132\",\"color\":\"3\",\"size\":\"3\"},\"172378803024581fcd8fce8f7b56b8f9\":{\"productid\":\"1446\",\"qty\":\"5\",\"color\":\"1\",\"size\":\"1\"},\"a3ac6377f76f8dec5f9f5a9feea4b54d\":{\"productid\":\"1446\",\"qty\":\"3\",\"color\":\"3\",\"size\":\"4\"},\"89a05a14a177b8b05b7716311f8d369b\":{\"productid\":\"1446\",\"qty\":\"1\",\"color\":\"3\",\"size\":\"1\"}}', 1430902327, 0, 1, 0, ''),
+(35, 'XQKTPY', 'TẤM INOX', '121212', '123 Quận 12 Hồ Chí Minh', 'tuanbl90@yahoo.com', 0, 65160000, '', '123 Quận 12 Hồ Chí Minh', '', ' <table id=\"giohang\" class=\"table table-bordered \" style=\"margin-top:10px\"><thead><th align=\"center\"></th><th>Tên sản phẩm</th><th align=\"center\">Giá bán</th><th align=\"center\">Số lượng</th><th align=\"center\">Tổng giá</th></thead><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"upload/sanpham/927273_288x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Cam</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>M</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[e5416798c662ce90d1eb525226b3ebd8]\" value=\"158\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">18.960.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"http://localhost/uyenchi/upload/user/images/1.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Vàng</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>M</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[9febff5e6cae7fb27b1318d31834e730]\" value=\"13\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">1.560.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"http://localhost/uyenchi/upload/user/images/1.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Vàng</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>XL</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[4e2c8d48ec4ccfb43bf008213ed852d6]\" value=\"134\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">16.080.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"http://localhost/uyenchi/upload/user/images/1.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Vàng</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>L</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[0c9689ccfce6b63384eeecd609639a5e]\" value=\"2\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">240.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"http://localhost/uyenchi/upload/user/images/1.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Tím</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>M</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[89a05a14a177b8b05b7716311f8d369b]\" value=\"2\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">240.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"http://localhost/uyenchi/upload/user/images/red/0009207_dam_ren_xoe_du_tiec_d3135.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Đỏ</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>M</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[172378803024581fcd8fce8f7b56b8f9]\" value=\"234\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">28.080.000&nbsp;VNĐ</td></tr> <tr><td colspan=\"6\" style=\"padding:0\"><h3 class=\"all-cart-price\">Tổng giá:65.160.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1430905645, 0, 1, 0, ''),
+(36, 'WIY1PB', 'Điện thoại Microsoft Lumia 5352', '121212', '123 Quận 12 Hồ Chí Minh', 'tuantran23.nina@gmail.com', 0, 840000, '', '123 Quận 12 Hồ Chí Minh', '', ' <table id=\"giohang\" class=\"table table-bordered \" style=\"margin-top:10px\"><thead><th align=\"center\"></th><th>Tên sản phẩm</th><th align=\"center\">Giá bán</th><th align=\"center\">Số lượng</th><th align=\"center\">Tổng giá</th></thead><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"upload/sanpham/927273_288x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Cam</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>XXL</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[f85111546951f536b99c2ab075debe1d]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">120.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"upload/sanpham/927273_288x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Cam</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>XL</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[1408cbe52cf0beaba10d3c3d8539f464]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">120.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"upload/sanpham/927273_288x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Cam</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>L</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[0ed0eb33d65b7c99240b1979e927e962]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">120.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"upload/sanpham/927273_288x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Cam</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>M</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[e5416798c662ce90d1eb525226b3ebd8]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">120.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"http://localhost/uyenchi/upload/user/images/1.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Tím</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>M</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[89a05a14a177b8b05b7716311f8d369b]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">120.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"http://localhost/uyenchi/upload/user/images/1.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Vàng</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>M</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[9febff5e6cae7fb27b1318d31834e730]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">120.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"http://localhost/uyenchi/upload/user/images/red/0009207_dam_ren_xoe_du_tiec_d3135.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Đỏ</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>M</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[172378803024581fcd8fce8f7b56b8f9]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">120.000&nbsp;VNĐ</td></tr> <tr><td colspan=\"6\" style=\"padding:0\"><h3 class=\"all-cart-price\">Tổng giá:840.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1430905707, 0, 1, 0, ''),
+(37, 'YIMRME', 'Điện thoại Microsoft Lumia 5352', '0987654321', '123 Quận 12 Hồ Chí Minh', 'email@gmai.com', 0, 360000, '', '123 Quận 12 Hồ Chí Minh', '', ' <table id=\"giohang\" class=\"table table-bordered \" style=\"margin-top:10px\"><thead><th align=\"center\"></th><th>Tên sản phẩm</th><th align=\"center\">Giá bán</th><th align=\"center\">Số lượng</th><th align=\"center\">Tổng giá</th></thead><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"http://localhost/uyenchi/upload/user/images/1.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Tím</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>XL</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[1f3c16b668e61b50f360f779b64cc842]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">120.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"upload/sanpham/927273_288x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Cam</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>XL</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[1408cbe52cf0beaba10d3c3d8539f464]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">120.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"http://localhost/uyenchi/upload/user/images/1.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Vàng</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>XL</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[4e2c8d48ec4ccfb43bf008213ed852d6]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">120.000&nbsp;VNĐ</td></tr> <tr><td colspan=\"6\" style=\"padding:0\"><h3 class=\"all-cart-price\">Tổng giá:360.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1430905912, 0, 1, 0, ''),
+(38, 'UT3T0D', 'Facebook', '0987654321', 'Tuyên Quang, Tuyên Quang', 'tuanbl90@yahoo.com', 0, 360000, '', 'Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang Tuyên Quang, Tuyên Quang', '', ' <table id=\"giohang\" class=\"table table-bordered \" style=\"margin-top:10px\"><thead><th align=\"center\"></th><th>Tên sản phẩm</th><th align=\"center\">Giá bán</th><th align=\"center\">Số lượng</th><th align=\"center\">Tổng giá</th></thead><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"http://localhost/uyenchi/upload/user/images/1.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Tím</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>XL</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[1f3c16b668e61b50f360f779b64cc842]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">120.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"http://localhost/uyenchi/upload/sanpham/927273_288x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Cam</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>XL</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[1408cbe52cf0beaba10d3c3d8539f464]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">120.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\"><img src=\"http://localhost/uyenchi/upload/user/images/1.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/uyenchisan-pham/1446/vay-xoe-cong-chua.html\">Váy xòe công chúa</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Vàng</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>XL</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">120.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[4e2c8d48ec4ccfb43bf008213ed852d6]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">120.000&nbsp;VNĐ</td></tr> <tr><td colspan=\"6\" style=\"padding:0\"><h3 class=\"all-cart-price\">Tổng giá:360.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1430906448, 0, 1, 0, ''),
+(39, 'F3ESIY', 'admin', '0987654321', '123 Quận 12 Hồ Chí Minh', 'tuanbl90@yahoo.com', 0, 2147483647, '', 'sdddddddddd', '', ' <table id=\"giohang\" class=\"table table-bordered \" style=\"margin-top:10px\"><thead><th align=\"center\"></th><th>Tên sản phẩm</th><th align=\"center\">Giá bán</th><th align=\"center\">Số lượng</th><th align=\"center\">Tổng giá</th></thead><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1450/vay-xoe-da-hoi-8.html\"><img src=\"http://localhost/comayca/upload/sanpham/474100_275.86206896552x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1450/vay-xoe-da-hoi-8.html\">Váy xòe dạ hội 8</a></td><td width=\"10%\" align=\"center\"><div class=\"price-real\">5.000.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[4c499c242a59418fd0b8026a9b66f84e]\" value=\"2\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">10.000.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1447/vay-xoe-da-hoi-2.html\"><img src=\"http://localhost/comayca/upload/sanpham/185350_258.18181818182x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1447/vay-xoe-da-hoi-2.html\">Váy xòe dạ hội 2</a></td><td width=\"10%\" align=\"center\"><div class=\"price-real\">5.000.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[650b616cdae8e1c4f7fe91dda7eea545]\" value=\"71\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">355.000.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1452/vay-xoe-da-hoi-3.html\"><img src=\"http://localhost/comayca/upload/sanpham/088538_266.66666666667x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1452/vay-xoe-da-hoi-3.html\">Váy xòe dạ hội 3</a></td><td width=\"10%\" align=\"center\"><div class=\"price-real\">5.000.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[41a992ff0969ebced714871cf1d82a56]\" value=\"9\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">45.000.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1464/vay-xoe-da-hoi-5.html\"><img src=\"http://localhost/comayca/upload/sanpham/660070_276.73716012085x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1464/vay-xoe-da-hoi-5.html\">Váy xòe dạ hội 5</a></td><td width=\"10%\" align=\"center\"><div class=\"price-real\">5.000.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[1d8f8b54cd9e162e4b4c4b5f2c6ab897]\" value=\"7\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">35.000.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1454/vay-xoe-da-hoi-15.html\"><img src=\"http://localhost/comayca/upload/sanpham/528376_269.54177897574x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1454/vay-xoe-da-hoi-15.html\">Váy xòe dạ hội 15</a></td><td width=\"10%\" align=\"center\"><div class=\"price-real\">5.000.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[89aa45227c63be768a09663bdd4f9cf7]\" value=\"1122\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">5.610.000.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1446/vay-xoe-da-hoi-6.html\"><img src=\"http://localhost/comayca/upload/sanpham/402989_269.36026936027x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1446/vay-xoe-da-hoi-6.html\">Váy xòe dạ hội 6</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Cam</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>XXL</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">5.000.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[f85111546951f536b99c2ab075debe1d]\" value=\"3\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">15.000.000&nbsp;VNĐ</td></tr> <tr><td colspan=\"6\" style=\"padding:0\"><h3 class=\"all-cart-price\">Tổng giá:6.070.000.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1432887594, 0, 1, 153, ''),
+(40, 'ZC10RA', 'TẤM INOX', '0987654321', '123 Quận 12 Hồ Chí Minh', 'tuanbl90@yahoo.com', 0, 35000000, '', 'aaaaaaaaaaaaaaaaaaaaa', '', ' <table id=\"giohang\" class=\"table table-bordered \" style=\"margin-top:10px\"><thead><th align=\"center\"></th><th>Tên sản phẩm</th><th align=\"center\">Giá bán</th><th align=\"center\">Số lượng</th><th align=\"center\">Tổng giá</th></thead><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1447/vay-xoe-da-hoi-2.html\"><img src=\"http://localhost/comayca/upload/sanpham/185350_258.18181818182x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1447/vay-xoe-da-hoi-2.html\">Váy xòe dạ hội 2</a></td><td width=\"10%\" align=\"center\"><div class=\"price-real\">5.000.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[c930eecd01935feef55942cc445f708f]\" value=\"2\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">10.000.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1452/vay-xoe-da-hoi-3.html\"><img src=\"http://localhost/comayca/upload/sanpham/088538_266.66666666667x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1452/vay-xoe-da-hoi-3.html\">Váy xòe dạ hội 3</a></td><td width=\"10%\" align=\"center\"><div class=\"price-real\">5.000.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[6786f3c62fbf9021694f6e51cc07fe3c]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">5.000.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1446/vay-xoe-da-hoi-6.html\"><img src=\"http://localhost/comayca/upload/sanpham/402989_269.36026936027x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1446/vay-xoe-da-hoi-6.html\">Váy xòe dạ hội 6</a><div class=\"product-option\"><label>Màu sắc: </label><strong class=\'red\'>Cam</strong><div class=\"clearfix\"></div></div><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>XXL</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-old\">200.000 đ</div><div class=\"price-real\">5.000.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[f85111546951f536b99c2ab075debe1d]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">5.000.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1458/vay-xoe-da-hoi-4.html\"><img src=\"http://localhost/comayca/upload/sanpham/968425_305.34351145038x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1458/vay-xoe-da-hoi-4.html\">Váy xòe dạ hội 4</a></td><td width=\"10%\" align=\"center\"><div class=\"price-real\">5.000.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[4dcae38ee11d3a6606cc6cd636a3628b]\" value=\"3\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">15.000.000&nbsp;VNĐ</td></tr> <tr><td colspan=\"6\" style=\"padding:0\"><h3 class=\"all-cart-price\">Tổng giá:35.000.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1432887831, 0, 1, 153, '[{\"id\":\"1447\",\"id_list\":\"231\",\"noibat\":\"1\",\"hot\":\"0\",\"photo\":\"185350.jpg\",\"thumb\":\"185350_258.18181818182x400.jpg\",\"ten_vi\":\"V\\u00e1y x\\u00f2e d\\u1ea1 h\\u1ed9i 2\",\"tenkhongdau\":\"vay-xoe-da-hoi-2\",\"mota_vi\":\"\",\"maso\":\"OT 3\",\"gia\":\"5000000\",\"giacu\":\"\",\"noidung_vi\":\"\",\"tag\":\"\",\"stt\":\"3\",\"hienthi\":\"1\",\"spmoi\":\"1\",\"spnoibat\":\"0\",\"ngaytao\":\"1427611824\",\"ngaysua\":\"1432785493\",\"luotxem\":\"305\",\"id_danhmuc\":\"66\",\"ten_en\":\"\",\"noidung_en\":\"\",\"mota_en\":\"\",\"gallery\":\"[]\",\"ten_cn\":\"\",\"mota_cn\":\"\",\"noidung_cn\":\"\",\"cntb\":\"0\",\"title\":\"\",\"keyword\":\"\",\"description\":\"\",\"id_cat\":\"0\",\"motangan_vi\":\"\",\"motangan_en\":\"\",\"xuatsu\":\"\",\"spbanchay\":\"1\",\"seo_title\":\"\",\"seo_keyword\":\"gach op tuong, g\\u1ea1ch \\u1ed1p t\\u01b0\\u1eddng\",\"seo_description\":\"gach op tuong, g\\u1ea1ch \\u1ed1p t\\u01b0\\u1eddng\",\"khuyenmai\":\"1\",\"chatlieu\":\"\",\"kichthuoc\":\"\",\"id_loaiphong\":\"0\"},{\"id\":\"1452\",\"id_list\":\"230\",\"noibat\":\"1\",\"hot\":\"0\",\"photo\":\"088538.jpg\",\"thumb\":\"088538_266.66666666667x400.jpg\",\"ten_vi\":\"V\\u00e1y x\\u00f2e d\\u1ea1 h\\u1ed9i 3\",\"tenkhongdau\":\"vay-xoe-da-hoi-3\",\"mota_vi\":\"\",\"maso\":\"SN 3\",\"gia\":\"5000000\",\"giacu\":\"\",\"noidung_vi\":\"\",\"tag\":\"\",\"stt\":\"3\",\"hienthi\":\"1\",\"spmoi\":\"1\",\"spnoibat\":\"0\",\"ngaytao\":\"1427612133\",\"ngaysua\":\"1432785510\",\"luotxem\":\"18\",\"id_danhmuc\":\"67\",\"ten_en\":\"\",\"noidung_en\":\"\",\"mota_en\":\"\",\"gallery\":\"[]\",\"ten_cn\":\"\",\"mota_cn\":\"\",\"noidung_cn\":\"\",\"cntb\":\"0\",\"title\":\"\",\"keyword\":\"\",\"description\":\"\",\"id_cat\":\"0\",\"motangan_vi\":\"\",\"motangan_en\":\"\",\"xuatsu\":\"\",\"spbanchay\":\"1\",\"seo_title\":\"\",\"seo_keyword\":\"\",\"seo_description\":\"\",\"khuyenmai\":\"1\",\"chatlieu\":\"\",\"kichthuoc\":\"\",\"id_loaiphong\":\"0\"},{\"id\":\"1446\",\"id_list\":\"231\",\"noibat\":\"1\",\"hot\":\"0\",\"photo\":\"402989.jpg\",\"thumb\":\"402989_269.36026936027x400.jpg\",\"ten_vi\":\"V\\u00e1y x\\u00f2e d\\u1ea1 h\\u1ed9i 6\",\"tenkhongdau\":\"vay-xoe-da-hoi-6\",\"mota_vi\":\"\",\"maso\":\"OT 2\",\"gia\":\"5000000\",\"giacu\":\"200000\",\"noidung_vi\":\"\",\"tag\":\"\",\"stt\":\"2\",\"hienthi\":\"1\",\"spmoi\":\"1\",\"spnoibat\":\"0\",\"ngaytao\":\"1427611762\",\"ngaysua\":\"1432785528\",\"luotxem\":\"199\",\"id_danhmuc\":\"66\",\"ten_en\":\"\",\"noidung_en\":\"\",\"mota_en\":\"\",\"gallery\":\"[\\\"\\/upload\\/user\\/images\\/1.jpg\\\",\\\"\\/upload\\/user\\/images\\/10.jpg\\\",\\\"\\/upload\\/user\\/images\\/11.jpg\\\",\\\"\\/upload\\/user\\/images\\/12.jpg\\\",\\\"\\/upload\\/user\\/images\\/3.jpg\\\",\\\"\\/upload\\/user\\/images\\/4.jpg\\\",\\\"\\/upload\\/user\\/images\\/5.jpg\\\",\\\"\\/upload\\/user\\/images\\/6.jpg\\\"]\",\"ten_cn\":\"\",\"mota_cn\":\"\",\"noidung_cn\":\"\",\"cntb\":\"0\",\"title\":\"\",\"keyword\":\"\",\"description\":\"\",\"id_cat\":\"0\",\"motangan_vi\":\"\",\"motangan_en\":\"\",\"xuatsu\":\"\",\"spbanchay\":\"1\",\"seo_title\":\"G\\u1ea1ch \\u1ed0p T\\u01b0\\u1eddng\",\"seo_keyword\":\"gach op tuong, g\\u1ea1ch \\u1ed1p t\\u01b0\\u1eddng\",\"seo_description\":\"gach op tuong, g\\u1ea1ch \\u1ed1p t\\u01b0\\u1eddng\",\"khuyenmai\":\"1\",\"chatlieu\":\"\",\"kichthuoc\":\"\",\"id_loaiphong\":\"0\"},{\"id\":\"1458\",\"id_list\":\"228\",\"noibat\":\"1\",\"hot\":\"0\",\"photo\":\"968425.jpg\",\"thumb\":\"968425_305.34351145038x400.jpg\",\"ten_vi\":\"V\\u00e1y x\\u00f2e d\\u1ea1 h\\u1ed9i 4\",\"tenkhongdau\":\"vay-xoe-da-hoi-4\",\"mota_vi\":\"\",\"maso\":\"ON 3\",\"gia\":\"5000000\",\"giacu\":\"\",\"noidung_vi\":\"\",\"tag\":\"\",\"stt\":\"3\",\"hienthi\":\"1\",\"spmoi\":\"1\",\"spnoibat\":\"0\",\"ngaytao\":\"1427612551\",\"ngaysua\":\"1432785516\",\"luotxem\":\"12\",\"id_danhmuc\":\"66\",\"ten_en\":\"\",\"noidung_en\":\"\",\"mota_en\":\"\",\"gallery\":\"[]\",\"ten_cn\":\"\",\"mota_cn\":\"\",\"noidung_cn\":\"\",\"cntb\":\"0\",\"title\":\"\",\"keyword\":\"\",\"description\":\"\",\"id_cat\":\"0\",\"motangan_vi\":\"\",\"motangan_en\":\"\",\"xuatsu\":\"\",\"spbanchay\":\"1\",\"seo_title\":\"\",\"seo_keyword\":\"\",\"seo_description\":\"\",\"khuyenmai\":\"1\",\"chatlieu\":\"\",\"kichthuoc\":\"\",\"id_loaiphong\":\"0\"}]'),
+(41, 'ASGDA1', 'email@gmail.com', 'email@gmail.com', 'email@gmail.com', 'emailxxx@gmail.com', 0, 20000000, '', 'xxxxxxxxxxxxxx', '', ' <table id=\"giohang\" class=\"table table-bordered \" style=\"margin-top:10px\"><thead><th align=\"center\"></th><th>Tên sản phẩm</th><th align=\"center\">Giá bán</th><th align=\"center\">Số lượng</th><th align=\"center\">Tổng giá</th></thead><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1459/vay-xoe-da-hoi-1.html\"><img src=\"http://localhost/comayca/upload/sanpham/929376_269.54177897574x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1459/vay-xoe-da-hoi-1.html\">Váy xòe dạ hội 1</a><div class=\"product-option\"><label>Kích thước: </label><strong class=\'red\'>XXL</strong><div class=\"clearfix\"></div></div></td><td width=\"10%\" align=\"center\"><div class=\"price-real\">5.000.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[2d9f2c24d2cc46cc548c763be6ae94d8]\" value=\"4\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">20.000.000&nbsp;VNĐ</td></tr> <tr><td colspan=\"6\" style=\"padding:0\"><h3 class=\"all-cart-price\">Tổng giá:20.000.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1432892590, 0, 1, 153, '[{\"id\":\"1459\",\"id_list\":\"230\",\"noibat\":\"1\",\"hot\":\"0\",\"photo\":\"929376.jpg\",\"thumb\":\"929376_269.54177897574x400.jpg\",\"ten_vi\":\"V\\u00e1y x\\u00f2e d\\u1ea1 h\\u1ed9i 1\",\"tenkhongdau\":\"vay-xoe-da-hoi-1\",\"mota_vi\":\"\",\"maso\":\"ON 4\",\"gia\":\"5000000\",\"giacu\":\"\",\"noidung_vi\":\"\",\"tag\":\"\",\"stt\":\"4\",\"hienthi\":\"1\",\"spmoi\":\"1\",\"spnoibat\":\"0\",\"ngaytao\":\"1427612578\",\"ngaysua\":\"1432785497\",\"luotxem\":\"24\",\"id_danhmuc\":\"67\",\"ten_en\":\"\",\"noidung_en\":\"\",\"mota_en\":\"\",\"gallery\":\"[]\",\"ten_cn\":\"\",\"mota_cn\":\"\",\"noidung_cn\":\"\",\"cntb\":\"0\",\"title\":\"\",\"keyword\":\"\",\"description\":\"\",\"id_cat\":\"0\",\"motangan_vi\":\"\",\"motangan_en\":\"\",\"xuatsu\":\"\",\"spbanchay\":\"1\",\"seo_title\":\"\",\"seo_keyword\":\"\",\"seo_description\":\"\",\"khuyenmai\":\"1\",\"chatlieu\":\"\",\"kichthuoc\":\"\",\"id_loaiphong\":\"0\"}]');
 INSERT INTO `table_donhang` (`id`, `madonhang`, `hoten`, `dienthoai`, `diachi`, `email`, `httt`, `tonggia`, `tieudethanhtoan`, `noidung`, `ghichu`, `donhang`, `ngaytao`, `trangthai`, `tinhtrang`, `thanhvien`, `chitiet`) VALUES
-(42, 'W7Y8W', 'tuanbl90@gmail.com.vn.cn', '0908887765', '159 Tiền Giang, Khóm 1, Phường Cam lợi, Cam Ranh Khánh Hòa', 'tuanbl90@gmail.com.vn.cn', 0, 8340000, '', 'GIao hàng ngay cho bố', '', ' <table id="giohang" class="table table-bordered " style="margin-top:10px"><thead><th align="center"></th><th>Tên sản phẩm</th><th align="center">Giá bán</th><th align="center">Số lượng</th><th align="center">Tổng giá</th></thead><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1472/bo-ao-so-mi-va-chan-vay-xoe-xep-ly-xinh-nhu-ngoc-trinh-328.html"><img src="http://localhost/comayca/upload/sanpham/858180_266.30136986301x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1472/bo-ao-so-mi-va-chan-vay-xoe-xep-ly-xinh-nhu-ngoc-trinh-328.html">Bộ áo sơ mi và chân váy xòe xếp ly xinh như Ngọc Trinh #328</a></td><td width="10%" align="center"><div class="price-real">450.000 đ</div><td width="10%" align="center"><input type="text" name="product[f39e82ac3dc83de7f056d07e0f0bcb8e]" value="4" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">1.800.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1453/vay-xoe-da-hoi-9.html"><img src="http://localhost/comayca/upload/sanpham/012041_262.99694189602x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1453/vay-xoe-da-hoi-9.html">Váy xòe dạ hội 9</a></td><td width="10%" align="center"><div class="price-real">5.000.000 đ</div><td width="10%" align="center"><input type="text" name="product[44dd1662b1b684d3304a52701d680821]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">5.000.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1471/do-bay-jumpsuit-dep-thiet-ke-xe-nguc-giong-ngoc-trinh-132.html"><img src="http://localhost/comayca/upload/sanpham/412208_263.79310344828x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1471/do-bay-jumpsuit-dep-thiet-ke-xe-nguc-giong-ngoc-trinh-132.html">Đồ bay jumpsuit đẹp thiết kế xẻ ngực giống Ngọc Trinh #132</a></td><td width="10%" align="center"><div class="price-real">520.000 đ</div><td width="10%" align="center"><input type="text" name="product[6597e35504c82e2f89f20837fb631376]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">520.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1468/do-bay-dai-ngoc-trinh-666.html"><img src="http://localhost/comayca/upload/sanpham/565468_286.02739726027x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1468/do-bay-dai-ngoc-trinh-666.html">Đồ bay dài Ngọc Trinh 666</a></td><td width="10%" align="center"><div class="price-real">540.000 đ</div><td width="10%" align="center"><input type="text" name="product[143e509fceba0b83430a3239938bff8f]" value="1" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">540.000&nbsp;VNĐ</td></tr><tr bgcolor="#FFFFFF"><td width="10%" align="center"><a target="_blank"  href="http://localhost/comaycasan-pham/1475/vay-but-chi-dai-kieu-dang-don-gian-de-phoi-do-951.html"><img src="http://localhost/comayca/upload/sanpham/540932_266.30136986301x400.jpg" class="img-responsive" /></a></td><td width="35%"><a target="_blank" href="http://localhost/comaycasan-pham/1475/vay-but-chi-dai-kieu-dang-don-gian-de-phoi-do-951.html">Váy bút chì dài kiểu dáng đơn giản dễ phối đồ #951</a></td><td width="10%" align="center"><div class="price-real">240.000 đ</div><td width="10%" align="center"><input type="text" name="product[1c7bc3bf2c3ed4a45a7f0bab620800f9]" value="2" maxlength="3" size="2" style="text-align:center; border:1px solid #F0F0F0" />&nbsp;</td><td width="18%" align="center" class="price-total">480.000&nbsp;VNĐ</td></tr> <tr><td colspan="6" style="padding:0"><h3 class="all-cart-price">Tổng giá:8.340.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1432955376, 0, 1, 155, '[{"id":"1472","id_list":"0","noibat":"1","hot":"0","photo":"858180.jpg","thumb":"858180_266.30136986301x400.jpg","ten_vi":"B\\u1ed9 \\u00e1o s\\u01a1 mi v\\u00e0 ch\\u00e2n v\\u00e1y x\\u00f2e x\\u1ebfp ly xinh nh\\u01b0 Ng\\u1ecdc Trinh #328","tenkhongdau":"bo-ao-so-mi-va-chan-vay-xoe-xep-ly-xinh-nhu-ngoc-trinh-328","mota_vi":"<p><span style=\\"font-size:16px\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 328<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Gi&aacute;: 450.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">M&agrave;u s\\u1eafc: Cam nh\\u1ea1t ph\\u1ed1i tr\\u1eafng<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i tuy\\u1ebft m\\u01b0a + Voan<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 46kg&nbsp;\\u0111\\u1ebfn 54kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Chi\\u1ec1u&nbsp;d&agrave;i:&nbsp;<\\/span><span style=\\"font-size:16px\\">85<\\/span><span style=\\"font-size:16px\\">cm<\\/span><\\/p>\\r\\n","maso":"DT 328","gia":"450000","giacu":"","noidung_vi":"<h2><span style=\\"font-size:14px\\"><span style=\\"font-size:18px\\">B\\u1ed9 &aacute;o s\\u01a1 mi v&agrave; ch&acirc;n v&aacute;y x&ograve;e x\\u1ebfp ly xinh nh\\u01b0 Ng\\u1ecdc Trinh #328<\\/span><\\/span><\\/h2>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 328<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Gi&aacute;: 450.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">M&agrave;u s\\u1eafc: Cam nh\\u1ea1t ph\\u1ed1i tr\\u1eafng<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i tuy\\u1ebft m\\u01b0a + Voan<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 46kg&nbsp;\\u0111\\u1ebfn 54kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Chi\\u1ec1u&nbsp;d&agrave;i:&nbsp;<\\/span><span style=\\"font-size:16px\\">85<\\/span><span style=\\"font-size:16px\\">cm<\\/span><\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\"><img alt=\\"B\\u1ed9 \\u00e1o s\\u01a1 mi v\\u00e0 ch\\u00e2n v\\u00e1y x\\u00f2e x\\u1ebfp ly xinh nh\\u01b0 Ng\\u1ecdc Trinh \\" height=\\"675\\" src=\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/988537_653095004821317_7954289588034850540_n.jpg\\" width=\\"450\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\"><span style=\\"font-size:14px\\">B\\u1ed9 &aacute;o s\\u01a1 mi v&agrave; ch&acirc;n v&aacute;y x&ograve;e x\\u1ebfp ly xinh nh\\u01b0 Ng\\u1ecdc Trinh #328<\\/span><\\/p>\\r\\n","tag":"","stt":"5","hienthi":"1","spmoi":"1","spnoibat":"0","ngaytao":"1432910065","ngaysua":"0","luotxem":"3","id_danhmuc":"69","ten_en":"","noidung_en":"","mota_en":"","gallery":"[]","ten_cn":"","mota_cn":"","noidung_cn":"","cntb":"0","title":"","keyword":"","description":"","id_cat":"0","motangan_vi":"","motangan_en":"","xuatsu":"","spbanchay":"1","seo_title":"","seo_keyword":"","seo_description":"","khuyenmai":"1","bansi":"1"},{"id":"1453","id_list":"230","noibat":"1","hot":"0","photo":"012041.jpg","thumb":"012041_262.99694189602x400.jpg","ten_vi":"V\\u00e1y x\\u00f2e d\\u1ea1 h\\u1ed9i 9","tenkhongdau":"vay-xoe-da-hoi-9","mota_vi":"","maso":"SN 2","gia":"5000000","giacu":"","noidung_vi":"","tag":"","stt":"2","hienthi":"1","spmoi":"1","spnoibat":"0","ngaytao":"1427612167","ngaysua":"1432785548","luotxem":"3","id_danhmuc":"67","ten_en":"","noidung_en":"","mota_en":"","gallery":"[]","ten_cn":"","mota_cn":"","noidung_cn":"","cntb":"0","title":"","keyword":"","description":"","id_cat":"0","motangan_vi":"","motangan_en":"","xuatsu":"","spbanchay":"1","seo_title":"","seo_keyword":"","seo_description":"","khuyenmai":"1","bansi":"0"},{"id":"1471","id_list":"0","noibat":"1","hot":"0","photo":"412208.jpg","thumb":"412208_263.79310344828x400.jpg","ten_vi":"\\u0110\\u1ed3 bay jumpsuit \\u0111\\u1eb9p thi\\u1ebft k\\u1ebf x\\u1ebb ng\\u1ef1c gi\\u1ed1ng Ng\\u1ecdc Trinh #132","tenkhongdau":"do-bay-jumpsuit-dep-thiet-ke-xe-nguc-giong-ngoc-trinh-132","mota_vi":"<h2><strong>\\u0110\\u1ed3 bay jumpsuit \\u0111\\u1eb9p<\\/strong>&nbsp;thi\\u1ebft k\\u1ebf x\\u1ebb ng\\u1ef1c gi\\u1ed1ng Ng\\u1ecdc Trinh #132<\\/h2>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 132 (Ko b&aacute;n k&egrave;m&nbsp;th\\u1eaft l\\u01b0ng)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Gi&aacute;: 520.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">M&agrave;u s\\u1eafc: \\u0110en, \\u0110\\u1ecf<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i tuy\\u1ebft m\\u01b0a<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 45kg&nbsp;\\u0111\\u1ebfn 55kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n","maso":"DT 132 (Ko b\\u00e1n k\\u00e8m th\\u1eaft l\\u01b0ng)","gia":"520000","giacu":"","noidung_vi":"<h2><strong>\\u0110\\u1ed3 bay jumpsuit \\u0111\\u1eb9p<\\/strong>&nbsp;thi\\u1ebft k\\u1ebf x\\u1ebb ng\\u1ef1c gi\\u1ed1ng Ng\\u1ecdc Trinh #132<\\/h2>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 132 (Ko b&aacute;n k&egrave;m&nbsp;th\\u1eaft l\\u01b0ng)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Gi&aacute;: 520.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">M&agrave;u s\\u1eafc: \\u0110en, \\u0110\\u1ecf<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i tuy\\u1ebft m\\u01b0a<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 45kg&nbsp;\\u0111\\u1ebfn 55kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\"><img alt=\\"\\u0110\\u1ed3 bay jumpsuit \\u0111\\u1eb9p gi\\u1ed1ng Ng\\u1ecdc Trinh\\" height=\\"800\\" src=\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/do-bay-jumpsuit-dep-ngoc-trinh%20(2).jpg\\" width=\\"800\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\">&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\"><strong>\\u0110\\u1ed3 bay jumpsuit \\u0111\\u1eb9p<\\/strong>&nbsp;thi\\u1ebft k\\u1ebf x\\u1ebb ng\\u1ef1c gi\\u1ed1ng Ng\\u1ecdc Trinh #132<\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\"><img alt=\\"\\" height=\\"857\\" src=\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/do-bay-jumpsuit-dep-ngoc-trinh.JPG\\" width=\\"500\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\"><strong>\\u0110\\u1ed3 bay jumpsuit \\u0111\\u1eb9p<\\/strong>&nbsp;thi\\u1ebft k\\u1ebf x\\u1ebb ng\\u1ef1c gi\\u1ed1ng Ng\\u1ecdc Trinh #132<\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\">&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\"text-align:right\\"><span style=\\"font-family:arial,sans-serif; font-size:16px\\">Xem th&ecirc;m c<\\/span><span style=\\"font-family:arial,sans-serif; font-size:16px\\">&aacute;c&nbsp;m\\u1eabu<\\/span><span style=\\"font-family:arial,sans-serif; font-size:16px\\">&nbsp;<\\/span><strong><a href=\\"http:\\/\\/meoshop.vn\\/jumpsuit-1.html\\" style=\\"margin: 0px; padding: 0px; text-decoration: none; color: rgb(0, 0, 0);\\"><span style=\\"color:rgb(255, 140, 0)\\">Jumpsuit<\\/span><\\/a><\\/strong><span style=\\"font-family:arial,sans-serif; font-size:16px\\">&nbsp;t\\u1ea1i&nbsp;\\u0111&acirc;y<\\/span><\\/p>\\r\\n","tag":"","stt":"4","hienthi":"1","spmoi":"1","spnoibat":"0","ngaytao":"1432909741","ngaysua":"0","luotxem":"0","id_danhmuc":"70","ten_en":"","noidung_en":"","mota_en":"","gallery":"[]","ten_cn":"","mota_cn":"","noidung_cn":"","cntb":"0","title":"","keyword":"","description":"","id_cat":"0","motangan_vi":"","motangan_en":"","xuatsu":"","spbanchay":"1","seo_title":"","seo_keyword":"","seo_description":"","khuyenmai":"1","bansi":"1"},{"id":"1468","id_list":"0","noibat":"1","hot":"0","photo":"565468.jpg","thumb":"565468_286.02739726027x400.jpg","ten_vi":"\\u0110\\u1ed3 bay d\\u00e0i Ng\\u1ecdc Trinh 666","tenkhongdau":"do-bay-dai-ngoc-trinh-666","mota_vi":"<h2><em>\\u0110\\u1ed3 bay d&agrave;i Ng\\u1ecdc Trinh<\\/em>&nbsp;666<\\/h2>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 666<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Gi&aacute;: 540.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">M&agrave;u s\\u1eafc: Tr\\u1eafng<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i Laza d&agrave;y m\\u1ecbn<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 45kg&nbsp;\\u0111\\u1ebfn 55kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Ch&uacute; th&iacute;ch:&nbsp;Nguy&ecirc;n B\\u1ed9 G\\u1ed3m&nbsp;<strong><a href=\\"http:\\/\\/meoshop.vn\\/ao-croptop-1.html\\" style=\\"color: rgb(0, 0, 0); margin: 0px; padding: 0px; text-decoration: none;\\">&aacute;o&nbsp;crop top<\\/a><\\/strong>&nbsp;v&agrave;&nbsp;<strong><a href=\\"http:\\/\\/meoshop.vn\\/quan-ong-suong-1.html\\" style=\\"color: rgb(0, 0, 0); margin: 0px; padding: 0px; text-decoration: none;\\">qu<\\/a><\\/strong><strong><a href=\\"http:\\/\\/meoshop.vn\\/quan-ong-suong-1.html\\" style=\\"color: rgb(0, 0, 0); margin: 0px; padding: 0px; text-decoration: none;\\">\\u1ea7n&nbsp;\\u1ed1ng&nbsp;su&ocirc;ng&nbsp;<\\/a>&nbsp;<\\/strong><strong>tr<\\/strong>\\u1eafng<\\/span><\\/p>\\r\\n","maso":"\\u0110\\u1ed3 bay d\\u00e0i Ng\\u1ecdc Trinh 666","gia":"540000","giacu":"","noidung_vi":"<h2><em>\\u0110\\u1ed3 bay d&agrave;i Ng\\u1ecdc Trinh<\\/em>&nbsp;666<\\/h2>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 666<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Gi&aacute;: 540.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">M&agrave;u s\\u1eafc: Tr\\u1eafng<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i Laza d&agrave;y m\\u1ecbn<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 45kg&nbsp;\\u0111\\u1ebfn 55kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Ch&uacute; th&iacute;ch:&nbsp;Nguy&ecirc;n B\\u1ed9 G\\u1ed3m&nbsp;<strong><a href=\\"http:\\/\\/meoshop.vn\\/ao-croptop-1.html\\" style=\\"color: rgb(0, 0, 0); margin: 0px; padding: 0px; text-decoration: none;\\">&aacute;o&nbsp;crop top<\\/a><\\/strong>&nbsp;v&agrave;&nbsp;<strong><a href=\\"http:\\/\\/meoshop.vn\\/quan-ong-suong-1.html\\" style=\\"color: rgb(0, 0, 0); margin: 0px; padding: 0px; text-decoration: none;\\">qu<\\/a><\\/strong><strong><a href=\\"http:\\/\\/meoshop.vn\\/quan-ong-suong-1.html\\" style=\\"color: rgb(0, 0, 0); margin: 0px; padding: 0px; text-decoration: none;\\">\\u1ea7n&nbsp;\\u1ed1ng&nbsp;su&ocirc;ng&nbsp;<\\/a>&nbsp;<\\/strong><strong>tr<\\/strong>\\u1eafng<\\/span><\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\"><img alt=\\"\\u0110\\u1ed3 bay d\\u00e0i Ng\\u1ecdc Trinh 666\\" height=\\"750\\" src=\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/do-bay-ngoc-trinh-1.jpg\\" title=\\"\\u0110\\u1ed3 bay d\\u00e0i Ng\\u1ecdc Trinh 666\\" width=\\"500\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\"><em>\\u0110\\u1ed3 bay d&agrave;i Ng\\u1ecdc Trinh<\\/em>&nbsp;666<\\/p>\\r\\n\\r\\n<p style=\\"outline:yellow solid 2px; cursor:default; text-align:center\\"><img alt=\\"\\u0110\\u1ed3 bay d\\u00e0i Ng\\u1ecdc Trinh 666\\" height=\\"743\\" src=\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/do-bay-dai-ngoc-trinh%20(4).jpg\\" title=\\"\\u0110\\u1ed3 bay d\\u00e0i Ng\\u1ecdc Trinh 666\\" width=\\"500\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\">Jumpsuit<em>&nbsp;\\u0111\\u1ed3 bay d&agrave;i<\\/em>&nbsp;c\\u1ee7a ng\\u1ecdc trinh v\\u1edbi thi\\u1ebft k\\u1ebf&nbsp;&aacute;o croptop vu&ocirc;ng v\\u1edbi&nbsp;\\u0111\\u01b0\\u1eddng c\\u1eaft may t\\u0129&nbsp;m\\u0129<\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\">&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\"><img alt=\\"Jumpsuit Ng\\u1ecdc Trinh 666\\" height=\\"700\\" src=\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/jumpsuit-ngoc-trinh-1.jpg\\" title=\\"Jumpsuit Ng\\u1ecdc Trinh 666\\" width=\\"500\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\">B\\u1ed9&nbsp;\\u0111\\u1ed3 jumpsuit Ng\\u1ecdc Trinh 666<\\/p>\\r\\n\\r\\n<p style=\\"text-align:right\\">&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\"text-align:right\\"><span style=\\"font-family:arial,sans-serif; font-size:16px\\">Xem th&ecirc;m c<\\/span><span style=\\"font-family:arial,sans-serif; font-size:16px\\">&aacute;c&nbsp;m\\u1eabu&nbsp;<\\/span><strong><a href=\\"http:\\/\\/meoshop.vn\\/jumpsuit-1.html\\" style=\\"color: rgb(0, 0, 0); margin: 0px; padding: 0px; text-decoration: none;\\"><span style=\\"color:rgb(255, 140, 0)\\">\\u0110\\u1ed3&nbsp;bay d&agrave;i<\\/span><\\/a><\\/strong><span style=\\"font-family:arial,sans-serif; font-size:16px\\">&nbsp;t\\u1ea1i&nbsp;\\u0111&acirc;y<\\/span><\\/p>\\r\\n\\r\\n<div>&nbsp;<\\/div>\\r\\n","tag":"","stt":"1","hienthi":"1","spmoi":"1","spnoibat":"0","ngaytao":"1432908972","ngaysua":"1432909079","luotxem":"3","id_danhmuc":"70","ten_en":"","noidung_en":"","mota_en":"","gallery":"[]","ten_cn":"","mota_cn":"","noidung_cn":"","cntb":"0","title":"","keyword":"","description":"","id_cat":"0","motangan_vi":"","motangan_en":"","xuatsu":"","spbanchay":"0","seo_title":"","seo_keyword":"","seo_description":"","khuyenmai":"1","bansi":"0"},{"id":"1475","id_list":"0","noibat":"1","hot":"0","photo":"540932.jpg","thumb":"540932_266.30136986301x400.jpg","ten_vi":"V\\u00e1y b\\u00fat ch\\u00ec d\\u00e0i ki\\u1ec3u d\\u00e1ng \\u0111\\u01a1n gi\\u1ea3n d\\u1ec5 ph\\u1ed1i \\u0111\\u1ed3 #951","tenkhongdau":"vay-but-chi-dai-kieu-dang-don-gian-de-phoi-do-951","mota_vi":"<p><span style=\\"font-size:16px\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 951<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Gi&aacute;: 240.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">M&agrave;u s\\u1eafc: Xanh pastel | H\\u1ed3ng&nbsp;sen<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i tuy\\u1ebft&nbsp;m\\u01b0a&nbsp;cao c\\u1ea5p<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 45kg&nbsp;\\u0111\\u1ebfn 55kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Chi\\u1ec1u&nbsp;d&agrave;i: 60cm<\\/span><\\/p>\\r\\n","maso":"DT 951","gia":"240000","giacu":"","noidung_vi":"<p><span style=\\"font-size:16px\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 951<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Gi&aacute;: 240.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">M&agrave;u s\\u1eafc: Xanh pastel | H\\u1ed3ng&nbsp;sen<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i tuy\\u1ebft&nbsp;m\\u01b0a&nbsp;cao c\\u1ea5p<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 45kg&nbsp;\\u0111\\u1ebfn 55kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\"font-size:16px\\">Chi\\u1ec1u&nbsp;d&agrave;i: 60cm<\\/span><\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\"><img alt=\\"V\\u00e1y b\\u00fat ch\\u00ec d\\u00e0i Ngoc trinh\\" height=\\"670\\" src=\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/vay-but-chi-dai-ngoc-trinh.jpg\\" title=\\"V\\u00e1y b\\u00fat ch\\u00ec d\\u00e0i Ngoc trinh\\" width=\\"450\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\"><strong>V&aacute;y b&uacute;t ch&igrave; d&agrave;i<\\/strong>&nbsp;ki\\u1ec3u d&aacute;ng \\u0111\\u01a1n gi\\u1ea3n d\\u1ec5 ph\\u1ed1i \\u0111\\u1ed3 #951<\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\"><img alt=\\"V\\u00e1y b\\u00fat ch\\u00ec d\\u00e0i Ngoc trinh\\" height=\\"592\\" src=\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/vay-but-chi-dai-ngoc-trinh%20(2).jpg\\" title=\\"V\\u00e1y b\\u00fat ch\\u00ec d\\u00e0i Ngoc trinh\\" width=\\"450\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\"text-align:center\\">&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\"text-align:right\\"><span style=\\"font-size:16px\\">Xem th&ecirc;m c&aacute;c m\\u1eabu&nbsp;<strong><a href=\\"http:\\/\\/meoshop.vn\\/vay-but-chi-1.html\\" style=\\"margin: 0px; padding: 0px; text-decoration: none; color: rgb(51, 51, 51);\\"><span style=\\"color:rgb(255, 140, 0)\\">V&aacute;y b&uacute;t ch&igrave;<\\/span><\\/a><\\/strong>&nbsp;t\\u1ea1i&nbsp;\\u0111&acirc;y.<\\/span><\\/p>\\r\\n","tag":"","stt":"5","hienthi":"1","spmoi":"1","spnoibat":"0","ngaytao":"1432910763","ngaysua":"1432954544","luotxem":"2","id_danhmuc":"67","ten_en":"","noidung_en":"","mota_en":"","gallery":"[]","ten_cn":"","mota_cn":"","noidung_cn":"","cntb":"0","title":"","keyword":"","description":"","id_cat":"0","motangan_vi":"","motangan_en":"","xuatsu":"","spbanchay":"1","seo_title":"","seo_keyword":"","seo_description":"","khuyenmai":"1","bansi":"0"}]');
+(42, 'W7Y8W', 'tuanbl90@gmail.com.vn.cn', '0908887765', '159 Tiền Giang, Khóm 1, Phường Cam lợi, Cam Ranh Khánh Hòa', 'tuanbl90@gmail.com.vn.cn', 0, 8340000, '', 'GIao hàng ngay cho bố', '', ' <table id=\"giohang\" class=\"table table-bordered \" style=\"margin-top:10px\"><thead><th align=\"center\"></th><th>Tên sản phẩm</th><th align=\"center\">Giá bán</th><th align=\"center\">Số lượng</th><th align=\"center\">Tổng giá</th></thead><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1472/bo-ao-so-mi-va-chan-vay-xoe-xep-ly-xinh-nhu-ngoc-trinh-328.html\"><img src=\"http://localhost/comayca/upload/sanpham/858180_266.30136986301x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1472/bo-ao-so-mi-va-chan-vay-xoe-xep-ly-xinh-nhu-ngoc-trinh-328.html\">Bộ áo sơ mi và chân váy xòe xếp ly xinh như Ngọc Trinh #328</a></td><td width=\"10%\" align=\"center\"><div class=\"price-real\">450.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[f39e82ac3dc83de7f056d07e0f0bcb8e]\" value=\"4\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">1.800.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1453/vay-xoe-da-hoi-9.html\"><img src=\"http://localhost/comayca/upload/sanpham/012041_262.99694189602x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1453/vay-xoe-da-hoi-9.html\">Váy xòe dạ hội 9</a></td><td width=\"10%\" align=\"center\"><div class=\"price-real\">5.000.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[44dd1662b1b684d3304a52701d680821]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">5.000.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1471/do-bay-jumpsuit-dep-thiet-ke-xe-nguc-giong-ngoc-trinh-132.html\"><img src=\"http://localhost/comayca/upload/sanpham/412208_263.79310344828x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1471/do-bay-jumpsuit-dep-thiet-ke-xe-nguc-giong-ngoc-trinh-132.html\">Đồ bay jumpsuit đẹp thiết kế xẻ ngực giống Ngọc Trinh #132</a></td><td width=\"10%\" align=\"center\"><div class=\"price-real\">520.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[6597e35504c82e2f89f20837fb631376]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">520.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1468/do-bay-dai-ngoc-trinh-666.html\"><img src=\"http://localhost/comayca/upload/sanpham/565468_286.02739726027x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1468/do-bay-dai-ngoc-trinh-666.html\">Đồ bay dài Ngọc Trinh 666</a></td><td width=\"10%\" align=\"center\"><div class=\"price-real\">540.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[143e509fceba0b83430a3239938bff8f]\" value=\"1\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">540.000&nbsp;VNĐ</td></tr><tr bgcolor=\"#FFFFFF\"><td width=\"10%\" align=\"center\"><a target=\"_blank\"  href=\"http://localhost/comaycasan-pham/1475/vay-but-chi-dai-kieu-dang-don-gian-de-phoi-do-951.html\"><img src=\"http://localhost/comayca/upload/sanpham/540932_266.30136986301x400.jpg\" class=\"img-responsive\" /></a></td><td width=\"35%\"><a target=\"_blank\" href=\"http://localhost/comaycasan-pham/1475/vay-but-chi-dai-kieu-dang-don-gian-de-phoi-do-951.html\">Váy bút chì dài kiểu dáng đơn giản dễ phối đồ #951</a></td><td width=\"10%\" align=\"center\"><div class=\"price-real\">240.000 đ</div><td width=\"10%\" align=\"center\"><input type=\"text\" name=\"product[1c7bc3bf2c3ed4a45a7f0bab620800f9]\" value=\"2\" maxlength=\"3\" size=\"2\" style=\"text-align:center; border:1px solid #F0F0F0\" />&nbsp;</td><td width=\"18%\" align=\"center\" class=\"price-total\">480.000&nbsp;VNĐ</td></tr> <tr><td colspan=\"6\" style=\"padding:0\"><h3 class=\"all-cart-price\">Tổng giá:8.340.000&nbsp;VNĐ</h3>   </td></tr> </table>	', 1432955376, 0, 1, 155, '[{\"id\":\"1472\",\"id_list\":\"0\",\"noibat\":\"1\",\"hot\":\"0\",\"photo\":\"858180.jpg\",\"thumb\":\"858180_266.30136986301x400.jpg\",\"ten_vi\":\"B\\u1ed9 \\u00e1o s\\u01a1 mi v\\u00e0 ch\\u00e2n v\\u00e1y x\\u00f2e x\\u1ebfp ly xinh nh\\u01b0 Ng\\u1ecdc Trinh #328\",\"tenkhongdau\":\"bo-ao-so-mi-va-chan-vay-xoe-xep-ly-xinh-nhu-ngoc-trinh-328\",\"mota_vi\":\"<p><span style=\\\"font-size:16px\\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 328<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Gi&aacute;: 450.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">M&agrave;u s\\u1eafc: Cam nh\\u1ea1t ph\\u1ed1i tr\\u1eafng<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i tuy\\u1ebft m\\u01b0a + Voan<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 46kg&nbsp;\\u0111\\u1ebfn 54kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Chi\\u1ec1u&nbsp;d&agrave;i:&nbsp;<\\/span><span style=\\\"font-size:16px\\\">85<\\/span><span style=\\\"font-size:16px\\\">cm<\\/span><\\/p>\\r\\n\",\"maso\":\"DT 328\",\"gia\":\"450000\",\"giacu\":\"\",\"noidung_vi\":\"<h2><span style=\\\"font-size:14px\\\"><span style=\\\"font-size:18px\\\">B\\u1ed9 &aacute;o s\\u01a1 mi v&agrave; ch&acirc;n v&aacute;y x&ograve;e x\\u1ebfp ly xinh nh\\u01b0 Ng\\u1ecdc Trinh #328<\\/span><\\/span><\\/h2>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 328<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Gi&aacute;: 450.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">M&agrave;u s\\u1eafc: Cam nh\\u1ea1t ph\\u1ed1i tr\\u1eafng<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i tuy\\u1ebft m\\u01b0a + Voan<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 46kg&nbsp;\\u0111\\u1ebfn 54kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Chi\\u1ec1u&nbsp;d&agrave;i:&nbsp;<\\/span><span style=\\\"font-size:16px\\\">85<\\/span><span style=\\\"font-size:16px\\\">cm<\\/span><\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\"><img alt=\\\"B\\u1ed9 \\u00e1o s\\u01a1 mi v\\u00e0 ch\\u00e2n v\\u00e1y x\\u00f2e x\\u1ebfp ly xinh nh\\u01b0 Ng\\u1ecdc Trinh \\\" height=\\\"675\\\" src=\\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/988537_653095004821317_7954289588034850540_n.jpg\\\" width=\\\"450\\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\"><span style=\\\"font-size:14px\\\">B\\u1ed9 &aacute;o s\\u01a1 mi v&agrave; ch&acirc;n v&aacute;y x&ograve;e x\\u1ebfp ly xinh nh\\u01b0 Ng\\u1ecdc Trinh #328<\\/span><\\/p>\\r\\n\",\"tag\":\"\",\"stt\":\"5\",\"hienthi\":\"1\",\"spmoi\":\"1\",\"spnoibat\":\"0\",\"ngaytao\":\"1432910065\",\"ngaysua\":\"0\",\"luotxem\":\"3\",\"id_danhmuc\":\"69\",\"ten_en\":\"\",\"noidung_en\":\"\",\"mota_en\":\"\",\"gallery\":\"[]\",\"ten_cn\":\"\",\"mota_cn\":\"\",\"noidung_cn\":\"\",\"cntb\":\"0\",\"title\":\"\",\"keyword\":\"\",\"description\":\"\",\"id_cat\":\"0\",\"motangan_vi\":\"\",\"motangan_en\":\"\",\"xuatsu\":\"\",\"spbanchay\":\"1\",\"seo_title\":\"\",\"seo_keyword\":\"\",\"seo_description\":\"\",\"khuyenmai\":\"1\",\"bansi\":\"1\"},{\"id\":\"1453\",\"id_list\":\"230\",\"noibat\":\"1\",\"hot\":\"0\",\"photo\":\"012041.jpg\",\"thumb\":\"012041_262.99694189602x400.jpg\",\"ten_vi\":\"V\\u00e1y x\\u00f2e d\\u1ea1 h\\u1ed9i 9\",\"tenkhongdau\":\"vay-xoe-da-hoi-9\",\"mota_vi\":\"\",\"maso\":\"SN 2\",\"gia\":\"5000000\",\"giacu\":\"\",\"noidung_vi\":\"\",\"tag\":\"\",\"stt\":\"2\",\"hienthi\":\"1\",\"spmoi\":\"1\",\"spnoibat\":\"0\",\"ngaytao\":\"1427612167\",\"ngaysua\":\"1432785548\",\"luotxem\":\"3\",\"id_danhmuc\":\"67\",\"ten_en\":\"\",\"noidung_en\":\"\",\"mota_en\":\"\",\"gallery\":\"[]\",\"ten_cn\":\"\",\"mota_cn\":\"\",\"noidung_cn\":\"\",\"cntb\":\"0\",\"title\":\"\",\"keyword\":\"\",\"description\":\"\",\"id_cat\":\"0\",\"motangan_vi\":\"\",\"motangan_en\":\"\",\"xuatsu\":\"\",\"spbanchay\":\"1\",\"seo_title\":\"\",\"seo_keyword\":\"\",\"seo_description\":\"\",\"khuyenmai\":\"1\",\"bansi\":\"0\"},{\"id\":\"1471\",\"id_list\":\"0\",\"noibat\":\"1\",\"hot\":\"0\",\"photo\":\"412208.jpg\",\"thumb\":\"412208_263.79310344828x400.jpg\",\"ten_vi\":\"\\u0110\\u1ed3 bay jumpsuit \\u0111\\u1eb9p thi\\u1ebft k\\u1ebf x\\u1ebb ng\\u1ef1c gi\\u1ed1ng Ng\\u1ecdc Trinh #132\",\"tenkhongdau\":\"do-bay-jumpsuit-dep-thiet-ke-xe-nguc-giong-ngoc-trinh-132\",\"mota_vi\":\"<h2><strong>\\u0110\\u1ed3 bay jumpsuit \\u0111\\u1eb9p<\\/strong>&nbsp;thi\\u1ebft k\\u1ebf x\\u1ebb ng\\u1ef1c gi\\u1ed1ng Ng\\u1ecdc Trinh #132<\\/h2>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 132 (Ko b&aacute;n k&egrave;m&nbsp;th\\u1eaft l\\u01b0ng)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Gi&aacute;: 520.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">M&agrave;u s\\u1eafc: \\u0110en, \\u0110\\u1ecf<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i tuy\\u1ebft m\\u01b0a<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 45kg&nbsp;\\u0111\\u1ebfn 55kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\",\"maso\":\"DT 132 (Ko b\\u00e1n k\\u00e8m th\\u1eaft l\\u01b0ng)\",\"gia\":\"520000\",\"giacu\":\"\",\"noidung_vi\":\"<h2><strong>\\u0110\\u1ed3 bay jumpsuit \\u0111\\u1eb9p<\\/strong>&nbsp;thi\\u1ebft k\\u1ebf x\\u1ebb ng\\u1ef1c gi\\u1ed1ng Ng\\u1ecdc Trinh #132<\\/h2>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 132 (Ko b&aacute;n k&egrave;m&nbsp;th\\u1eaft l\\u01b0ng)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Gi&aacute;: 520.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">M&agrave;u s\\u1eafc: \\u0110en, \\u0110\\u1ecf<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i tuy\\u1ebft m\\u01b0a<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 45kg&nbsp;\\u0111\\u1ebfn 55kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\"><img alt=\\\"\\u0110\\u1ed3 bay jumpsuit \\u0111\\u1eb9p gi\\u1ed1ng Ng\\u1ecdc Trinh\\\" height=\\\"800\\\" src=\\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/do-bay-jumpsuit-dep-ngoc-trinh%20(2).jpg\\\" width=\\\"800\\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\">&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\"><strong>\\u0110\\u1ed3 bay jumpsuit \\u0111\\u1eb9p<\\/strong>&nbsp;thi\\u1ebft k\\u1ebf x\\u1ebb ng\\u1ef1c gi\\u1ed1ng Ng\\u1ecdc Trinh #132<\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\"><img alt=\\\"\\\" height=\\\"857\\\" src=\\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/do-bay-jumpsuit-dep-ngoc-trinh.JPG\\\" width=\\\"500\\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\"><strong>\\u0110\\u1ed3 bay jumpsuit \\u0111\\u1eb9p<\\/strong>&nbsp;thi\\u1ebft k\\u1ebf x\\u1ebb ng\\u1ef1c gi\\u1ed1ng Ng\\u1ecdc Trinh #132<\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\">&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\\"text-align:right\\\"><span style=\\\"font-family:arial,sans-serif; font-size:16px\\\">Xem th&ecirc;m c<\\/span><span style=\\\"font-family:arial,sans-serif; font-size:16px\\\">&aacute;c&nbsp;m\\u1eabu<\\/span><span style=\\\"font-family:arial,sans-serif; font-size:16px\\\">&nbsp;<\\/span><strong><a href=\\\"http:\\/\\/meoshop.vn\\/jumpsuit-1.html\\\" style=\\\"margin: 0px; padding: 0px; text-decoration: none; color: rgb(0, 0, 0);\\\"><span style=\\\"color:rgb(255, 140, 0)\\\">Jumpsuit<\\/span><\\/a><\\/strong><span style=\\\"font-family:arial,sans-serif; font-size:16px\\\">&nbsp;t\\u1ea1i&nbsp;\\u0111&acirc;y<\\/span><\\/p>\\r\\n\",\"tag\":\"\",\"stt\":\"4\",\"hienthi\":\"1\",\"spmoi\":\"1\",\"spnoibat\":\"0\",\"ngaytao\":\"1432909741\",\"ngaysua\":\"0\",\"luotxem\":\"0\",\"id_danhmuc\":\"70\",\"ten_en\":\"\",\"noidung_en\":\"\",\"mota_en\":\"\",\"gallery\":\"[]\",\"ten_cn\":\"\",\"mota_cn\":\"\",\"noidung_cn\":\"\",\"cntb\":\"0\",\"title\":\"\",\"keyword\":\"\",\"description\":\"\",\"id_cat\":\"0\",\"motangan_vi\":\"\",\"motangan_en\":\"\",\"xuatsu\":\"\",\"spbanchay\":\"1\",\"seo_title\":\"\",\"seo_keyword\":\"\",\"seo_description\":\"\",\"khuyenmai\":\"1\",\"bansi\":\"1\"},{\"id\":\"1468\",\"id_list\":\"0\",\"noibat\":\"1\",\"hot\":\"0\",\"photo\":\"565468.jpg\",\"thumb\":\"565468_286.02739726027x400.jpg\",\"ten_vi\":\"\\u0110\\u1ed3 bay d\\u00e0i Ng\\u1ecdc Trinh 666\",\"tenkhongdau\":\"do-bay-dai-ngoc-trinh-666\",\"mota_vi\":\"<h2><em>\\u0110\\u1ed3 bay d&agrave;i Ng\\u1ecdc Trinh<\\/em>&nbsp;666<\\/h2>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 666<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Gi&aacute;: 540.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">M&agrave;u s\\u1eafc: Tr\\u1eafng<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i Laza d&agrave;y m\\u1ecbn<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 45kg&nbsp;\\u0111\\u1ebfn 55kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Ch&uacute; th&iacute;ch:&nbsp;Nguy&ecirc;n B\\u1ed9 G\\u1ed3m&nbsp;<strong><a href=\\\"http:\\/\\/meoshop.vn\\/ao-croptop-1.html\\\" style=\\\"color: rgb(0, 0, 0); margin: 0px; padding: 0px; text-decoration: none;\\\">&aacute;o&nbsp;crop top<\\/a><\\/strong>&nbsp;v&agrave;&nbsp;<strong><a href=\\\"http:\\/\\/meoshop.vn\\/quan-ong-suong-1.html\\\" style=\\\"color: rgb(0, 0, 0); margin: 0px; padding: 0px; text-decoration: none;\\\">qu<\\/a><\\/strong><strong><a href=\\\"http:\\/\\/meoshop.vn\\/quan-ong-suong-1.html\\\" style=\\\"color: rgb(0, 0, 0); margin: 0px; padding: 0px; text-decoration: none;\\\">\\u1ea7n&nbsp;\\u1ed1ng&nbsp;su&ocirc;ng&nbsp;<\\/a>&nbsp;<\\/strong><strong>tr<\\/strong>\\u1eafng<\\/span><\\/p>\\r\\n\",\"maso\":\"\\u0110\\u1ed3 bay d\\u00e0i Ng\\u1ecdc Trinh 666\",\"gia\":\"540000\",\"giacu\":\"\",\"noidung_vi\":\"<h2><em>\\u0110\\u1ed3 bay d&agrave;i Ng\\u1ecdc Trinh<\\/em>&nbsp;666<\\/h2>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 666<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Gi&aacute;: 540.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">M&agrave;u s\\u1eafc: Tr\\u1eafng<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i Laza d&agrave;y m\\u1ecbn<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 45kg&nbsp;\\u0111\\u1ebfn 55kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Ch&uacute; th&iacute;ch:&nbsp;Nguy&ecirc;n B\\u1ed9 G\\u1ed3m&nbsp;<strong><a href=\\\"http:\\/\\/meoshop.vn\\/ao-croptop-1.html\\\" style=\\\"color: rgb(0, 0, 0); margin: 0px; padding: 0px; text-decoration: none;\\\">&aacute;o&nbsp;crop top<\\/a><\\/strong>&nbsp;v&agrave;&nbsp;<strong><a href=\\\"http:\\/\\/meoshop.vn\\/quan-ong-suong-1.html\\\" style=\\\"color: rgb(0, 0, 0); margin: 0px; padding: 0px; text-decoration: none;\\\">qu<\\/a><\\/strong><strong><a href=\\\"http:\\/\\/meoshop.vn\\/quan-ong-suong-1.html\\\" style=\\\"color: rgb(0, 0, 0); margin: 0px; padding: 0px; text-decoration: none;\\\">\\u1ea7n&nbsp;\\u1ed1ng&nbsp;su&ocirc;ng&nbsp;<\\/a>&nbsp;<\\/strong><strong>tr<\\/strong>\\u1eafng<\\/span><\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\"><img alt=\\\"\\u0110\\u1ed3 bay d\\u00e0i Ng\\u1ecdc Trinh 666\\\" height=\\\"750\\\" src=\\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/do-bay-ngoc-trinh-1.jpg\\\" title=\\\"\\u0110\\u1ed3 bay d\\u00e0i Ng\\u1ecdc Trinh 666\\\" width=\\\"500\\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\"><em>\\u0110\\u1ed3 bay d&agrave;i Ng\\u1ecdc Trinh<\\/em>&nbsp;666<\\/p>\\r\\n\\r\\n<p style=\\\"outline:yellow solid 2px; cursor:default; text-align:center\\\"><img alt=\\\"\\u0110\\u1ed3 bay d\\u00e0i Ng\\u1ecdc Trinh 666\\\" height=\\\"743\\\" src=\\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/do-bay-dai-ngoc-trinh%20(4).jpg\\\" title=\\\"\\u0110\\u1ed3 bay d\\u00e0i Ng\\u1ecdc Trinh 666\\\" width=\\\"500\\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\">Jumpsuit<em>&nbsp;\\u0111\\u1ed3 bay d&agrave;i<\\/em>&nbsp;c\\u1ee7a ng\\u1ecdc trinh v\\u1edbi thi\\u1ebft k\\u1ebf&nbsp;&aacute;o croptop vu&ocirc;ng v\\u1edbi&nbsp;\\u0111\\u01b0\\u1eddng c\\u1eaft may t\\u0129&nbsp;m\\u0129<\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\">&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\"><img alt=\\\"Jumpsuit Ng\\u1ecdc Trinh 666\\\" height=\\\"700\\\" src=\\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/jumpsuit-ngoc-trinh-1.jpg\\\" title=\\\"Jumpsuit Ng\\u1ecdc Trinh 666\\\" width=\\\"500\\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\">B\\u1ed9&nbsp;\\u0111\\u1ed3 jumpsuit Ng\\u1ecdc Trinh 666<\\/p>\\r\\n\\r\\n<p style=\\\"text-align:right\\\">&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\\"text-align:right\\\"><span style=\\\"font-family:arial,sans-serif; font-size:16px\\\">Xem th&ecirc;m c<\\/span><span style=\\\"font-family:arial,sans-serif; font-size:16px\\\">&aacute;c&nbsp;m\\u1eabu&nbsp;<\\/span><strong><a href=\\\"http:\\/\\/meoshop.vn\\/jumpsuit-1.html\\\" style=\\\"color: rgb(0, 0, 0); margin: 0px; padding: 0px; text-decoration: none;\\\"><span style=\\\"color:rgb(255, 140, 0)\\\">\\u0110\\u1ed3&nbsp;bay d&agrave;i<\\/span><\\/a><\\/strong><span style=\\\"font-family:arial,sans-serif; font-size:16px\\\">&nbsp;t\\u1ea1i&nbsp;\\u0111&acirc;y<\\/span><\\/p>\\r\\n\\r\\n<div>&nbsp;<\\/div>\\r\\n\",\"tag\":\"\",\"stt\":\"1\",\"hienthi\":\"1\",\"spmoi\":\"1\",\"spnoibat\":\"0\",\"ngaytao\":\"1432908972\",\"ngaysua\":\"1432909079\",\"luotxem\":\"3\",\"id_danhmuc\":\"70\",\"ten_en\":\"\",\"noidung_en\":\"\",\"mota_en\":\"\",\"gallery\":\"[]\",\"ten_cn\":\"\",\"mota_cn\":\"\",\"noidung_cn\":\"\",\"cntb\":\"0\",\"title\":\"\",\"keyword\":\"\",\"description\":\"\",\"id_cat\":\"0\",\"motangan_vi\":\"\",\"motangan_en\":\"\",\"xuatsu\":\"\",\"spbanchay\":\"0\",\"seo_title\":\"\",\"seo_keyword\":\"\",\"seo_description\":\"\",\"khuyenmai\":\"1\",\"bansi\":\"0\"},{\"id\":\"1475\",\"id_list\":\"0\",\"noibat\":\"1\",\"hot\":\"0\",\"photo\":\"540932.jpg\",\"thumb\":\"540932_266.30136986301x400.jpg\",\"ten_vi\":\"V\\u00e1y b\\u00fat ch\\u00ec d\\u00e0i ki\\u1ec3u d\\u00e1ng \\u0111\\u01a1n gi\\u1ea3n d\\u1ec5 ph\\u1ed1i \\u0111\\u1ed3 #951\",\"tenkhongdau\":\"vay-but-chi-dai-kieu-dang-don-gian-de-phoi-do-951\",\"mota_vi\":\"<p><span style=\\\"font-size:16px\\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 951<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Gi&aacute;: 240.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">M&agrave;u s\\u1eafc: Xanh pastel | H\\u1ed3ng&nbsp;sen<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i tuy\\u1ebft&nbsp;m\\u01b0a&nbsp;cao c\\u1ea5p<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 45kg&nbsp;\\u0111\\u1ebfn 55kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Chi\\u1ec1u&nbsp;d&agrave;i: 60cm<\\/span><\\/p>\\r\\n\",\"maso\":\"DT 951\",\"gia\":\"240000\",\"giacu\":\"\",\"noidung_vi\":\"<p><span style=\\\"font-size:16px\\\">M&atilde; s\\u1ed1 s\\u1ea3n ph\\u1ea9m: DT 951<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Gi&aacute;: 240.000\\u0110<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">M&agrave;u s\\u1eafc: Xanh pastel | H\\u1ed3ng&nbsp;sen<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Ch\\u1ea5t li\\u1ec7u: V\\u1ea3i tuy\\u1ebft&nbsp;m\\u01b0a&nbsp;cao c\\u1ea5p<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">K&iacute;ch th\\u01b0\\u1edbc: Freesize ( 45kg&nbsp;\\u0111\\u1ebfn 55kg m\\u1eb7c v\\u1eeba)<\\/span><\\/p>\\r\\n\\r\\n<p><span style=\\\"font-size:16px\\\">Chi\\u1ec1u&nbsp;d&agrave;i: 60cm<\\/span><\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\"><img alt=\\\"V\\u00e1y b\\u00fat ch\\u00ec d\\u00e0i Ngoc trinh\\\" height=\\\"670\\\" src=\\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/vay-but-chi-dai-ngoc-trinh.jpg\\\" title=\\\"V\\u00e1y b\\u00fat ch\\u00ec d\\u00e0i Ngoc trinh\\\" width=\\\"450\\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\"><strong>V&aacute;y b&uacute;t ch&igrave; d&agrave;i<\\/strong>&nbsp;ki\\u1ec3u d&aacute;ng \\u0111\\u01a1n gi\\u1ea3n d\\u1ec5 ph\\u1ed1i \\u0111\\u1ed3 #951<\\/p>\\r\\n\\r\\n<p>&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\"><img alt=\\\"V\\u00e1y b\\u00fat ch\\u00ec d\\u00e0i Ngoc trinh\\\" height=\\\"592\\\" src=\\\"http:\\/\\/meoshop.vn\\/useruploads\\/userfiles\\/3139\\/images\\/vay-but-chi-dai-ngoc-trinh%20(2).jpg\\\" title=\\\"V\\u00e1y b\\u00fat ch\\u00ec d\\u00e0i Ngoc trinh\\\" width=\\\"450\\\" \\/><\\/p>\\r\\n\\r\\n<p style=\\\"text-align:center\\\">&nbsp;<\\/p>\\r\\n\\r\\n<p style=\\\"text-align:right\\\"><span style=\\\"font-size:16px\\\">Xem th&ecirc;m c&aacute;c m\\u1eabu&nbsp;<strong><a href=\\\"http:\\/\\/meoshop.vn\\/vay-but-chi-1.html\\\" style=\\\"margin: 0px; padding: 0px; text-decoration: none; color: rgb(51, 51, 51);\\\"><span style=\\\"color:rgb(255, 140, 0)\\\">V&aacute;y b&uacute;t ch&igrave;<\\/span><\\/a><\\/strong>&nbsp;t\\u1ea1i&nbsp;\\u0111&acirc;y.<\\/span><\\/p>\\r\\n\",\"tag\":\"\",\"stt\":\"5\",\"hienthi\":\"1\",\"spmoi\":\"1\",\"spnoibat\":\"0\",\"ngaytao\":\"1432910763\",\"ngaysua\":\"1432954544\",\"luotxem\":\"2\",\"id_danhmuc\":\"67\",\"ten_en\":\"\",\"noidung_en\":\"\",\"mota_en\":\"\",\"gallery\":\"[]\",\"ten_cn\":\"\",\"mota_cn\":\"\",\"noidung_cn\":\"\",\"cntb\":\"0\",\"title\":\"\",\"keyword\":\"\",\"description\":\"\",\"id_cat\":\"0\",\"motangan_vi\":\"\",\"motangan_en\":\"\",\"xuatsu\":\"\",\"spbanchay\":\"1\",\"seo_title\":\"\",\"seo_keyword\":\"\",\"seo_description\":\"\",\"khuyenmai\":\"1\",\"bansi\":\"0\"}]');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_footer`
+-- Cấu trúc bảng cho bảng `table_footer`
 --
 
-CREATE TABLE IF NOT EXISTS `table_footer` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_footer` (
+  `id` int(10) UNSIGNED NOT NULL,
   `ten` varchar(225) NOT NULL,
   `mota` text NOT NULL,
   `noidung_vi` text NOT NULL,
   `photo` varchar(100) NOT NULL,
-  `stt` int(10) unsigned NOT NULL DEFAULT '1',
+  `stt` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1',
   `ngaytao` int(11) NOT NULL DEFAULT '0',
   `ngaysua` int(11) NOT NULL DEFAULT '0',
   `noidung_en` text NOT NULL,
   `noidung_cn` text NOT NULL,
   `address` longtext NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_footer`
+-- Đang đổ dữ liệu cho bảng `table_footer`
 --
 
 INSERT INTO `table_footer` (`id`, `ten`, `mota`, `noidung_vi`, `photo`, `stt`, `hienthi`, `ngaytao`, `ngaysua`, `noidung_en`, `noidung_cn`, `address`) VALUES
-(1, 'hdfzbzdb', '', '<div>\r\n<p><u><strong>Phòng tư vấn môi trường</strong></u></p>\r\n\r\n<p>Hotline: 0933350988</p>\r\n\r\n<p>Điện thoại: 08. 6269.9991</p>\r\n</div>\r\n\r\n<div>\r\n<p><u><strong>Dịch vụ Cơ khí - Xây dựng</strong></u></p>\r\n\r\n<p>Hotline: 0933320588</p>\r\n\r\n<p>Điện thoại: 08. 6269.9993</p>\r\n</div>\r\n\r\n<div>\r\n<p><u><strong>Tư vấn-Thương mại-Công nghiệp</strong></u></p>\r\n\r\n<p>Hotline: 0938995855</p>\r\n\r\n<p>Điện thoại: 08. 6269.9991</p>\r\n\r\n<p>design : 0906.205.425</p>\r\n</div>\r\n', '', 1, 1, 0, 0, '<h1><span style="font-size:20px"><strong>C&Ocirc;NG TY TNHH ĐẦU TƯ SẢN XUẤT TMDV T&Iacute;N NGHĨA TL.</strong></span><br />\r\n<span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">Địa chỉ&nbsp; : P1901 Sai gon Trade center, 37 T&ocirc;n đức Thắng, P.Bến Ngh&eacute;, Q.1, TP. HCM.</span><br />\r\n<span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">Email : maynenkhitinnghia@gmail.com&nbsp; - Website : www.tinnghiatl.com</span><br />\r\n<span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">VPĐD: Đường 27, KP6, P. Hiệp B&igrave;nh Ch&aacute;nh , Q. Thủ Đức, HCM.</span><br />\r\n<span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">Điện thoại : (08) 62710579 - 0918326306 - Fax : (08) 62836459</span></h1>\r\n', '<h1><img alt="" src="/vietphat/upload/user/images/logo.png" style="float:left; height:151px; width:150px" /></h1>\r\n\r\n<h1><br />\r\n<strong><span style="color:#FFF0F5">公司精密工程有限公司越南发展&nbsp;</span></strong></h1>\r\n\r\n<p>地址：14号路10号，协平福病房，守德区，胡志明市。 HCM。&nbsp;</p>\r\n\r\n<p>电子邮件：vietphat_cn@yahoo.com。</p>\r\n', '[]');
+(1, 'hdfzbzdb', '', '<div>\r\n<p><u><strong>Phòng tư vấn môi trường</strong></u></p>\r\n\r\n<p>Hotline: 0933350988</p>\r\n\r\n<p>Điện thoại: 08. 6269.9991</p>\r\n</div>\r\n\r\n<div>\r\n<p><u><strong>Dịch vụ Cơ khí - Xây dựng</strong></u></p>\r\n\r\n<p>Hotline: 0933320588</p>\r\n\r\n<p>Điện thoại: 08. 6269.9993</p>\r\n</div>\r\n\r\n<div>\r\n<p><u><strong>Tư vấn-Thương mại-Công nghiệp</strong></u></p>\r\n\r\n<p>Hotline: 0938995855</p>\r\n\r\n<p>Điện thoại: 08. 6269.9991</p>\r\n\r\n<p>design : 0906.205.425</p>\r\n</div>\r\n', '', 1, 1, 0, 0, '<h1><span style=\"font-size:20px\"><strong>C&Ocirc;NG TY TNHH ĐẦU TƯ SẢN XUẤT TMDV T&Iacute;N NGHĨA TL.</strong></span><br />\r\n<span style=\"color:rgb(0, 0, 0); font-family:times new roman; font-size:medium\">Địa chỉ&nbsp; : P1901 Sai gon Trade center, 37 T&ocirc;n đức Thắng, P.Bến Ngh&eacute;, Q.1, TP. HCM.</span><br />\r\n<span style=\"color:rgb(0, 0, 0); font-family:times new roman; font-size:medium\">Email : maynenkhitinnghia@gmail.com&nbsp; - Website : www.tinnghiatl.com</span><br />\r\n<span style=\"color:rgb(0, 0, 0); font-family:times new roman; font-size:medium\">VPĐD: Đường 27, KP6, P. Hiệp B&igrave;nh Ch&aacute;nh , Q. Thủ Đức, HCM.</span><br />\r\n<span style=\"color:rgb(0, 0, 0); font-family:times new roman; font-size:medium\">Điện thoại : (08) 62710579 - 0918326306 - Fax : (08) 62836459</span></h1>\r\n', '<h1><img alt=\"\" src=\"/vietphat/upload/user/images/logo.png\" style=\"float:left; height:151px; width:150px\" /></h1>\r\n\r\n<h1><br />\r\n<strong><span style=\"color:#FFF0F5\">公司精密工程有限公司越南发展&nbsp;</span></strong></h1>\r\n\r\n<p>地址：14号路10号，协平福病房，守德区，胡志明市。 HCM。&nbsp;</p>\r\n\r\n<p>电子邮件：vietphat_cn@yahoo.com。</p>\r\n', '[]');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_hotline`
+-- Cấu trúc bảng cho bảng `table_hotline`
 --
 
-CREATE TABLE IF NOT EXISTS `table_hotline` (
+CREATE TABLE `table_hotline` (
   `id` int(10) NOT NULL,
   `ten_vi` varchar(255) NOT NULL,
   `dienthoai_vi` varchar(100) NOT NULL,
@@ -467,10 +467,10 @@ CREATE TABLE IF NOT EXISTS `table_hotline` (
   `slogan_vi` varchar(255) NOT NULL,
   `slogan_en` varchar(255) NOT NULL,
   `logo` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_hotline`
+-- Đang đổ dữ liệu cho bảng `table_hotline`
 --
 
 INSERT INTO `table_hotline` (`id`, `ten_vi`, `dienthoai_vi`, `email_vi`, `diachi_vi`, `fax_vi`, `ten_en`, `ten_cn`, `diachi_en`, `diachi_cn`, `dienthoai_en`, `dienthoai_cn`, `email_en`, `email_cn`, `fax_en`, `fax_cn`, `hotline_vi`, `hotline_en`, `facebook`, `slogan_vi`, `slogan_en`, `logo`) VALUES
@@ -479,11 +479,11 @@ INSERT INTO `table_hotline` (`id`, `ten_vi`, `dienthoai_vi`, `email_vi`, `diachi
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_index`
+-- Cấu trúc bảng cho bảng `table_index`
 --
 
-CREATE TABLE IF NOT EXISTS `table_index` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_index` (
+  `id` int(10) UNSIGNED NOT NULL,
   `noibat` int(12) NOT NULL,
   `ten_vi` varchar(225) NOT NULL,
   `ten_en` varchar(255) NOT NULL,
@@ -494,10 +494,10 @@ CREATE TABLE IF NOT EXISTS `table_index` (
   `noidung_vi` text NOT NULL,
   `photo` varchar(100) NOT NULL,
   `thumb` varchar(255) NOT NULL,
-  `stt` int(10) unsigned NOT NULL DEFAULT '1',
+  `stt` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1',
-  `ngaytao` int(10) unsigned NOT NULL DEFAULT '0',
-  `ngaysua` int(10) unsigned NOT NULL DEFAULT '0',
+  `ngaytao` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `ngaysua` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `ten_cn` varchar(255) NOT NULL,
   `mota_cn` text NOT NULL,
   `noidung_cn` text NOT NULL,
@@ -505,10 +505,10 @@ CREATE TABLE IF NOT EXISTS `table_index` (
   `seo_keyword` text NOT NULL,
   `seo_description` text NOT NULL,
   `location` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_index`
+-- Đang đổ dữ liệu cho bảng `table_index`
 --
 
 INSERT INTO `table_index` (`id`, `noibat`, `ten_vi`, `ten_en`, `mota_en`, `noidung_en`, `tenkhongdau`, `mota_vi`, `noidung_vi`, `photo`, `thumb`, `stt`, `hienthi`, `ngaytao`, `ngaysua`, `ten_cn`, `mota_cn`, `noidung_cn`, `seo_title`, `seo_keyword`, `seo_description`, `location`) VALUES
@@ -519,33 +519,33 @@ INSERT INTO `table_index` (`id`, `noibat`, `ten_vi`, `ten_en`, `mota_en`, `noidu
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_letruot`
+-- Cấu trúc bảng cho bảng `table_letruot`
 --
 
-CREATE TABLE IF NOT EXISTS `table_letruot` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_letruot` (
+  `id` int(10) UNSIGNED NOT NULL,
   `photo` varchar(225) NOT NULL,
   `ten` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `mota` text NOT NULL,
   `link` varchar(255) NOT NULL,
-  `stt` int(10) unsigned NOT NULL DEFAULT '1',
+  `stt` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1',
   `letruot` varchar(50) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_lienhe`
+-- Cấu trúc bảng cho bảng `table_lienhe`
 --
 
-CREATE TABLE IF NOT EXISTS `table_lienhe` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_lienhe` (
+  `id` int(10) UNSIGNED NOT NULL,
   `ten` varchar(225) NOT NULL,
   `mota` text NOT NULL,
   `noidung_vi` text NOT NULL,
   `photo` varchar(100) NOT NULL,
-  `stt` int(10) unsigned NOT NULL DEFAULT '1',
+  `stt` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1',
   `ngaytao` int(11) NOT NULL DEFAULT '0',
   `ngaysua` int(11) NOT NULL DEFAULT '0',
@@ -554,22 +554,22 @@ CREATE TABLE IF NOT EXISTS `table_lienhe` (
   `map_iframe` text NOT NULL,
   `map_x` varchar(255) NOT NULL,
   `map_y` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_lienhe`
+-- Đang đổ dữ liệu cho bảng `table_lienhe`
 --
 
 INSERT INTO `table_lienhe` (`id`, `ten`, `mota`, `noidung_vi`, `photo`, `stt`, `hienthi`, `ngaytao`, `ngaysua`, `noidung_en`, `noidung_cn`, `map_iframe`, `map_x`, `map_y`) VALUES
-(1, 'Welcome An Tín', '', '<p><span style="font-size:16px"><strong>CÔNG TY TNHH&nbsp; KỸ THUẬT MIỀN XANH</strong></span><br />\r\nĐịa chỉ: <em>411/58/59 Lê Đức Thọ, Phường 17, Gò Vấp</em><br />\r\nĐT: <span style="background-color:rgb(238, 238, 238); font-family:helvetica neue,helvetica,arial,sans-serif">08. 6269.9991 - 08. 6269.9993&nbsp; FAX: 08. 6269.9992</span><br />\r\nEmail: info@mienxanh.vn<br />\r\nWebsite: mienxanh.vn</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n', '57083.jpg', 1, 1, 1225497589, 1225508616, '<p>Precision Engineering Company Limited Vietnam Development&nbsp;</p>\r\n\r\n<p>Address: 14 Road on the 10th, the Association Binh Phuoc Ward, Thu Duc District, Ho Chi Minh City. HCM.&nbsp;</p>\r\n\r\n<p>Email: vietphat_cn@yahoo.com.</p>\r\n', '<p>公司精密工程有限公司越南发展&nbsp;</p>\r\n\r\n<p>地址：14号路10号，协平福病房，守德区，胡志明市。 HCM。&nbsp;</p>\r\n\r\n<p>电子邮件：vietphat_cn@yahoo.com。</p>\r\n', '', '10.7688262', '106.61151');
+(1, 'Welcome An Tín', '', '<p><span style=\"font-size:16px\"><strong>CÔNG TY TNHH&nbsp; KỸ THUẬT MIỀN XANH</strong></span><br />\r\nĐịa chỉ: <em>411/58/59 Lê Đức Thọ, Phường 17, Gò Vấp</em><br />\r\nĐT: <span style=\"background-color:rgb(238, 238, 238); font-family:helvetica neue,helvetica,arial,sans-serif\">08. 6269.9991 - 08. 6269.9993&nbsp; FAX: 08. 6269.9992</span><br />\r\nEmail: info@mienxanh.vn<br />\r\nWebsite: mienxanh.vn</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n', '57083.jpg', 1, 1, 1225497589, 1225508616, '<p>Precision Engineering Company Limited Vietnam Development&nbsp;</p>\r\n\r\n<p>Address: 14 Road on the 10th, the Association Binh Phuoc Ward, Thu Duc District, Ho Chi Minh City. HCM.&nbsp;</p>\r\n\r\n<p>Email: vietphat_cn@yahoo.com.</p>\r\n', '<p>公司精密工程有限公司越南发展&nbsp;</p>\r\n\r\n<p>地址：14号路10号，协平福病房，守德区，胡志明市。 HCM。&nbsp;</p>\r\n\r\n<p>电子邮件：vietphat_cn@yahoo.com。</p>\r\n', '', '10.7688262', '106.61151');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_member`
+-- Cấu trúc bảng cho bảng `table_member`
 --
 
-CREATE TABLE IF NOT EXISTS `table_member` (
+CREATE TABLE `table_member` (
   `id` int(11) NOT NULL,
   `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -591,10 +591,10 @@ CREATE TABLE IF NOT EXISTS `table_member` (
   `country` int(11) NOT NULL,
   `district` int(11) NOT NULL,
   `avatar` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=156 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_member`
+-- Đang đổ dữ liệu cho bảng `table_member`
 --
 
 INSERT INTO `table_member` (`id`, `username`, `email`, `password`, `ngaytao`, `gender`, `banned`, `fullname`, `phone`, `last_login`, `secret`, `isActive`, `coin`, `type`, `birthday`, `diemtichluy`, `address`, `province`, `country`, `district`, `avatar`) VALUES
@@ -625,18 +625,18 @@ INSERT INTO `table_member` (`id`, `username`, `email`, `password`, `ngaytao`, `g
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_meta`
+-- Cấu trúc bảng cho bảng `table_meta`
 --
 
-CREATE TABLE IF NOT EXISTS `table_meta` (
+CREATE TABLE `table_meta` (
   `id` int(10) NOT NULL,
   `description` text NOT NULL,
   `keyword` text NOT NULL,
   `title` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_meta`
+-- Đang đổ dữ liệu cho bảng `table_meta`
 --
 
 INSERT INTO `table_meta` (`id`, `description`, `keyword`, `title`) VALUES
@@ -645,10 +645,10 @@ INSERT INTO `table_meta` (`id`, `description`, `keyword`, `title`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_newsletter`
+-- Cấu trúc bảng cho bảng `table_newsletter`
 --
 
-CREATE TABLE IF NOT EXISTS `table_newsletter` (
+CREATE TABLE `table_newsletter` (
   `id` int(10) NOT NULL,
   `email` varchar(100) NOT NULL,
   `stt` int(10) NOT NULL,
@@ -656,22 +656,22 @@ CREATE TABLE IF NOT EXISTS `table_newsletter` (
   `ngaytao` varchar(100) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `name` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=699 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_online`
+-- Cấu trúc bảng cho bảng `table_online`
 --
 
-CREATE TABLE IF NOT EXISTS `table_online` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_online` (
+  `id` int(10) UNSIGNED NOT NULL,
   `session_id` varchar(255) NOT NULL,
-  `time` int(10) unsigned NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=61161 DEFAULT CHARSET=utf8;
+  `time` int(10) UNSIGNED NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_online`
+-- Đang đổ dữ liệu cho bảng `table_online`
 --
 
 INSERT INTO `table_online` (`id`, `session_id`, `time`) VALUES
@@ -680,20 +680,20 @@ INSERT INTO `table_online` (`id`, `session_id`, `time`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_permission`
+-- Cấu trúc bảng cho bảng `table_permission`
 --
 
-CREATE TABLE IF NOT EXISTS `table_permission` (
+CREATE TABLE `table_permission` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `xcom` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `xact` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `xgroup` int(11) NOT NULL,
   `xid` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_permission`
+-- Đang đổ dữ liệu cho bảng `table_permission`
 --
 
 INSERT INTO `table_permission` (`id`, `name`, `xcom`, `xact`, `xgroup`, `xid`) VALUES
@@ -742,16 +742,16 @@ INSERT INTO `table_permission` (`id`, `name`, `xcom`, `xact`, `xgroup`, `xid`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_permission_group`
+-- Cấu trúc bảng cho bảng `table_permission_group`
 --
 
-CREATE TABLE IF NOT EXISTS `table_permission_group` (
+CREATE TABLE `table_permission_group` (
   `id` int(11) NOT NULL,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_permission_group`
+-- Đang đổ dữ liệu cho bảng `table_permission_group`
 --
 
 INSERT INTO `table_permission_group` (`id`, `name`) VALUES
@@ -767,23 +767,23 @@ INSERT INTO `table_permission_group` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_photo`
+-- Cấu trúc bảng cho bảng `table_photo`
 --
 
-CREATE TABLE IF NOT EXISTS `table_photo` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_photo` (
+  `id` int(10) UNSIGNED NOT NULL,
   `photo` varchar(225) NOT NULL,
   `thumb` varchar(225) NOT NULL,
   `ten` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `mota` text NOT NULL,
-  `id_cat` int(10) unsigned NOT NULL,
-  `stt` int(10) unsigned NOT NULL DEFAULT '1',
+  `id_cat` int(10) UNSIGNED NOT NULL,
+  `stt` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1',
   `com` varchar(30) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=252 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_photo`
+-- Đang đổ dữ liệu cho bảng `table_photo`
 --
 
 INSERT INTO `table_photo` (`id`, `photo`, `thumb`, `ten`, `mota`, `id_cat`, `stt`, `hienthi`, `com`) VALUES
@@ -793,11 +793,11 @@ INSERT INTO `table_photo` (`id`, `photo`, `thumb`, `ten`, `mota`, `id_cat`, `stt
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product`
+-- Cấu trúc bảng cho bảng `table_product`
 --
 
-CREATE TABLE IF NOT EXISTS `table_product` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_product` (
+  `id` int(10) UNSIGNED NOT NULL,
   `id_list` int(11) NOT NULL,
   `noibat` tinyint(4) NOT NULL,
   `hot` int(11) NOT NULL,
@@ -811,7 +811,7 @@ CREATE TABLE IF NOT EXISTS `table_product` (
   `giacu` varchar(100) NOT NULL,
   `noidung_vi` text NOT NULL,
   `tag` text NOT NULL,
-  `stt` int(10) unsigned NOT NULL DEFAULT '1',
+  `stt` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1',
   `spmoi` int(11) NOT NULL,
   `spnoibat` tinyint(4) NOT NULL,
@@ -847,37 +847,38 @@ CREATE TABLE IF NOT EXISTS `table_product` (
   `contact_name` varchar(255) NOT NULL,
   `contact_phone` varchar(255) NOT NULL,
   `contact_cellphone` varchar(255) NOT NULL,
-  `contact_note` text NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+  `contact_note` text NOT NULL,
+  `phanloai` varchar(25) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_product`
+-- Đang đổ dữ liệu cho bảng `table_product`
 --
 
-INSERT INTO `table_product` (`id`, `id_list`, `noibat`, `hot`, `photo`, `thumb`, `ten_vi`, `tenkhongdau`, `mota_vi`, `maso`, `gia`, `giacu`, `noidung_vi`, `tag`, `stt`, `hienthi`, `spmoi`, `spnoibat`, `ngaytao`, `ngaysua`, `luotxem`, `id_danhmuc`, `ten_en`, `noidung_en`, `mota_en`, `gallery`, `ten_cn`, `mota_cn`, `noidung_cn`, `cntb`, `title`, `keyword`, `description`, `id_cat`, `motangan_vi`, `motangan_en`, `xuatsu`, `spbanchay`, `seo_title`, `seo_keyword`, `seo_description`, `khuyenmai`, `id_brand`, `new`, `id_location_danhmuc`, `id_location`, `id_price`, `contact_name`, `contact_phone`, `contact_cellphone`, `contact_note`) VALUES
-(1, 0, 1, 0, 'pano-alu-chu-inox-mat-mica-led-module-phat-sang-hino-.jpg', 'pano-alu-chu-inox-mat-mica-led-module-phat-sang-hino-_450x450.jpg', 'PANO ALU - CHỮ INOX MẶT MICA - LED MODULE PHÁT SÁNG ( HINO )', 'pano-alu-chu-inox-mat-mica-led-module-phat-sang-hino-', 'fsdhjk', '', '', '', '<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px; text-align: center;"><span style="color:#000000"><img alt="" src="http://saotanviet.com.vn/images/advportfoliopro/images/CT_VinhThinh/bien-hieu-aluminium-chu-mica-dan-decal-3M-den-led-phatsang-xe-hino.jpg" /></span></div>\r\n\r\n<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;">&nbsp;</div>\r\n\r\n<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;"><span style="color:#000000"><span style="font-size:12pt"><strong>Đơn Vị Thực Hiện : CÔNG TY TNHH QUẢNG CÁO SAO TÂN VIỆT</strong></span></span></div>\r\n\r\n<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;"><span style="color:#000000"><strong><span style="font-size:12pt">Chủ đầu tư : CTY CP Ô TÔ VĨNH THỊNH &nbsp;| &nbsp;Chi Nhánh BÌNH DƯƠNG</span></strong></span></div>\r\n\r\n<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;"><span style="color:#000000"><span style="font-size:12pt">Địa chỉ : 55/5 Khu phố Bình Giao, Thuận Giao, Thuận An, &nbsp;Bình Dương</span></span></div>\r\n\r\n<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;"><span style="color:#000000"><span style="font-size:12pt">&nbsp;&nbsp;</span></span></div>\r\n\r\n<p><span style="color:#000000"><strong><span style="font-size:12pt">Quy Cách Thực Hiện :&nbsp;</span></strong><span style="font-size:12pt">PANO HINO VĨNH THỊNH&nbsp;</span></span></p>\r\n\r\n<p><span style="color:#000000"><span style="font-size:12pt">&nbsp; &nbsp; &nbsp;- Chất liệu : Chữ Inox, mặt mica dán film 3M USA,</span></span></p>\r\n\r\n<p><span style="color:#000000"><span style="font-size:12pt">&nbsp; &nbsp; &nbsp;- Chữ phát sáng : Bên trong chữ gắn Led module phát sáng full mặt.</span></span></p>\r\n\r\n<p><span style="color:#000000"><span style="font-size:12pt">&nbsp; &nbsp; &nbsp;- Nền biển sử dụng nhôm Aluminium ngoài trời ( Triều Chen )</span></span></p>\r\n\r\n<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;"><span style="color:#000000"><span style="font-size:12pt">* Chế độ bào hành 2 năm tại công trình .</span></span>\r\n\r\n<p><span style="color:#000000"><span style="font-size:12pt">----------------------------------------------------------------------------------------------------------------------</span></span></p>\r\n</div>\r\n\r\n<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;">\r\n<p><span style="color:#000000"><strong><span style="font-size:12pt">CTY TNHH QUẢNG CÁO SAO TÂN VIỆT / Thiết Kế - Thi Công - Chuyên Nghiệp</span></strong></span></p>\r\n\r\n<p><span style="color:#000000"><span style="font-size:12pt">Address : 198 Cô Giang , P. Cô Giang , Quận 1 - TP.HCM</span></span></p>\r\n\r\n<p><span style="color:#000000">Showroom : 227 Trần Hưng Đạo, P. Cô Giang, Quận 1, TP.HCM</span></p>\r\n\r\n<p><span style="color:#000000"><span style="font-size:12pt">Tel : (84.8) 3920 4964 - Fax : (84.8) 3837 0424</span></span></p>\r\n\r\n<p><span style="color:#000000"><span style="font-size:12pt">Liên hệ : Nguyễn Quang Vinh / để được tư vấn - cung cấp mẫu</span></span></p>\r\n\r\n<p><span style="font-size:12pt"><span style="color:#000000">Hotline : 0919 600 988 ( Mr Vinh ) - Email :&nbsp;</span><a href="mailto:vinh@saotanviet.com.vn" style="color: rgb(0, 154, 202); text-decoration: none; outline: 0px;"><span style="color:#000000">vinh@saotanviet.com.vn</span></a></span></p>\r\n</div>\r\n', '', 1, 1, 0, 0, 1488708131, 0, 6, 1, '', '', '', '[]', '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, 0, 0, 0, 0, 0, '', '', '', ''),
-(2, 0, 1, 0, '', '', 'CHỮ INOX MẶT MICA ĐÈN LED MODULE PHÁT SÁNG (ĐỒNG TÂM HD)', 'chu-inox-mat-mica-den-led-module-phat-sang-dong-tam-hd', 'cc', '', '', '', '<p style="text-align:center"><img alt="" src="http://saotanviet.com.vn/images/SANPHAM/SanPham-2016/hop-den-ep-noi-film-3M-KLB-1.jpg" /></p>\r\n\r\n<p><span style="color:rgb(255, 204, 0)"><strong>Đơn Vị Thực Hiện : CÔNG TY TNHH QUẢNG CÁO SAO TÂN VIỆT</strong></span><br />\r\nChủ đầu tư : NGÂN HÀNG KIÊN LONG | Chi Nhánh Bình Dương<br />\r\n<br />\r\n<strong>Quy Cách Thực Hiện :</strong></p>\r\n\r\n<p><span style="font-size:12.8px">&nbsp; &nbsp; &nbsp; - Hộp đèn : Thu đổi ngoại tệ, sử dụng mica ép nổi dán film 3M USA</span></p>\r\n\r\n<p><span style="font-size:12.8px">&nbsp; &nbsp; &nbsp;&nbsp;</span>- Ánh Sáng Hộp đèn : Sử dụng Led Module phát sáng</p>\r\n\r\n<p><span style="font-size:12.8px">&nbsp; &nbsp; &nbsp;&nbsp;</span>* Chế độ bào hành 2 năm tại công trình .</p>\r\n\r\n<p><br />\r\n----------------------------------------------------------------------------------------------------------------------<br />\r\n<strong>CTY TNHH QUẢNG CÁO SAO TÂN VIỆT / Thiết Kế - Thi Công - Chuyên Nghiệp</strong></p>\r\n\r\n<p>Address : 198 Cô Giang , P. Cô Giang , Quận 1 - TP.HCM</p>\r\n\r\n<p>Tel : (84.8) 3920 4964 - Fax : (84.8) 3837 0424</p>\r\n\r\n<p><span style="font-size:12.8px">Liên hệ : Nguyễn Quang Vinh / để được tư vấn - cung cấp mẫu</span></p>\r\n\r\n<p><span style="font-size:12.8px">Hotline : 0919 600 988 ( Mr Vinh ) -&nbsp;<span style="font-size:12.8px">Email : vinh@saotanviet.com.vn</span></span></p>\r\n', '', 2, 1, 0, 0, 1488708409, 0, 0, 1, '', '', '', '[]', '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, 0, 0, 0, 0, 0, '', '', '', ''),
-(3, 0, 1, 0, '', '', 'CHỮ INOX MẶT MICA ĐÈN LED MODULE PHÁT SÁNG (ĐỒNG TÂM HD)', 'chu-inox-mat-mica-den-led-module-phat-sang-dong-tam-hd', 'cc', '', '', '', '<p style="text-align:center"><img alt="" src="http://saotanviet.com.vn/images/SANPHAM/SanPham-2016/hop-den-ep-noi-film-3M-KLB-1.jpg" /></p>\r\n\r\n<p><span style="color:rgb(255, 204, 0)"><strong>Đơn Vị Thực Hiện : CÔNG TY TNHH QUẢNG CÁO SAO TÂN VIỆT</strong></span><br />\r\nChủ đầu tư : NGÂN HÀNG KIÊN LONG | Chi Nhánh Bình Dương<br />\r\n<br />\r\n<strong>Quy Cách Thực Hiện :</strong></p>\r\n\r\n<p><span style="font-size:12.8px">&nbsp; &nbsp; &nbsp; - Hộp đèn : Thu đổi ngoại tệ, sử dụng mica ép nổi dán film 3M USA</span></p>\r\n\r\n<p><span style="font-size:12.8px">&nbsp; &nbsp; &nbsp;&nbsp;</span>- Ánh Sáng Hộp đèn : Sử dụng Led Module phát sáng</p>\r\n\r\n<p><span style="font-size:12.8px">&nbsp; &nbsp; &nbsp;&nbsp;</span>* Chế độ bào hành 2 năm tại công trình .</p>\r\n\r\n<p><br />\r\n----------------------------------------------------------------------------------------------------------------------<br />\r\n<strong>CTY TNHH QUẢNG CÁO SAO TÂN VIỆT / Thiết Kế - Thi Công - Chuyên Nghiệp</strong></p>\r\n\r\n<p>Address : 198 Cô Giang , P. Cô Giang , Quận 1 - TP.HCM</p>\r\n\r\n<p>Tel : (84.8) 3920 4964 - Fax : (84.8) 3837 0424</p>\r\n\r\n<p><span style="font-size:12.8px">Liên hệ : Nguyễn Quang Vinh / để được tư vấn - cung cấp mẫu</span></p>\r\n\r\n<p><span style="font-size:12.8px">Hotline : 0919 600 988 ( Mr Vinh ) -&nbsp;<span style="font-size:12.8px">Email : vinh@saotanviet.com.vn</span></span></p>\r\n', '', 2, 1, 0, 0, 1488708409, 0, 0, 1, '', '', '', '[]', '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, 0, 0, 0, 0, 0, '', '', '', ''),
-(4, 0, 1, 0, 'pano-alu-chu-inox-mat-mica-led-module-phat-sang-hino-.jpg', 'pano-alu-chu-inox-mat-mica-led-module-phat-sang-hino-_450x450.jpg', 'PANO ALU - CHỮ INOX MẶT MICA - LED MODULE PHÁT SÁNG ( HINO )', 'pano-alu-chu-inox-mat-mica-led-module-phat-sang-hino-', 'fsdhjk', '', '', '', '<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px; text-align: center;"><span style="color:#000000"><img alt="" src="http://saotanviet.com.vn/images/advportfoliopro/images/CT_VinhThinh/bien-hieu-aluminium-chu-mica-dan-decal-3M-den-led-phatsang-xe-hino.jpg" /></span></div>\r\n\r\n<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;">&nbsp;</div>\r\n\r\n<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;"><span style="color:#000000"><span style="font-size:12pt"><strong>Đơn Vị Thực Hiện : CÔNG TY TNHH QUẢNG CÁO SAO TÂN VIỆT</strong></span></span></div>\r\n\r\n<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;"><span style="color:#000000"><strong><span style="font-size:12pt">Chủ đầu tư : CTY CP Ô TÔ VĨNH THỊNH &nbsp;| &nbsp;Chi Nhánh BÌNH DƯƠNG</span></strong></span></div>\r\n\r\n<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;"><span style="color:#000000"><span style="font-size:12pt">Địa chỉ : 55/5 Khu phố Bình Giao, Thuận Giao, Thuận An, &nbsp;Bình Dương</span></span></div>\r\n\r\n<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;"><span style="color:#000000"><span style="font-size:12pt">&nbsp;&nbsp;</span></span></div>\r\n\r\n<p><span style="color:#000000"><strong><span style="font-size:12pt">Quy Cách Thực Hiện :&nbsp;</span></strong><span style="font-size:12pt">PANO HINO VĨNH THỊNH&nbsp;</span></span></p>\r\n\r\n<p><span style="color:#000000"><span style="font-size:12pt">&nbsp; &nbsp; &nbsp;- Chất liệu : Chữ Inox, mặt mica dán film 3M USA,</span></span></p>\r\n\r\n<p><span style="color:#000000"><span style="font-size:12pt">&nbsp; &nbsp; &nbsp;- Chữ phát sáng : Bên trong chữ gắn Led module phát sáng full mặt.</span></span></p>\r\n\r\n<p><span style="color:#000000"><span style="font-size:12pt">&nbsp; &nbsp; &nbsp;- Nền biển sử dụng nhôm Aluminium ngoài trời ( Triều Chen )</span></span></p>\r\n\r\n<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;"><span style="color:#000000"><span style="font-size:12pt">* Chế độ bào hành 2 năm tại công trình .</span></span>\r\n\r\n<p><span style="color:#000000"><span style="font-size:12pt">----------------------------------------------------------------------------------------------------------------------</span></span></p>\r\n</div>\r\n\r\n<div style="color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;">\r\n<p><span style="color:#000000"><strong><span style="font-size:12pt">CTY TNHH QUẢNG CÁO SAO TÂN VIỆT / Thiết Kế - Thi Công - Chuyên Nghiệp</span></strong></span></p>\r\n\r\n<p><span style="color:#000000"><span style="font-size:12pt">Address : 198 Cô Giang , P. Cô Giang , Quận 1 - TP.HCM</span></span></p>\r\n\r\n<p><span style="color:#000000">Showroom : 227 Trần Hưng Đạo, P. Cô Giang, Quận 1, TP.HCM</span></p>\r\n\r\n<p><span style="color:#000000"><span style="font-size:12pt">Tel : (84.8) 3920 4964 - Fax : (84.8) 3837 0424</span></span></p>\r\n\r\n<p><span style="color:#000000"><span style="font-size:12pt">Liên hệ : Nguyễn Quang Vinh / để được tư vấn - cung cấp mẫu</span></span></p>\r\n\r\n<p><span style="font-size:12pt"><span style="color:#000000">Hotline : 0919 600 988 ( Mr Vinh ) - Email :&nbsp;</span><a href="mailto:vinh@saotanviet.com.vn" style="color: rgb(0, 154, 202); text-decoration: none; outline: 0px;"><span style="color:#000000">vinh@saotanviet.com.vn</span></a></span></p>\r\n</div>\r\n', '', 1, 1, 0, 0, 1488708131, 0, 0, 1, '', '', '', '[]', '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, 0, 0, 0, 0, 0, '', '', '', ''),
-(5, 0, 1, 0, '', '', 'CHỮ INOX MẶT MICA ĐÈN LED MODULE PHÁT SÁNG (ĐỒNG TÂM HD)', 'chu-inox-mat-mica-den-led-module-phat-sang-dong-tam-hd', 'cc', '', '', '', '<p style="text-align:center"><img alt="" src="http://saotanviet.com.vn/images/SANPHAM/SanPham-2016/hop-den-ep-noi-film-3M-KLB-1.jpg" /></p>\r\n\r\n<p><span style="color:rgb(255, 204, 0)"><strong>Đơn Vị Thực Hiện : CÔNG TY TNHH QUẢNG CÁO SAO TÂN VIỆT</strong></span><br />\r\nChủ đầu tư : NGÂN HÀNG KIÊN LONG | Chi Nhánh Bình Dương<br />\r\n<br />\r\n<strong>Quy Cách Thực Hiện :</strong></p>\r\n\r\n<p><span style="font-size:12.8px">&nbsp; &nbsp; &nbsp; - Hộp đèn : Thu đổi ngoại tệ, sử dụng mica ép nổi dán film 3M USA</span></p>\r\n\r\n<p><span style="font-size:12.8px">&nbsp; &nbsp; &nbsp;&nbsp;</span>- Ánh Sáng Hộp đèn : Sử dụng Led Module phát sáng</p>\r\n\r\n<p><span style="font-size:12.8px">&nbsp; &nbsp; &nbsp;&nbsp;</span>* Chế độ bào hành 2 năm tại công trình .</p>\r\n\r\n<p><br />\r\n----------------------------------------------------------------------------------------------------------------------<br />\r\n<strong>CTY TNHH QUẢNG CÁO SAO TÂN VIỆT / Thiết Kế - Thi Công - Chuyên Nghiệp</strong></p>\r\n\r\n<p>Address : 198 Cô Giang , P. Cô Giang , Quận 1 - TP.HCM</p>\r\n\r\n<p>Tel : (84.8) 3920 4964 - Fax : (84.8) 3837 0424</p>\r\n\r\n<p><span style="font-size:12.8px">Liên hệ : Nguyễn Quang Vinh / để được tư vấn - cung cấp mẫu</span></p>\r\n\r\n<p><span style="font-size:12.8px">Hotline : 0919 600 988 ( Mr Vinh ) -&nbsp;<span style="font-size:12.8px">Email : vinh@saotanviet.com.vn</span></span></p>\r\n', '', 2, 1, 0, 0, 1488708409, 0, 0, 1, '', '', '', '[]', '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, 0, 0, 0, 0, 0, '', '', '', ''),
-(6, 0, 1, 0, '', '', 'CHỮ INOX MẶT MICA ĐÈN LED MODULE PHÁT SÁNG (ĐỒNG TÂM HD)', 'chu-inox-mat-mica-den-led-module-phat-sang-dong-tam-hd', 'cc', '', '', '', '<p style="text-align:center"><img alt="" src="http://saotanviet.com.vn/images/SANPHAM/SanPham-2016/hop-den-ep-noi-film-3M-KLB-1.jpg" /></p>\r\n\r\n<p><span style="color:rgb(255, 204, 0)"><strong>Đơn Vị Thực Hiện : CÔNG TY TNHH QUẢNG CÁO SAO TÂN VIỆT</strong></span><br />\r\nChủ đầu tư : NGÂN HÀNG KIÊN LONG | Chi Nhánh Bình Dương<br />\r\n<br />\r\n<strong>Quy Cách Thực Hiện :</strong></p>\r\n\r\n<p><span style="font-size:12.8px">&nbsp; &nbsp; &nbsp; - Hộp đèn : Thu đổi ngoại tệ, sử dụng mica ép nổi dán film 3M USA</span></p>\r\n\r\n<p><span style="font-size:12.8px">&nbsp; &nbsp; &nbsp;&nbsp;</span>- Ánh Sáng Hộp đèn : Sử dụng Led Module phát sáng</p>\r\n\r\n<p><span style="font-size:12.8px">&nbsp; &nbsp; &nbsp;&nbsp;</span>* Chế độ bào hành 2 năm tại công trình .</p>\r\n\r\n<p><br />\r\n----------------------------------------------------------------------------------------------------------------------<br />\r\n<strong>CTY TNHH QUẢNG CÁO SAO TÂN VIỆT / Thiết Kế - Thi Công - Chuyên Nghiệp</strong></p>\r\n\r\n<p>Address : 198 Cô Giang , P. Cô Giang , Quận 1 - TP.HCM</p>\r\n\r\n<p>Tel : (84.8) 3920 4964 - Fax : (84.8) 3837 0424</p>\r\n\r\n<p><span style="font-size:12.8px">Liên hệ : Nguyễn Quang Vinh / để được tư vấn - cung cấp mẫu</span></p>\r\n\r\n<p><span style="font-size:12.8px">Hotline : 0919 600 988 ( Mr Vinh ) -&nbsp;<span style="font-size:12.8px">Email : vinh@saotanviet.com.vn</span></span></p>\r\n', '', 2, 1, 0, 0, 1488708409, 0, 0, 1, '', '', '', '[]', '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, 0, 0, 0, 0, 0, '', '', '', '');
+INSERT INTO `table_product` (`id`, `id_list`, `noibat`, `hot`, `photo`, `thumb`, `ten_vi`, `tenkhongdau`, `mota_vi`, `maso`, `gia`, `giacu`, `noidung_vi`, `tag`, `stt`, `hienthi`, `spmoi`, `spnoibat`, `ngaytao`, `ngaysua`, `luotxem`, `id_danhmuc`, `ten_en`, `noidung_en`, `mota_en`, `gallery`, `ten_cn`, `mota_cn`, `noidung_cn`, `cntb`, `title`, `keyword`, `description`, `id_cat`, `motangan_vi`, `motangan_en`, `xuatsu`, `spbanchay`, `seo_title`, `seo_keyword`, `seo_description`, `khuyenmai`, `id_brand`, `new`, `id_location_danhmuc`, `id_location`, `id_price`, `contact_name`, `contact_phone`, `contact_cellphone`, `contact_note`, `phanloai`) VALUES
+(1, 0, 1, 0, 'pano-alu-chu-inox-mat-mica-led-module-phat-sang-hino-.jpg', 'pano-alu-chu-inox-mat-mica-led-module-phat-sang-hino-_450x450.jpg', 'PANO ALU - CHỮ INOX MẶT MICA - LED MODULE PHÁT SÁNG ( HINO )', 'pano-alu-chu-inox-mat-mica-led-module-phat-sang-hino-', 'fsdhjk', '', '', '', '<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px; text-align: center;\"><span style=\"color:#000000\"><img alt=\"\" src=\"http://saotanviet.com.vn/images/advportfoliopro/images/CT_VinhThinh/bien-hieu-aluminium-chu-mica-dan-decal-3M-den-led-phatsang-xe-hino.jpg\" /></span></div>\r\n\r\n<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;\">&nbsp;</div>\r\n\r\n<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;\"><span style=\"color:#000000\"><span style=\"font-size:12pt\"><strong>Đơn Vị Thực Hiện : CÔNG TY TNHH QUẢNG CÁO SAO TÂN VIỆT</strong></span></span></div>\r\n\r\n<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;\"><span style=\"color:#000000\"><strong><span style=\"font-size:12pt\">Chủ đầu tư : CTY CP Ô TÔ VĨNH THỊNH &nbsp;| &nbsp;Chi Nhánh BÌNH DƯƠNG</span></strong></span></div>\r\n\r\n<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;\"><span style=\"color:#000000\"><span style=\"font-size:12pt\">Địa chỉ : 55/5 Khu phố Bình Giao, Thuận Giao, Thuận An, &nbsp;Bình Dương</span></span></div>\r\n\r\n<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;\"><span style=\"color:#000000\"><span style=\"font-size:12pt\">&nbsp;&nbsp;</span></span></div>\r\n\r\n<p><span style=\"color:#000000\"><strong><span style=\"font-size:12pt\">Quy Cách Thực Hiện :&nbsp;</span></strong><span style=\"font-size:12pt\">PANO HINO VĨNH THỊNH&nbsp;</span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:12pt\">&nbsp; &nbsp; &nbsp;- Chất liệu : Chữ Inox, mặt mica dán film 3M USA,</span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:12pt\">&nbsp; &nbsp; &nbsp;- Chữ phát sáng : Bên trong chữ gắn Led module phát sáng full mặt.</span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:12pt\">&nbsp; &nbsp; &nbsp;- Nền biển sử dụng nhôm Aluminium ngoài trời ( Triều Chen )</span></span></p>\r\n\r\n<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;\"><span style=\"color:#000000\"><span style=\"font-size:12pt\">* Chế độ bào hành 2 năm tại công trình .</span></span>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:12pt\">----------------------------------------------------------------------------------------------------------------------</span></span></p>\r\n</div>\r\n\r\n<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;\">\r\n<p><span style=\"color:#000000\"><strong><span style=\"font-size:12pt\">CTY TNHH QUẢNG CÁO SAO TÂN VIỆT / Thiết Kế - Thi Công - Chuyên Nghiệp</span></strong></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:12pt\">Address : 198 Cô Giang , P. Cô Giang , Quận 1 - TP.HCM</span></span></p>\r\n\r\n<p><span style=\"color:#000000\">Showroom : 227 Trần Hưng Đạo, P. Cô Giang, Quận 1, TP.HCM</span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:12pt\">Tel : (84.8) 3920 4964 - Fax : (84.8) 3837 0424</span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:12pt\">Liên hệ : Nguyễn Quang Vinh / để được tư vấn - cung cấp mẫu</span></span></p>\r\n\r\n<p><span style=\"font-size:12pt\"><span style=\"color:#000000\">Hotline : 0919 600 988 ( Mr Vinh ) - Email :&nbsp;</span><a href=\"mailto:vinh@saotanviet.com.vn\" style=\"color: rgb(0, 154, 202); text-decoration: none; outline: 0px;\"><span style=\"color:#000000\">vinh@saotanviet.com.vn</span></a></span></p>\r\n</div>\r\n', '', 1, 1, 0, 0, 1488708131, 1553425288, 7, 1, '', '', '', '[]', '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, 0, 0, 0, 0, 0, '', '', '', '', 'indoor'),
+(2, 0, 1, 0, '', '', 'CHỮ INOX MẶT MICA ĐÈN LED MODULE PHÁT SÁNG (ĐỒNG TÂM HD)', 'chu-inox-mat-mica-den-led-module-phat-sang-dong-tam-hd', 'cc', '', '', '', '<p style=\"text-align:center\"><img alt=\"\" src=\"http://saotanviet.com.vn/images/SANPHAM/SanPham-2016/hop-den-ep-noi-film-3M-KLB-1.jpg\" /></p>\r\n\r\n<p><span style=\"color:rgb(255, 204, 0)\"><strong>Đơn Vị Thực Hiện : CÔNG TY TNHH QUẢNG CÁO SAO TÂN VIỆT</strong></span><br />\r\nChủ đầu tư : NGÂN HÀNG KIÊN LONG | Chi Nhánh Bình Dương<br />\r\n<br />\r\n<strong>Quy Cách Thực Hiện :</strong></p>\r\n\r\n<p><span style=\"font-size:12.8px\">&nbsp; &nbsp; &nbsp; - Hộp đèn : Thu đổi ngoại tệ, sử dụng mica ép nổi dán film 3M USA</span></p>\r\n\r\n<p><span style=\"font-size:12.8px\">&nbsp; &nbsp; &nbsp;&nbsp;</span>- Ánh Sáng Hộp đèn : Sử dụng Led Module phát sáng</p>\r\n\r\n<p><span style=\"font-size:12.8px\">&nbsp; &nbsp; &nbsp;&nbsp;</span>* Chế độ bào hành 2 năm tại công trình .</p>\r\n\r\n<p><br />\r\n----------------------------------------------------------------------------------------------------------------------<br />\r\n<strong>CTY TNHH QUẢNG CÁO SAO TÂN VIỆT / Thiết Kế - Thi Công - Chuyên Nghiệp</strong></p>\r\n\r\n<p>Address : 198 Cô Giang , P. Cô Giang , Quận 1 - TP.HCM</p>\r\n\r\n<p>Tel : (84.8) 3920 4964 - Fax : (84.8) 3837 0424</p>\r\n\r\n<p><span style=\"font-size:12.8px\">Liên hệ : Nguyễn Quang Vinh / để được tư vấn - cung cấp mẫu</span></p>\r\n\r\n<p><span style=\"font-size:12.8px\">Hotline : 0919 600 988 ( Mr Vinh ) -&nbsp;<span style=\"font-size:12.8px\">Email : vinh@saotanviet.com.vn</span></span></p>\r\n', '', 2, 1, 0, 0, 1488708409, 1553425187, 2, 1, '', '', '', '[]', '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, 0, 0, 0, 0, 0, '', '', '', '', 'indoor'),
+(3, 0, 1, 0, '', '', 'CHỮ INOX MẶT MICA ĐÈN LED MODULE PHÁT SÁNG (ĐỒNG TÂM HD)', 'chu-inox-mat-mica-den-led-module-phat-sang-dong-tam-hd', 'cc', '', '', '', '<p style=\"text-align:center\"><img alt=\"\" src=\"http://saotanviet.com.vn/images/SANPHAM/SanPham-2016/hop-den-ep-noi-film-3M-KLB-1.jpg\" /></p>\r\n\r\n<p><span style=\"color:rgb(255, 204, 0)\"><strong>Đơn Vị Thực Hiện : CÔNG TY TNHH QUẢNG CÁO SAO TÂN VIỆT</strong></span><br />\r\nChủ đầu tư : NGÂN HÀNG KIÊN LONG | Chi Nhánh Bình Dương<br />\r\n<br />\r\n<strong>Quy Cách Thực Hiện :</strong></p>\r\n\r\n<p><span style=\"font-size:12.8px\">&nbsp; &nbsp; &nbsp; - Hộp đèn : Thu đổi ngoại tệ, sử dụng mica ép nổi dán film 3M USA</span></p>\r\n\r\n<p><span style=\"font-size:12.8px\">&nbsp; &nbsp; &nbsp;&nbsp;</span>- Ánh Sáng Hộp đèn : Sử dụng Led Module phát sáng</p>\r\n\r\n<p><span style=\"font-size:12.8px\">&nbsp; &nbsp; &nbsp;&nbsp;</span>* Chế độ bào hành 2 năm tại công trình .</p>\r\n\r\n<p><br />\r\n----------------------------------------------------------------------------------------------------------------------<br />\r\n<strong>CTY TNHH QUẢNG CÁO SAO TÂN VIỆT / Thiết Kế - Thi Công - Chuyên Nghiệp</strong></p>\r\n\r\n<p>Address : 198 Cô Giang , P. Cô Giang , Quận 1 - TP.HCM</p>\r\n\r\n<p>Tel : (84.8) 3920 4964 - Fax : (84.8) 3837 0424</p>\r\n\r\n<p><span style=\"font-size:12.8px\">Liên hệ : Nguyễn Quang Vinh / để được tư vấn - cung cấp mẫu</span></p>\r\n\r\n<p><span style=\"font-size:12.8px\">Hotline : 0919 600 988 ( Mr Vinh ) -&nbsp;<span style=\"font-size:12.8px\">Email : vinh@saotanviet.com.vn</span></span></p>\r\n', '', 2, 1, 0, 0, 1488708409, 1553425192, 1, 1, '', '', '', '[]', '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, 0, 0, 0, 0, 0, '', '', '', '', 'printing'),
+(4, 0, 1, 0, 'pano-alu-chu-inox-mat-mica-led-module-phat-sang-hino-.jpg', 'pano-alu-chu-inox-mat-mica-led-module-phat-sang-hino-_450x450.jpg', 'PANO ALU - CHỮ INOX MẶT MICA - LED MODULE PHÁT SÁNG ( HINO )', 'pano-alu-chu-inox-mat-mica-led-module-phat-sang-hino-', 'fsdhjk', '', '', '', '<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px; text-align: center;\"><span style=\"color:#000000\"><img alt=\"\" src=\"http://saotanviet.com.vn/images/advportfoliopro/images/CT_VinhThinh/bien-hieu-aluminium-chu-mica-dan-decal-3M-den-led-phatsang-xe-hino.jpg\" /></span></div>\r\n\r\n<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;\">&nbsp;</div>\r\n\r\n<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;\"><span style=\"color:#000000\"><span style=\"font-size:12pt\"><strong>Đơn Vị Thực Hiện : CÔNG TY TNHH QUẢNG CÁO SAO TÂN VIỆT</strong></span></span></div>\r\n\r\n<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;\"><span style=\"color:#000000\"><strong><span style=\"font-size:12pt\">Chủ đầu tư : CTY CP Ô TÔ VĨNH THỊNH &nbsp;| &nbsp;Chi Nhánh BÌNH DƯƠNG</span></strong></span></div>\r\n\r\n<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;\"><span style=\"color:#000000\"><span style=\"font-size:12pt\">Địa chỉ : 55/5 Khu phố Bình Giao, Thuận Giao, Thuận An, &nbsp;Bình Dương</span></span></div>\r\n\r\n<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;\"><span style=\"color:#000000\"><span style=\"font-size:12pt\">&nbsp;&nbsp;</span></span></div>\r\n\r\n<p><span style=\"color:#000000\"><strong><span style=\"font-size:12pt\">Quy Cách Thực Hiện :&nbsp;</span></strong><span style=\"font-size:12pt\">PANO HINO VĨNH THỊNH&nbsp;</span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:12pt\">&nbsp; &nbsp; &nbsp;- Chất liệu : Chữ Inox, mặt mica dán film 3M USA,</span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:12pt\">&nbsp; &nbsp; &nbsp;- Chữ phát sáng : Bên trong chữ gắn Led module phát sáng full mặt.</span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:12pt\">&nbsp; &nbsp; &nbsp;- Nền biển sử dụng nhôm Aluminium ngoài trời ( Triều Chen )</span></span></p>\r\n\r\n<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;\"><span style=\"color:#000000\"><span style=\"font-size:12pt\">* Chế độ bào hành 2 năm tại công trình .</span></span>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:12pt\">----------------------------------------------------------------------------------------------------------------------</span></span></p>\r\n</div>\r\n\r\n<div style=\"color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 12.8px; line-height: 19.2px;\">\r\n<p><span style=\"color:#000000\"><strong><span style=\"font-size:12pt\">CTY TNHH QUẢNG CÁO SAO TÂN VIỆT / Thiết Kế - Thi Công - Chuyên Nghiệp</span></strong></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:12pt\">Address : 198 Cô Giang , P. Cô Giang , Quận 1 - TP.HCM</span></span></p>\r\n\r\n<p><span style=\"color:#000000\">Showroom : 227 Trần Hưng Đạo, P. Cô Giang, Quận 1, TP.HCM</span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:12pt\">Tel : (84.8) 3920 4964 - Fax : (84.8) 3837 0424</span></span></p>\r\n\r\n<p><span style=\"color:#000000\"><span style=\"font-size:12pt\">Liên hệ : Nguyễn Quang Vinh / để được tư vấn - cung cấp mẫu</span></span></p>\r\n\r\n<p><span style=\"font-size:12pt\"><span style=\"color:#000000\">Hotline : 0919 600 988 ( Mr Vinh ) - Email :&nbsp;</span><a href=\"mailto:vinh@saotanviet.com.vn\" style=\"color: rgb(0, 154, 202); text-decoration: none; outline: 0px;\"><span style=\"color:#000000\">vinh@saotanviet.com.vn</span></a></span></p>\r\n</div>\r\n', '', 1, 1, 0, 0, 1488708131, 1553425291, 0, 1, '', '', '', '[]', '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, 0, 0, 0, 0, 0, '', '', '', '', 'indoor'),
+(5, 0, 1, 0, '', '', 'CHỮ INOX MẶT MICA ĐÈN LED MODULE PHÁT SÁNG (ĐỒNG TÂM HD)', 'chu-inox-mat-mica-den-led-module-phat-sang-dong-tam-hd', 'cc', '', '', '', '<p style=\"text-align:center\"><img alt=\"\" src=\"http://saotanviet.com.vn/images/SANPHAM/SanPham-2016/hop-den-ep-noi-film-3M-KLB-1.jpg\" /></p>\r\n\r\n<p><span style=\"color:rgb(255, 204, 0)\"><strong>Đơn Vị Thực Hiện : CÔNG TY TNHH QUẢNG CÁO SAO TÂN VIỆT</strong></span><br />\r\nChủ đầu tư : NGÂN HÀNG KIÊN LONG | Chi Nhánh Bình Dương<br />\r\n<br />\r\n<strong>Quy Cách Thực Hiện :</strong></p>\r\n\r\n<p><span style=\"font-size:12.8px\">&nbsp; &nbsp; &nbsp; - Hộp đèn : Thu đổi ngoại tệ, sử dụng mica ép nổi dán film 3M USA</span></p>\r\n\r\n<p><span style=\"font-size:12.8px\">&nbsp; &nbsp; &nbsp;&nbsp;</span>- Ánh Sáng Hộp đèn : Sử dụng Led Module phát sáng</p>\r\n\r\n<p><span style=\"font-size:12.8px\">&nbsp; &nbsp; &nbsp;&nbsp;</span>* Chế độ bào hành 2 năm tại công trình .</p>\r\n\r\n<p><br />\r\n----------------------------------------------------------------------------------------------------------------------<br />\r\n<strong>CTY TNHH QUẢNG CÁO SAO TÂN VIỆT / Thiết Kế - Thi Công - Chuyên Nghiệp</strong></p>\r\n\r\n<p>Address : 198 Cô Giang , P. Cô Giang , Quận 1 - TP.HCM</p>\r\n\r\n<p>Tel : (84.8) 3920 4964 - Fax : (84.8) 3837 0424</p>\r\n\r\n<p><span style=\"font-size:12.8px\">Liên hệ : Nguyễn Quang Vinh / để được tư vấn - cung cấp mẫu</span></p>\r\n\r\n<p><span style=\"font-size:12.8px\">Hotline : 0919 600 988 ( Mr Vinh ) -&nbsp;<span style=\"font-size:12.8px\">Email : vinh@saotanviet.com.vn</span></span></p>\r\n', '', 2, 1, 0, 0, 1488708409, 1553425279, 0, 1, '', '', '', '[]', '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, 0, 0, 0, 0, 0, '', '', '', '', 'outdoor'),
+(6, 0, 1, 0, '', '', 'CHỮ INOX MẶT MICA ĐÈN LED MODULE PHÁT SÁNG (ĐỒNG TÂM HD)', 'chu-inox-mat-mica-den-led-module-phat-sang-dong-tam-hd', 'cc', '', '', '', '<p style=\"text-align:center\"><img alt=\"\" src=\"http://saotanviet.com.vn/images/SANPHAM/SanPham-2016/hop-den-ep-noi-film-3M-KLB-1.jpg\" /></p>\r\n\r\n<p><span style=\"color:rgb(255, 204, 0)\"><strong>Đơn Vị Thực Hiện : CÔNG TY TNHH QUẢNG CÁO SAO TÂN VIỆT</strong></span><br />\r\nChủ đầu tư : NGÂN HÀNG KIÊN LONG | Chi Nhánh Bình Dương<br />\r\n<br />\r\n<strong>Quy Cách Thực Hiện :</strong></p>\r\n\r\n<p><span style=\"font-size:12.8px\">&nbsp; &nbsp; &nbsp; - Hộp đèn : Thu đổi ngoại tệ, sử dụng mica ép nổi dán film 3M USA</span></p>\r\n\r\n<p><span style=\"font-size:12.8px\">&nbsp; &nbsp; &nbsp;&nbsp;</span>- Ánh Sáng Hộp đèn : Sử dụng Led Module phát sáng</p>\r\n\r\n<p><span style=\"font-size:12.8px\">&nbsp; &nbsp; &nbsp;&nbsp;</span>* Chế độ bào hành 2 năm tại công trình .</p>\r\n\r\n<p><br />\r\n----------------------------------------------------------------------------------------------------------------------<br />\r\n<strong>CTY TNHH QUẢNG CÁO SAO TÂN VIỆT / Thiết Kế - Thi Công - Chuyên Nghiệp</strong></p>\r\n\r\n<p>Address : 198 Cô Giang , P. Cô Giang , Quận 1 - TP.HCM</p>\r\n\r\n<p>Tel : (84.8) 3920 4964 - Fax : (84.8) 3837 0424</p>\r\n\r\n<p><span style=\"font-size:12.8px\">Liên hệ : Nguyễn Quang Vinh / để được tư vấn - cung cấp mẫu</span></p>\r\n\r\n<p><span style=\"font-size:12.8px\">Hotline : 0919 600 988 ( Mr Vinh ) -&nbsp;<span style=\"font-size:12.8px\">Email : vinh@saotanviet.com.vn</span></span></p>\r\n', '', 2, 1, 0, 0, 1488708409, 1553425284, 0, 1, '', '', '', '[]', '', '', '', 0, '', '', '', 0, '', '', '', 0, '', '', '', 0, 0, 0, 0, 0, 0, '', '', '', '', 'outdoor');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_brand`
+-- Cấu trúc bảng cho bảng `table_product_brand`
 --
 
-CREATE TABLE IF NOT EXISTS `table_product_brand` (
+CREATE TABLE `table_product_brand` (
   `id` int(11) NOT NULL,
   `ten_vi` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `stt` int(11) NOT NULL,
   `hienthi` int(11) NOT NULL,
   `tenkhongdau` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_product_brand`
+-- Đang đổ dữ liệu cho bảng `table_product_brand`
 --
 
 INSERT INTO `table_product_brand` (`id`, `ten_vi`, `stt`, `hienthi`, `tenkhongdau`) VALUES
@@ -893,17 +894,17 @@ INSERT INTO `table_product_brand` (`id`, `ten_vi`, `stt`, `hienthi`, `tenkhongda
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_brand_condition`
+-- Cấu trúc bảng cho bảng `table_product_brand_condition`
 --
 
-CREATE TABLE IF NOT EXISTS `table_product_brand_condition` (
+CREATE TABLE `table_product_brand_condition` (
   `id` int(11) NOT NULL,
   `id_brand` int(11) NOT NULL,
   `id_product` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_product_brand_condition`
+-- Đang đổ dữ liệu cho bảng `table_product_brand_condition`
 --
 
 INSERT INTO `table_product_brand_condition` (`id`, `id_brand`, `id_product`) VALUES
@@ -921,10 +922,10 @@ INSERT INTO `table_product_brand_condition` (`id`, `id_brand`, `id_product`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_cat`
+-- Cấu trúc bảng cho bảng `table_product_cat`
 --
 
-CREATE TABLE IF NOT EXISTS `table_product_cat` (
+CREATE TABLE `table_product_cat` (
   `id` int(11) NOT NULL,
   `id_list` int(11) NOT NULL,
   `ten_vi` varchar(255) NOT NULL,
@@ -939,15 +940,15 @@ CREATE TABLE IF NOT EXISTS `table_product_cat` (
   `seo_title` varchar(255) NOT NULL,
   `seo_keyword` text NOT NULL,
   `seo_description` text NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=143 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_color`
+-- Cấu trúc bảng cho bảng `table_product_color`
 --
 
-CREATE TABLE IF NOT EXISTS `table_product_color` (
+CREATE TABLE `table_product_color` (
   `id` int(11) NOT NULL,
   `ten_vi` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `bg_color` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -956,10 +957,10 @@ CREATE TABLE IF NOT EXISTS `table_product_color` (
   `hienthi` int(11) NOT NULL,
   `noibat` int(11) NOT NULL,
   `ten_en` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_product_color`
+-- Đang đổ dữ liệu cho bảng `table_product_color`
 --
 
 INSERT INTO `table_product_color` (`id`, `ten_vi`, `bg_color`, `text_color`, `stt`, `hienthi`, `noibat`, `ten_en`) VALUES
@@ -971,18 +972,18 @@ INSERT INTO `table_product_color` (`id`, `ten_vi`, `bg_color`, `text_color`, `st
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_color_condition`
+-- Cấu trúc bảng cho bảng `table_product_color_condition`
 --
 
-CREATE TABLE IF NOT EXISTS `table_product_color_condition` (
+CREATE TABLE `table_product_color_condition` (
   `id` int(11) NOT NULL,
   `id_color` int(11) NOT NULL,
   `id_product` int(11) NOT NULL,
   `image` text COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=1357 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_product_color_condition`
+-- Đang đổ dữ liệu cho bảng `table_product_color_condition`
 --
 
 INSERT INTO `table_product_color_condition` (`id`, `id_color`, `id_product`, `image`) VALUES
@@ -1946,22 +1947,38 @@ INSERT INTO `table_product_color_condition` (`id`, `id_color`, `id_product`, `im
 (1346, 3, 1627, ''),
 (1347, 2, 1627, ''),
 (1348, 1, 1627, ''),
-(1349, 4, 1, ''),
-(1350, 3, 1, ''),
-(1351, 2, 1, ''),
-(1352, 1, 1, ''),
-(1353, 4, 2, ''),
-(1354, 3, 2, ''),
-(1355, 2, 2, ''),
-(1356, 1, 2, '');
+(1357, 4, 2, ''),
+(1358, 3, 2, ''),
+(1359, 2, 2, ''),
+(1360, 1, 2, ''),
+(1361, 4, 3, ''),
+(1362, 3, 3, ''),
+(1363, 2, 3, ''),
+(1364, 1, 3, ''),
+(1365, 4, 5, ''),
+(1366, 3, 5, ''),
+(1367, 2, 5, ''),
+(1368, 1, 5, ''),
+(1369, 4, 6, ''),
+(1370, 3, 6, ''),
+(1371, 2, 6, ''),
+(1372, 1, 6, ''),
+(1373, 4, 1, ''),
+(1374, 3, 1, ''),
+(1375, 2, 1, ''),
+(1376, 1, 1, ''),
+(1377, 4, 4, ''),
+(1378, 3, 4, ''),
+(1379, 2, 4, ''),
+(1380, 1, 4, '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_danhmuc`
+-- Cấu trúc bảng cho bảng `table_product_danhmuc`
 --
 
-CREATE TABLE IF NOT EXISTS `table_product_danhmuc` (
+CREATE TABLE `table_product_danhmuc` (
   `id` int(11) NOT NULL,
   `ten_vi` varchar(255) NOT NULL,
   `tenkhongdau` varchar(255) NOT NULL,
@@ -1978,10 +1995,10 @@ CREATE TABLE IF NOT EXISTS `table_product_danhmuc` (
   `seo_description` text NOT NULL,
   `noibat` int(11) NOT NULL,
   `background_color` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_product_danhmuc`
+-- Đang đổ dữ liệu cho bảng `table_product_danhmuc`
 --
 
 INSERT INTO `table_product_danhmuc` (`id`, `ten_vi`, `tenkhongdau`, `photo`, `thumb`, `stt`, `hienthi`, `ngaytao`, `ngaysua`, `ten_en`, `ten_cn`, `seo_title`, `seo_keyword`, `seo_description`, `noibat`, `background_color`) VALUES
@@ -1993,11 +2010,11 @@ INSERT INTO `table_product_danhmuc` (`id`, `ten_vi`, `tenkhongdau`, `photo`, `th
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_item`
+-- Cấu trúc bảng cho bảng `table_product_item`
 --
 
-CREATE TABLE IF NOT EXISTS `table_product_item` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_product_item` (
+  `id` int(10) UNSIGNED NOT NULL,
   `id_list` int(11) NOT NULL,
   `id_cat` int(10) NOT NULL,
   `ten` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -2009,15 +2026,15 @@ CREATE TABLE IF NOT EXISTS `table_product_item` (
   `ngaysua` int(10) NOT NULL,
   `ngaytao` int(10) NOT NULL,
   `id_danhmuc` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_list`
+-- Cấu trúc bảng cho bảng `table_product_list`
 --
 
-CREATE TABLE IF NOT EXISTS `table_product_list` (
+CREATE TABLE `table_product_list` (
   `id` int(11) NOT NULL,
   `ten_vi` varchar(255) NOT NULL,
   `tenkhongdau` varchar(255) NOT NULL,
@@ -2033,10 +2050,10 @@ CREATE TABLE IF NOT EXISTS `table_product_list` (
   `seo_keyword` text NOT NULL,
   `seo_description` text NOT NULL,
   `noibat` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=234 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_product_list`
+-- Đang đổ dữ liệu cho bảng `table_product_list`
 --
 
 INSERT INTO `table_product_list` (`id`, `ten_vi`, `tenkhongdau`, `photo`, `thumb`, `stt`, `hienthi`, `ngaytao`, `ngaysua`, `id_danhmuc`, `ten_en`, `seo_title`, `seo_keyword`, `seo_description`, `noibat`) VALUES
@@ -2045,19 +2062,19 @@ INSERT INTO `table_product_list` (`id`, `ten_vi`, `tenkhongdau`, `photo`, `thumb
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_photo`
+-- Cấu trúc bảng cho bảng `table_product_photo`
 --
 
-CREATE TABLE IF NOT EXISTS `table_product_photo` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_product_photo` (
+  `id` int(10) UNSIGNED NOT NULL,
   `photo` varchar(225) NOT NULL,
-  `id_product` int(10) unsigned NOT NULL,
+  `id_product` int(10) UNSIGNED NOT NULL,
   `xid` varchar(50) NOT NULL,
   `thumb` varchar(255) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_product_photo`
+-- Đang đổ dữ liệu cho bảng `table_product_photo`
 --
 
 INSERT INTO `table_product_photo` (`id`, `photo`, `id_product`, `xid`, `thumb`) VALUES
@@ -2071,18 +2088,18 @@ INSERT INTO `table_product_photo` (`id`, `photo`, `id_product`, `xid`, `thumb`) 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_price`
+-- Cấu trúc bảng cho bảng `table_product_price`
 --
 
-CREATE TABLE IF NOT EXISTS `table_product_price` (
+CREATE TABLE `table_product_price` (
   `id` int(11) NOT NULL,
   `ten_vi` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `stt` int(11) NOT NULL,
   `hienthi` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_product_price`
+-- Đang đổ dữ liệu cho bảng `table_product_price`
 --
 
 INSERT INTO `table_product_price` (`id`, `ten_vi`, `stt`, `hienthi`) VALUES
@@ -2094,19 +2111,19 @@ INSERT INTO `table_product_price` (`id`, `ten_vi`, `stt`, `hienthi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_size`
+-- Cấu trúc bảng cho bảng `table_product_size`
 --
 
-CREATE TABLE IF NOT EXISTS `table_product_size` (
+CREATE TABLE `table_product_size` (
   `id` int(11) NOT NULL,
   `ten_vi` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `stt` int(11) NOT NULL,
   `hienthi` int(11) NOT NULL,
   `ten_en` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_product_size`
+-- Đang đổ dữ liệu cho bảng `table_product_size`
 --
 
 INSERT INTO `table_product_size` (`id`, `ten_vi`, `stt`, `hienthi`, `ten_en`) VALUES
@@ -2123,17 +2140,17 @@ INSERT INTO `table_product_size` (`id`, `ten_vi`, `stt`, `hienthi`, `ten_en`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_product_size_condition`
+-- Cấu trúc bảng cho bảng `table_product_size_condition`
 --
 
-CREATE TABLE IF NOT EXISTS `table_product_size_condition` (
+CREATE TABLE `table_product_size_condition` (
   `id` int(11) NOT NULL,
   `id_size` int(11) NOT NULL,
   `id_product` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_product_size_condition`
+-- Đang đổ dữ liệu cho bảng `table_product_size_condition`
 --
 
 INSERT INTO `table_product_size_condition` (`id`, `id_size`, `id_product`) VALUES
@@ -2162,10 +2179,10 @@ INSERT INTO `table_product_size_condition` (`id`, `id_size`, `id_product`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_question`
+-- Cấu trúc bảng cho bảng `table_question`
 --
 
-CREATE TABLE IF NOT EXISTS `table_question` (
+CREATE TABLE `table_question` (
   `id` int(11) NOT NULL,
   `ten` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -2176,29 +2193,29 @@ CREATE TABLE IF NOT EXISTS `table_question` (
   `create_time` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `hienthi` int(11) NOT NULL,
   `reply` text COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_question`
+-- Đang đổ dữ liệu cho bảng `table_question`
 --
 
 INSERT INTO `table_question` (`id`, `ten`, `email`, `phone`, `address`, `title`, `content`, `create_time`, `hienthi`, `reply`) VALUES
-(2, 'address', 'address@gmail.com', '', 'address@gmail.com', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437556913', 1, '<p><span style="color:rgb(136, 136, 136); font-family:roboto,segoe ui,helvetica,arial,sans-serif; font-size:14px">Sau th&agrave;nh c&ocirc;ng của ca kh&uacute;c &quot;T&igrave;m Được Nhau Kh&oacute; Thế N&agrave;o&quot; tại Zing Mp3, &quot;hit-maker&quot; Mr Siro tiếp tục tr&igrave;nh album online mang t&ecirc;n &quot;Nước Mắt V&agrave; Em&quot; bao gồm 5 ca kh&uacute;c, trong đ&oacute; c&oacute; 2 ca kh&uacute;c lần đầu được Mr Siro giới thiệu đến người nghe l&agrave; &quot;Day Dứt Nỗi Đau&quot; v&agrave; &quot;Lặng Lẽ Tổn Thương&quot;</span></p>\r\n'),
-(3, 'address', 'address@gmail.com', '', 'address@gmail.com', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437556960', 1, '<p><span style="color:rgb(136, 136, 136); font-family:roboto,segoe ui,helvetica,arial,sans-serif; font-size:14px">Sau th&agrave;nh c&ocirc;ng của ca kh&uacute;c &quot;T&igrave;m Được Nhau Kh&oacute; Thế N&agrave;o&quot; tại Zing Mp3, &quot;hit-maker&quot; Mr Siro tiếp tục tr&igrave;nh album online mang t&ecirc;n &quot;Nước Mắt V&agrave; Em&quot; bao gồm 5 ca kh&uacute;c, trong đ&oacute; c&oacute; 2 ca kh&uacute;c lần đầu được Mr Siro giới thiệu đến người nghe l&agrave; &quot;Day Dứt Nỗi Đau&quot; v&agrave; &quot;Lặng Lẽ Tổn Thương&quot;</span></p>\r\n'),
-(4, 'address', 'address@gmail.com', '', 'address@gmail.com', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437556963', 1, '<p><span style="color:rgb(136, 136, 136); font-family:roboto,segoe ui,helvetica,arial,sans-serif; font-size:14px">Sau th&agrave;nh c&ocirc;ng của ca kh&uacute;c &quot;T&igrave;m Được Nhau Kh&oacute; Thế N&agrave;o&quot; tại Zing Mp3, &quot;hit-maker&quot; Mr Siro tiếp tục tr&igrave;nh album online mang t&ecirc;n &quot;Nước Mắt V&agrave; Em&quot; bao gồm 5 ca kh&uacute;c, trong đ&oacute; c&oacute; 2 ca kh&uacute;c lần đầu được Mr Siro giới thiệu đến người nghe l&agrave; &quot;Day Dứt Nỗi Đau&quot; v&agrave; &quot;Lặng Lẽ Tổn Thương&quot;</span></p>\r\n'),
-(5, 'address', 'address@gmail.com', '', 'address@gmail.com', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437556964', 1, '<p><span style="color:rgb(136, 136, 136); font-family:roboto,segoe ui,helvetica,arial,sans-serif; font-size:14px">Sau th&agrave;nh c&ocirc;ng của ca kh&uacute;c &quot;T&igrave;m Được Nhau Kh&oacute; Thế N&agrave;o&quot; tại Zing Mp3, &quot;hit-maker&quot; Mr Siro tiếp tục tr&igrave;nh album online mang t&ecirc;n &quot;Nước Mắt V&agrave; Em&quot; bao gồm 5 ca kh&uacute;c, trong đ&oacute; c&oacute; 2 ca kh&uacute;c lần đầu được Mr Siro giới thiệu đến người nghe l&agrave; &quot;Day Dứt Nỗi Đau&quot; v&agrave; &quot;Lặng Lẽ Tổn Thương&quot;</span></p>\r\n'),
-(6, 'address', 'address@gmail.com', '', 'address@gmail.com', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437556990', 1, '<p><span style="color:rgb(136, 136, 136); font-family:roboto,segoe ui,helvetica,arial,sans-serif; font-size:14px">Sau th&agrave;nh c&ocirc;ng của ca kh&uacute;c &quot;T&igrave;m Được Nhau Kh&oacute; Thế N&agrave;o&quot; tại Zing Mp3, &quot;hit-maker&quot; Mr Siro tiếp tục tr&igrave;nh album online mang t&ecirc;n &quot;Nước Mắt V&agrave; Em&quot; bao gồm 5 ca kh&uacute;c, trong đ&oacute; c&oacute; 2 ca kh&uacute;c lần đầu được Mr Siro giới thiệu đến người nghe l&agrave; &quot;Day Dứt Nỗi Đau&quot; v&agrave; &quot;Lặng Lẽ Tổn Thương&quot;</span></p>\r\n'),
-(7, 'address', 'address@gmail.com', '', 'address@gmail.com', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437556992', 1, '<p><span style="color:rgb(136, 136, 136); font-family:roboto,segoe ui,helvetica,arial,sans-serif; font-size:14px">Sau th&agrave;nh c&ocirc;ng của ca kh&uacute;c &quot;T&igrave;m Được Nhau Kh&oacute; Thế N&agrave;o&quot; tại Zing Mp3, &quot;hit-maker&quot; Mr Siro tiếp tục tr&igrave;nh album online mang t&ecirc;n &quot;Nước Mắt V&agrave; Em&quot; bao gồm 5 ca kh&uacute;c, trong đ&oacute; c&oacute; 2 ca kh&uacute;c lần đầu được Mr Siro giới thiệu đến người nghe l&agrave; &quot;Day Dứt Nỗi Đau&quot; v&agrave; &quot;Lặng Lẽ Tổn Thương&quot;</span></p>\r\n'),
-(8, 'address', 'address@gmail.com', '', 'address@gmail.com', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437556996', 1, '<p><span style="color:rgb(136, 136, 136); font-family:roboto,segoe ui,helvetica,arial,sans-serif; font-size:14px">Sau th&agrave;nh c&ocirc;ng của ca kh&uacute;c &quot;T&igrave;m Được Nhau Kh&oacute; Thế N&agrave;o&quot; tại Zing Mp3, &quot;hit-maker&quot; Mr Siro tiếp tục tr&igrave;nh album online mang t&ecirc;n &quot;Nước Mắt V&agrave; Em&quot; bao gồm 5 ca kh&uacute;c, trong đ&oacute; c&oacute; 2 ca kh&uacute;c lần đầu được Mr Siro giới thiệu đến người nghe l&agrave; &quot;Day Dứt Nỗi Đau&quot; v&agrave; &quot;Lặng Lẽ Tổn Thương&quot;</span></p>\r\n'),
+(2, 'address', 'address@gmail.com', '', 'address@gmail.com', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437556913', 1, '<p><span style=\"color:rgb(136, 136, 136); font-family:roboto,segoe ui,helvetica,arial,sans-serif; font-size:14px\">Sau th&agrave;nh c&ocirc;ng của ca kh&uacute;c &quot;T&igrave;m Được Nhau Kh&oacute; Thế N&agrave;o&quot; tại Zing Mp3, &quot;hit-maker&quot; Mr Siro tiếp tục tr&igrave;nh album online mang t&ecirc;n &quot;Nước Mắt V&agrave; Em&quot; bao gồm 5 ca kh&uacute;c, trong đ&oacute; c&oacute; 2 ca kh&uacute;c lần đầu được Mr Siro giới thiệu đến người nghe l&agrave; &quot;Day Dứt Nỗi Đau&quot; v&agrave; &quot;Lặng Lẽ Tổn Thương&quot;</span></p>\r\n'),
+(3, 'address', 'address@gmail.com', '', 'address@gmail.com', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437556960', 1, '<p><span style=\"color:rgb(136, 136, 136); font-family:roboto,segoe ui,helvetica,arial,sans-serif; font-size:14px\">Sau th&agrave;nh c&ocirc;ng của ca kh&uacute;c &quot;T&igrave;m Được Nhau Kh&oacute; Thế N&agrave;o&quot; tại Zing Mp3, &quot;hit-maker&quot; Mr Siro tiếp tục tr&igrave;nh album online mang t&ecirc;n &quot;Nước Mắt V&agrave; Em&quot; bao gồm 5 ca kh&uacute;c, trong đ&oacute; c&oacute; 2 ca kh&uacute;c lần đầu được Mr Siro giới thiệu đến người nghe l&agrave; &quot;Day Dứt Nỗi Đau&quot; v&agrave; &quot;Lặng Lẽ Tổn Thương&quot;</span></p>\r\n'),
+(4, 'address', 'address@gmail.com', '', 'address@gmail.com', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437556963', 1, '<p><span style=\"color:rgb(136, 136, 136); font-family:roboto,segoe ui,helvetica,arial,sans-serif; font-size:14px\">Sau th&agrave;nh c&ocirc;ng của ca kh&uacute;c &quot;T&igrave;m Được Nhau Kh&oacute; Thế N&agrave;o&quot; tại Zing Mp3, &quot;hit-maker&quot; Mr Siro tiếp tục tr&igrave;nh album online mang t&ecirc;n &quot;Nước Mắt V&agrave; Em&quot; bao gồm 5 ca kh&uacute;c, trong đ&oacute; c&oacute; 2 ca kh&uacute;c lần đầu được Mr Siro giới thiệu đến người nghe l&agrave; &quot;Day Dứt Nỗi Đau&quot; v&agrave; &quot;Lặng Lẽ Tổn Thương&quot;</span></p>\r\n'),
+(5, 'address', 'address@gmail.com', '', 'address@gmail.com', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437556964', 1, '<p><span style=\"color:rgb(136, 136, 136); font-family:roboto,segoe ui,helvetica,arial,sans-serif; font-size:14px\">Sau th&agrave;nh c&ocirc;ng của ca kh&uacute;c &quot;T&igrave;m Được Nhau Kh&oacute; Thế N&agrave;o&quot; tại Zing Mp3, &quot;hit-maker&quot; Mr Siro tiếp tục tr&igrave;nh album online mang t&ecirc;n &quot;Nước Mắt V&agrave; Em&quot; bao gồm 5 ca kh&uacute;c, trong đ&oacute; c&oacute; 2 ca kh&uacute;c lần đầu được Mr Siro giới thiệu đến người nghe l&agrave; &quot;Day Dứt Nỗi Đau&quot; v&agrave; &quot;Lặng Lẽ Tổn Thương&quot;</span></p>\r\n'),
+(6, 'address', 'address@gmail.com', '', 'address@gmail.com', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437556990', 1, '<p><span style=\"color:rgb(136, 136, 136); font-family:roboto,segoe ui,helvetica,arial,sans-serif; font-size:14px\">Sau th&agrave;nh c&ocirc;ng của ca kh&uacute;c &quot;T&igrave;m Được Nhau Kh&oacute; Thế N&agrave;o&quot; tại Zing Mp3, &quot;hit-maker&quot; Mr Siro tiếp tục tr&igrave;nh album online mang t&ecirc;n &quot;Nước Mắt V&agrave; Em&quot; bao gồm 5 ca kh&uacute;c, trong đ&oacute; c&oacute; 2 ca kh&uacute;c lần đầu được Mr Siro giới thiệu đến người nghe l&agrave; &quot;Day Dứt Nỗi Đau&quot; v&agrave; &quot;Lặng Lẽ Tổn Thương&quot;</span></p>\r\n'),
+(7, 'address', 'address@gmail.com', '', 'address@gmail.com', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437556992', 1, '<p><span style=\"color:rgb(136, 136, 136); font-family:roboto,segoe ui,helvetica,arial,sans-serif; font-size:14px\">Sau th&agrave;nh c&ocirc;ng của ca kh&uacute;c &quot;T&igrave;m Được Nhau Kh&oacute; Thế N&agrave;o&quot; tại Zing Mp3, &quot;hit-maker&quot; Mr Siro tiếp tục tr&igrave;nh album online mang t&ecirc;n &quot;Nước Mắt V&agrave; Em&quot; bao gồm 5 ca kh&uacute;c, trong đ&oacute; c&oacute; 2 ca kh&uacute;c lần đầu được Mr Siro giới thiệu đến người nghe l&agrave; &quot;Day Dứt Nỗi Đau&quot; v&agrave; &quot;Lặng Lẽ Tổn Thương&quot;</span></p>\r\n'),
+(8, 'address', 'address@gmail.com', '', 'address@gmail.com', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437556996', 1, '<p><span style=\"color:rgb(136, 136, 136); font-family:roboto,segoe ui,helvetica,arial,sans-serif; font-size:14px\">Sau th&agrave;nh c&ocirc;ng của ca kh&uacute;c &quot;T&igrave;m Được Nhau Kh&oacute; Thế N&agrave;o&quot; tại Zing Mp3, &quot;hit-maker&quot; Mr Siro tiếp tục tr&igrave;nh album online mang t&ecirc;n &quot;Nước Mắt V&agrave; Em&quot; bao gồm 5 ca kh&uacute;c, trong đ&oacute; c&oacute; 2 ca kh&uacute;c lần đầu được Mr Siro giới thiệu đến người nghe l&agrave; &quot;Day Dứt Nỗi Đau&quot; v&agrave; &quot;Lặng Lẽ Tổn Thương&quot;</span></p>\r\n'),
 (9, 'address', 'address@gmail.com', '', '123 chu văn an', '', '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>', '1437557000', 1, '<p>123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn an&nbsp;123 chu văn anasasasas</p>\r\n');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_setting`
+-- Cấu trúc bảng cho bảng `table_setting`
 --
 
-CREATE TABLE IF NOT EXISTS `table_setting` (
+CREATE TABLE `table_setting` (
   `site_maintenance` int(11) NOT NULL,
   `product_paging` int(11) NOT NULL,
   `news_paging` int(11) NOT NULL,
@@ -2213,32 +2230,32 @@ CREATE TABLE IF NOT EXISTS `table_setting` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_setting`
+-- Đang đổ dữ liệu cho bảng `table_setting`
 --
 
 INSERT INTO `table_setting` (`site_maintenance`, `product_paging`, `news_paging`, `email_contact`, `email_contact_form`, `default_lang`, `site_maintenance_message`, `google_analytics`, `meta_top`, `meta_bottom`, `share_image`) VALUES
-(0, 15, 4, 'quochunguit@gmail.com', '<p>Thư liên hệ từ :%website%</p>\r\n\r\n<p>Họ tên khách hàng :%name%</p>\r\n\r\n<p>Email : %email%</p>\r\n\r\n<p>Điện thoại: %phone%</p>\r\n\r\n<p>Ngày gửi: %date%</p>\r\n\r\n<p>Tiêu đề liên hệ: Thư liên hệ&nbsp;</p>\r\n\r\n<p>Nội dung:&nbsp;</p>\r\n\r\n<p>%content%</p>\r\n', 'vi', '<h1 style="text-align:center">&nbsp;</h1>\r\n\r\n<h1 style="text-align:center">&nbsp;</h1>\r\n\r\n<h1 style="text-align:center">&nbsp;</h1>\r\n\r\n<h1 style="text-align:center"><span style="color:#B22222">WEBSITE ĐANG NÂNG CẤP.</span></h1>\r\n\r\n<h1 style="text-align:center"><span style="color:#B22222">VUI LÒNG QUAY LẠI SAU</span></h1>\r\n', '<script>\r\n  (function(i,s,o,g,r,a,m){i[''GoogleAnalyticsObject'']=r;i[r]=i[r]||function(){\r\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\r\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\r\n  })(window,document,''script'',''//www.google-analytics.com/analytics.js'',''ga'');\r\n\r\n  ga(''create'', ''UA-52045562-33'', ''auto'');\r\n  ga(''send'', ''pageview'');\r\n\r\n</script>', '<meta name="google-site-verification" content="oeR2qVihqsK9LhwqCTaDvi6NGkh7SGSHS2zJRRqdW3M" />\r\n', '<!-- Google Tag Manager -->\r\n<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-K8GKSB"\r\nheight="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>\r\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({''gtm.start'':\r\nnew Date().getTime(),event:''gtm.js''});var f=d.getElementsByTagName(s)[0],\r\nj=d.createElement(s),dl=l!=''dataLayer''?''&l=''+l:'''';j.async=true;j.src=\r\n''//www.googletagmanager.com/gtm.js?id=''+i+dl;f.parentNode.insertBefore(j,f);\r\n})(window,document,''script'',''dataLayer'',''GTM-K8GKSB'');</script>\r\n<!-- End Google Tag Manager -->', 'eaad17c1c0c8788bb8e4b0de95b31154_600x375.jpg');
+(0, 15, 4, 'quochunguit@gmail.com', '<p>Thư liên hệ từ :%website%</p>\r\n\r\n<p>Họ tên khách hàng :%name%</p>\r\n\r\n<p>Email : %email%</p>\r\n\r\n<p>Điện thoại: %phone%</p>\r\n\r\n<p>Ngày gửi: %date%</p>\r\n\r\n<p>Tiêu đề liên hệ: Thư liên hệ&nbsp;</p>\r\n\r\n<p>Nội dung:&nbsp;</p>\r\n\r\n<p>%content%</p>\r\n', 'vi', '<h1 style=\"text-align:center\">&nbsp;</h1>\r\n\r\n<h1 style=\"text-align:center\">&nbsp;</h1>\r\n\r\n<h1 style=\"text-align:center\">&nbsp;</h1>\r\n\r\n<h1 style=\"text-align:center\"><span style=\"color:#B22222\">WEBSITE ĐANG NÂNG CẤP.</span></h1>\r\n\r\n<h1 style=\"text-align:center\"><span style=\"color:#B22222\">VUI LÒNG QUAY LẠI SAU</span></h1>\r\n', '<script>\r\n  (function(i,s,o,g,r,a,m){i[\'GoogleAnalyticsObject\']=r;i[r]=i[r]||function(){\r\n  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\r\n  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\r\n  })(window,document,\'script\',\'//www.google-analytics.com/analytics.js\',\'ga\');\r\n\r\n  ga(\'create\', \'UA-52045562-33\', \'auto\');\r\n  ga(\'send\', \'pageview\');\r\n\r\n</script>', '<meta name=\"google-site-verification\" content=\"oeR2qVihqsK9LhwqCTaDvi6NGkh7SGSHS2zJRRqdW3M\" />\r\n', '<!-- Google Tag Manager -->\r\n<noscript><iframe src=\"//www.googletagmanager.com/ns.html?id=GTM-K8GKSB\"\r\nheight=\"0\" width=\"0\" style=\"display:none;visibility:hidden\"></iframe></noscript>\r\n<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({\'gtm.start\':\r\nnew Date().getTime(),event:\'gtm.js\'});var f=d.getElementsByTagName(s)[0],\r\nj=d.createElement(s),dl=l!=\'dataLayer\'?\'&l=\'+l:\'\';j.async=true;j.src=\r\n\'//www.googletagmanager.com/gtm.js?id=\'+i+dl;f.parentNode.insertBefore(j,f);\r\n})(window,document,\'script\',\'dataLayer\',\'GTM-K8GKSB\');</script>\r\n<!-- End Google Tag Manager -->', 'eaad17c1c0c8788bb8e4b0de95b31154_600x375.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_slider`
+-- Cấu trúc bảng cho bảng `table_slider`
 --
 
-CREATE TABLE IF NOT EXISTS `table_slider` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_slider` (
+  `id` int(10) UNSIGNED NOT NULL,
   `photo` varchar(225) NOT NULL,
   `ten` varchar(100) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `mota` text NOT NULL,
   `link` varchar(255) NOT NULL,
-  `stt` int(10) unsigned NOT NULL DEFAULT '1',
+  `stt` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1',
   `thumb` varchar(255) NOT NULL,
   `type` varchar(25) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=262 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_slider`
+-- Đang đổ dữ liệu cho bảng `table_slider`
 --
 
 INSERT INTO `table_slider` (`id`, `photo`, `ten`, `mota`, `link`, `stt`, `hienthi`, `thumb`, `type`) VALUES
@@ -2278,10 +2295,10 @@ INSERT INTO `table_slider` (`id`, `photo`, `ten`, `mota`, `link`, `stt`, `hienth
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_social`
+-- Cấu trúc bảng cho bảng `table_social`
 --
 
-CREATE TABLE IF NOT EXISTS `table_social` (
+CREATE TABLE `table_social` (
   `id` int(11) NOT NULL,
   `link` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `photo` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
@@ -2289,10 +2306,10 @@ CREATE TABLE IF NOT EXISTS `table_social` (
   `hienthi` int(11) NOT NULL,
   `ten` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `small_image` varchar(255) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_social`
+-- Đang đổ dữ liệu cho bảng `table_social`
 --
 
 INSERT INTO `table_social` (`id`, `link`, `photo`, `stt`, `hienthi`, `ten`, `small_image`) VALUES
@@ -2305,10 +2322,10 @@ INSERT INTO `table_social` (`id`, `link`, `photo`, `stt`, `hienthi`, `ten`, `sma
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_statistics`
+-- Cấu trúc bảng cho bảng `table_statistics`
 --
 
-CREATE TABLE IF NOT EXISTS `table_statistics` (
+CREATE TABLE `table_statistics` (
   `st_id` int(11) NOT NULL,
   `st_ip` varchar(255) NOT NULL,
   `st_url` varchar(255) NOT NULL,
@@ -2317,10 +2334,10 @@ CREATE TABLE IF NOT EXISTS `table_statistics` (
   `st_year` int(11) NOT NULL,
   `st_day` int(11) NOT NULL,
   `st_time` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2289 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_statistics`
+-- Đang đổ dữ liệu cho bảng `table_statistics`
 --
 
 INSERT INTO `table_statistics` (`st_id`, `st_ip`, `st_url`, `st_week`, `st_month`, `st_year`, `st_day`, `st_time`) VALUES
@@ -4620,11 +4637,11 @@ INSERT INTO `table_statistics` (`st_id`, `st_ip`, `st_url`, `st_week`, `st_month
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_tag`
+-- Cấu trúc bảng cho bảng `table_tag`
 --
 
-CREATE TABLE IF NOT EXISTS `table_tag` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_tag` (
+  `id` int(10) UNSIGNED NOT NULL,
   `ten_vi` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `ten_en` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `link` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -4635,10 +4652,10 @@ CREATE TABLE IF NOT EXISTS `table_tag` (
   `length_en` int(11) NOT NULL,
   `hienthi` int(11) NOT NULL,
   `slug_en` varchar(255) COLLATE latin1_general_ci NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=47 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data for table `table_tag`
+-- Đang đổ dữ liệu cho bảng `table_tag`
 --
 
 INSERT INTO `table_tag` (`id`, `ten_vi`, `ten_en`, `link`, `type`, `length_vi`, `slug_vi`, `stt`, `length_en`, `hienthi`, `slug_en`) VALUES
@@ -4658,16 +4675,16 @@ INSERT INTO `table_tag` (`id`, `ten_vi`, `ten_en`, `link`, `type`, `length_vi`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_title`
+-- Cấu trúc bảng cho bảng `table_title`
 --
 
-CREATE TABLE IF NOT EXISTS `table_title` (
+CREATE TABLE `table_title` (
   `id` int(10) NOT NULL,
   `ten` varchar(100) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_title`
+-- Đang đổ dữ liệu cho bảng `table_title`
 --
 
 INSERT INTO `table_title` (`id`, `ten`) VALUES
@@ -4676,11 +4693,11 @@ INSERT INTO `table_title` (`id`, `ten`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_user`
+-- Cấu trúc bảng cho bảng `table_user`
 --
 
-CREATE TABLE IF NOT EXISTS `table_user` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_user` (
+  `id` int(10) UNSIGNED NOT NULL,
   `username` varchar(225) NOT NULL,
   `password` varchar(225) NOT NULL,
   `ten` varchar(225) NOT NULL,
@@ -4693,13 +4710,13 @@ CREATE TABLE IF NOT EXISTS `table_user` (
   `congty` varchar(225) NOT NULL,
   `country` varchar(225) NOT NULL,
   `city` varchar(225) NOT NULL,
-  `role` tinyint(3) unsigned NOT NULL DEFAULT '1',
+  `role` tinyint(3) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1',
   `com` varchar(225) NOT NULL DEFAULT 'user'
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_user`
+-- Đang đổ dữ liệu cho bảng `table_user`
 --
 
 INSERT INTO `table_user` (`id`, `username`, `password`, `ten`, `dienthoai`, `email`, `diachi`, `sex`, `nick_yahoo`, `nick_skype`, `congty`, `country`, `city`, `role`, `hienthi`, `com`) VALUES
@@ -4709,17 +4726,17 @@ INSERT INTO `table_user` (`id`, `username`, `password`, `ten`, `dienthoai`, `ema
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_user_permission`
+-- Cấu trúc bảng cho bảng `table_user_permission`
 --
 
-CREATE TABLE IF NOT EXISTS `table_user_permission` (
+CREATE TABLE `table_user_permission` (
   `id` int(11) NOT NULL,
   `id_user` int(11) NOT NULL,
   `id_permission` int(11) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=97 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `table_user_permission`
+-- Đang đổ dữ liệu cho bảng `table_user_permission`
 --
 
 INSERT INTO `table_user_permission` (`id`, `id_user`, `id_permission`) VALUES
@@ -4742,11 +4759,11 @@ INSERT INTO `table_user_permission` (`id`, `id_user`, `id_permission`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_video`
+-- Cấu trúc bảng cho bảng `table_video`
 --
 
-CREATE TABLE IF NOT EXISTS `table_video` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_video` (
+  `id` int(10) UNSIGNED NOT NULL,
   `id_item` int(11) NOT NULL,
   `noibat` int(12) NOT NULL,
   `ten_vi` varchar(225) NOT NULL,
@@ -4761,10 +4778,10 @@ CREATE TABLE IF NOT EXISTS `table_video` (
   `photo` varchar(100) NOT NULL,
   `thumb` varchar(255) NOT NULL,
   `thumb1` varchar(255) NOT NULL,
-  `stt` int(10) unsigned NOT NULL DEFAULT '1',
+  `stt` int(10) UNSIGNED NOT NULL DEFAULT '1',
   `hienthi` tinyint(1) NOT NULL DEFAULT '1',
-  `ngaytao` int(10) unsigned NOT NULL DEFAULT '0',
-  `ngaysua` int(10) unsigned NOT NULL DEFAULT '0',
+  `ngaytao` int(10) UNSIGNED NOT NULL DEFAULT '0',
+  `ngaysua` int(10) UNSIGNED NOT NULL DEFAULT '0',
   `start_event` datetime NOT NULL,
   `ten_cn` varchar(255) NOT NULL,
   `mota_cn` text NOT NULL,
@@ -4773,10 +4790,10 @@ CREATE TABLE IF NOT EXISTS `table_video` (
   `seo_keyword` text NOT NULL,
   `seo_description` text NOT NULL,
   `id_danhmuc` int(11) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `table_video`
+-- Đang đổ dữ liệu cho bảng `table_video`
 --
 
 INSERT INTO `table_video` (`id`, `id_item`, `noibat`, `ten_vi`, `ten_en`, `link`, `mota_en`, `noidung_en`, `tenkhongdau`, `mota_vi`, `noidung_vi`, `loaitin`, `photo`, `thumb`, `thumb1`, `stt`, `hienthi`, `ngaytao`, `ngaysua`, `start_event`, `ten_cn`, `mota_cn`, `noidung_cn`, `seo_title`, `seo_keyword`, `seo_description`, `id_danhmuc`) VALUES
@@ -4785,11 +4802,11 @@ INSERT INTO `table_video` (`id`, `id_item`, `noibat`, `ten_vi`, `ten_en`, `link`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `table_yahoo`
+-- Cấu trúc bảng cho bảng `table_yahoo`
 --
 
-CREATE TABLE IF NOT EXISTS `table_yahoo` (
-  `id` int(10) unsigned NOT NULL,
+CREATE TABLE `table_yahoo` (
+  `id` int(10) UNSIGNED NOT NULL,
   `ten` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `ten2` varchar(20) COLLATE latin1_general_ci NOT NULL,
   `linhvuc` int(3) NOT NULL,
@@ -4802,529 +4819,529 @@ CREATE TABLE IF NOT EXISTS `table_yahoo` (
   `hienthi` int(2) NOT NULL,
   `ngaytao` int(10) NOT NULL,
   `ngaysua` int(10) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
 --
--- Dumping data for table `table_yahoo`
+-- Đang đổ dữ liệu cho bảng `table_yahoo`
 --
 
 INSERT INTO `table_yahoo` (`id`, `ten`, `ten2`, `linhvuc`, `loai`, `yahoo`, `skype`, `dienthoai`, `email`, `stt`, `hienthi`, `ngaytao`, `ngaysua`) VALUES
 (13, '', '', 0, 0, '', '', '', '', 1, 1, 1362537632, 1445594732);
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `table_about`
+-- Chỉ mục cho bảng `table_about`
 --
 ALTER TABLE `table_about`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_advs`
+-- Chỉ mục cho bảng `table_advs`
 --
 ALTER TABLE `table_advs`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_background`
+-- Chỉ mục cho bảng `table_background`
 --
 ALTER TABLE `table_background`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_baiviet`
+-- Chỉ mục cho bảng `table_baiviet`
 --
 ALTER TABLE `table_baiviet`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_config`
+-- Chỉ mục cho bảng `table_config`
 --
 ALTER TABLE `table_config`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_contact`
+-- Chỉ mục cho bảng `table_contact`
 --
 ALTER TABLE `table_contact`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_content`
+-- Chỉ mục cho bảng `table_content`
 --
 ALTER TABLE `table_content`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_content_danhmuc`
+-- Chỉ mục cho bảng `table_content_danhmuc`
 --
 ALTER TABLE `table_content_danhmuc`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_content_list`
+-- Chỉ mục cho bảng `table_content_list`
 --
 ALTER TABLE `table_content_list`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_doitac`
+-- Chỉ mục cho bảng `table_doitac`
 --
 ALTER TABLE `table_doitac`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_donhang`
+-- Chỉ mục cho bảng `table_donhang`
 --
 ALTER TABLE `table_donhang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_footer`
+-- Chỉ mục cho bảng `table_footer`
 --
 ALTER TABLE `table_footer`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_hotline`
+-- Chỉ mục cho bảng `table_hotline`
 --
 ALTER TABLE `table_hotline`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_index`
+-- Chỉ mục cho bảng `table_index`
 --
 ALTER TABLE `table_index`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_letruot`
+-- Chỉ mục cho bảng `table_letruot`
 --
 ALTER TABLE `table_letruot`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_lienhe`
+-- Chỉ mục cho bảng `table_lienhe`
 --
 ALTER TABLE `table_lienhe`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_member`
+-- Chỉ mục cho bảng `table_member`
 --
 ALTER TABLE `table_member`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_meta`
+-- Chỉ mục cho bảng `table_meta`
 --
 ALTER TABLE `table_meta`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_newsletter`
+-- Chỉ mục cho bảng `table_newsletter`
 --
 ALTER TABLE `table_newsletter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_online`
+-- Chỉ mục cho bảng `table_online`
 --
 ALTER TABLE `table_online`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_permission`
+-- Chỉ mục cho bảng `table_permission`
 --
 ALTER TABLE `table_permission`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_permission_group`
+-- Chỉ mục cho bảng `table_permission_group`
 --
 ALTER TABLE `table_permission_group`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_photo`
+-- Chỉ mục cho bảng `table_photo`
 --
 ALTER TABLE `table_photo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product`
+-- Chỉ mục cho bảng `table_product`
 --
 ALTER TABLE `table_product`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_brand`
+-- Chỉ mục cho bảng `table_product_brand`
 --
 ALTER TABLE `table_product_brand`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_brand_condition`
+-- Chỉ mục cho bảng `table_product_brand_condition`
 --
 ALTER TABLE `table_product_brand_condition`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_cat`
+-- Chỉ mục cho bảng `table_product_cat`
 --
 ALTER TABLE `table_product_cat`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_color`
+-- Chỉ mục cho bảng `table_product_color`
 --
 ALTER TABLE `table_product_color`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_color_condition`
+-- Chỉ mục cho bảng `table_product_color_condition`
 --
 ALTER TABLE `table_product_color_condition`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_danhmuc`
+-- Chỉ mục cho bảng `table_product_danhmuc`
 --
 ALTER TABLE `table_product_danhmuc`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_item`
+-- Chỉ mục cho bảng `table_product_item`
 --
 ALTER TABLE `table_product_item`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_list`
+-- Chỉ mục cho bảng `table_product_list`
 --
 ALTER TABLE `table_product_list`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_photo`
+-- Chỉ mục cho bảng `table_product_photo`
 --
 ALTER TABLE `table_product_photo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_price`
+-- Chỉ mục cho bảng `table_product_price`
 --
 ALTER TABLE `table_product_price`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_size`
+-- Chỉ mục cho bảng `table_product_size`
 --
 ALTER TABLE `table_product_size`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_product_size_condition`
+-- Chỉ mục cho bảng `table_product_size_condition`
 --
 ALTER TABLE `table_product_size_condition`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_question`
+-- Chỉ mục cho bảng `table_question`
 --
 ALTER TABLE `table_question`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_slider`
+-- Chỉ mục cho bảng `table_slider`
 --
 ALTER TABLE `table_slider`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_social`
+-- Chỉ mục cho bảng `table_social`
 --
 ALTER TABLE `table_social`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_statistics`
+-- Chỉ mục cho bảng `table_statistics`
 --
 ALTER TABLE `table_statistics`
   ADD PRIMARY KEY (`st_id`);
 
 --
--- Indexes for table `table_tag`
+-- Chỉ mục cho bảng `table_tag`
 --
 ALTER TABLE `table_tag`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_title`
+-- Chỉ mục cho bảng `table_title`
 --
 ALTER TABLE `table_title`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_user`
+-- Chỉ mục cho bảng `table_user`
 --
 ALTER TABLE `table_user`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_user_permission`
+-- Chỉ mục cho bảng `table_user_permission`
 --
 ALTER TABLE `table_user_permission`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_video`
+-- Chỉ mục cho bảng `table_video`
 --
 ALTER TABLE `table_video`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `table_yahoo`
+-- Chỉ mục cho bảng `table_yahoo`
 --
 ALTER TABLE `table_yahoo`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `table_about`
+-- AUTO_INCREMENT cho bảng `table_about`
 --
 ALTER TABLE `table_about`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
--- AUTO_INCREMENT for table `table_advs`
+-- AUTO_INCREMENT cho bảng `table_advs`
 --
 ALTER TABLE `table_advs`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=52;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
 --
--- AUTO_INCREMENT for table `table_background`
+-- AUTO_INCREMENT cho bảng `table_background`
 --
 ALTER TABLE `table_background`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `table_baiviet`
+-- AUTO_INCREMENT cho bảng `table_baiviet`
 --
 ALTER TABLE `table_baiviet`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
--- AUTO_INCREMENT for table `table_config`
+-- AUTO_INCREMENT cho bảng `table_config`
 --
 ALTER TABLE `table_config`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `table_contact`
+-- AUTO_INCREMENT cho bảng `table_contact`
 --
 ALTER TABLE `table_contact`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT for table `table_content`
+-- AUTO_INCREMENT cho bảng `table_content`
 --
 ALTER TABLE `table_content`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
--- AUTO_INCREMENT for table `table_content_danhmuc`
+-- AUTO_INCREMENT cho bảng `table_content_danhmuc`
 --
 ALTER TABLE `table_content_danhmuc`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `table_content_list`
+-- AUTO_INCREMENT cho bảng `table_content_list`
 --
 ALTER TABLE `table_content_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 --
--- AUTO_INCREMENT for table `table_doitac`
+-- AUTO_INCREMENT cho bảng `table_doitac`
 --
 ALTER TABLE `table_doitac`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=94;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 --
--- AUTO_INCREMENT for table `table_donhang`
+-- AUTO_INCREMENT cho bảng `table_donhang`
 --
 ALTER TABLE `table_donhang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=43;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
--- AUTO_INCREMENT for table `table_footer`
+-- AUTO_INCREMENT cho bảng `table_footer`
 --
 ALTER TABLE `table_footer`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `table_hotline`
+-- AUTO_INCREMENT cho bảng `table_hotline`
 --
 ALTER TABLE `table_hotline`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `table_index`
+-- AUTO_INCREMENT cho bảng `table_index`
 --
 ALTER TABLE `table_index`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
--- AUTO_INCREMENT for table `table_letruot`
+-- AUTO_INCREMENT cho bảng `table_letruot`
 --
 ALTER TABLE `table_letruot`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=51;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 --
--- AUTO_INCREMENT for table `table_lienhe`
+-- AUTO_INCREMENT cho bảng `table_lienhe`
 --
 ALTER TABLE `table_lienhe`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `table_member`
+-- AUTO_INCREMENT cho bảng `table_member`
 --
 ALTER TABLE `table_member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=156;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=156;
 --
--- AUTO_INCREMENT for table `table_meta`
+-- AUTO_INCREMENT cho bảng `table_meta`
 --
 ALTER TABLE `table_meta`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `table_newsletter`
+-- AUTO_INCREMENT cho bảng `table_newsletter`
 --
 ALTER TABLE `table_newsletter`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=699;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=699;
 --
--- AUTO_INCREMENT for table `table_online`
+-- AUTO_INCREMENT cho bảng `table_online`
 --
 ALTER TABLE `table_online`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=61161;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61161;
 --
--- AUTO_INCREMENT for table `table_permission`
+-- AUTO_INCREMENT cho bảng `table_permission`
 --
 ALTER TABLE `table_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 --
--- AUTO_INCREMENT for table `table_permission_group`
+-- AUTO_INCREMENT cho bảng `table_permission_group`
 --
 ALTER TABLE `table_permission_group`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
--- AUTO_INCREMENT for table `table_photo`
+-- AUTO_INCREMENT cho bảng `table_photo`
 --
 ALTER TABLE `table_photo`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=252;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=252;
 --
--- AUTO_INCREMENT for table `table_product`
+-- AUTO_INCREMENT cho bảng `table_product`
 --
 ALTER TABLE `table_product`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT for table `table_product_brand`
+-- AUTO_INCREMENT cho bảng `table_product_brand`
 --
 ALTER TABLE `table_product_brand`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
--- AUTO_INCREMENT for table `table_product_brand_condition`
+-- AUTO_INCREMENT cho bảng `table_product_brand_condition`
 --
 ALTER TABLE `table_product_brand_condition`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
--- AUTO_INCREMENT for table `table_product_cat`
+-- AUTO_INCREMENT cho bảng `table_product_cat`
 --
 ALTER TABLE `table_product_cat`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=143;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=143;
 --
--- AUTO_INCREMENT for table `table_product_color`
+-- AUTO_INCREMENT cho bảng `table_product_color`
 --
 ALTER TABLE `table_product_color`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `table_product_color_condition`
+-- AUTO_INCREMENT cho bảng `table_product_color_condition`
 --
 ALTER TABLE `table_product_color_condition`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1357;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1381;
 --
--- AUTO_INCREMENT for table `table_product_danhmuc`
+-- AUTO_INCREMENT cho bảng `table_product_danhmuc`
 --
 ALTER TABLE `table_product_danhmuc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `table_product_item`
+-- AUTO_INCREMENT cho bảng `table_product_item`
 --
 ALTER TABLE `table_product_item`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=28;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 --
--- AUTO_INCREMENT for table `table_product_list`
+-- AUTO_INCREMENT cho bảng `table_product_list`
 --
 ALTER TABLE `table_product_list`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=234;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=234;
 --
--- AUTO_INCREMENT for table `table_product_photo`
+-- AUTO_INCREMENT cho bảng `table_product_photo`
 --
 ALTER TABLE `table_product_photo`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=47;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 --
--- AUTO_INCREMENT for table `table_product_price`
+-- AUTO_INCREMENT cho bảng `table_product_price`
 --
 ALTER TABLE `table_product_price`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
--- AUTO_INCREMENT for table `table_product_size`
+-- AUTO_INCREMENT cho bảng `table_product_size`
 --
 ALTER TABLE `table_product_size`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT for table `table_product_size_condition`
+-- AUTO_INCREMENT cho bảng `table_product_size_condition`
 --
 ALTER TABLE `table_product_size_condition`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
--- AUTO_INCREMENT for table `table_question`
+-- AUTO_INCREMENT cho bảng `table_question`
 --
 ALTER TABLE `table_question`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
--- AUTO_INCREMENT for table `table_slider`
+-- AUTO_INCREMENT cho bảng `table_slider`
 --
 ALTER TABLE `table_slider`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=262;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=262;
 --
--- AUTO_INCREMENT for table `table_social`
+-- AUTO_INCREMENT cho bảng `table_social`
 --
 ALTER TABLE `table_social`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
--- AUTO_INCREMENT for table `table_statistics`
+-- AUTO_INCREMENT cho bảng `table_statistics`
 --
 ALTER TABLE `table_statistics`
-  MODIFY `st_id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2289;
+  MODIFY `st_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2289;
 --
--- AUTO_INCREMENT for table `table_tag`
+-- AUTO_INCREMENT cho bảng `table_tag`
 --
 ALTER TABLE `table_tag`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=47;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 --
--- AUTO_INCREMENT for table `table_title`
+-- AUTO_INCREMENT cho bảng `table_title`
 --
 ALTER TABLE `table_title`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `table_user`
+-- AUTO_INCREMENT cho bảng `table_user`
 --
 ALTER TABLE `table_user`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `table_user_permission`
+-- AUTO_INCREMENT cho bảng `table_user_permission`
 --
 ALTER TABLE `table_user_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=97;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
 --
--- AUTO_INCREMENT for table `table_video`
+-- AUTO_INCREMENT cho bảng `table_video`
 --
 ALTER TABLE `table_video`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `table_yahoo`
+-- AUTO_INCREMENT cho bảng `table_yahoo`
 --
 ALTER TABLE `table_yahoo`
-  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=29;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
