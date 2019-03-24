@@ -1,0 +1,48 @@
+RewriteEngine on
+Options -Indexes
+DirectoryIndex index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+ErrorDocument 404 /index.php?com=404
+RewriteRule ^([a-zA-Z0-9_-]+).php?type=([0-9]+)$ tools.php?type=$1  [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+).html&p=([0-9]+)$ index.php?com=$1&p=$2  [L]
+
+RewriteRule ^&p=([0-9]+)$ index.php?com=index&p=$1  [L]
+RewriteRule ^([a-zA-Z0-9_-]+).html$ index.php?com=$1  [L]
+RewriteRule ^([a-zA-Z0-9_-]+).html&act=active$ index.php?com=$1&act=active  [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)/([a-zA-Z0-9_-]+).html$ index.php?com=$1&id=$2  [L]
+
+
+
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/$ index.php?com=$1&slug=$2 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/&p=([0-9]+)$ index.php?com=$1&slug=$2&p=$3 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([0-9]+)/([a-zA-Z0-9_-]+).html$ index.php?com=$1&id_list=$3 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([0-9]+)/([a-zA-Z0-9_-]+).html&p=([0-9]+)$ index.php?com=$1&id_list=$3&p=$5 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)_([a-zA-Z0-9_-]+).html$ index.php?com=$1&id_danhmuc=$2 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)_([a-zA-Z0-9_-]+).html&p=([0-9]+)$ index.php?com=$1&id_danhmuc=$2&p=$4 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)_([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).html$ index.php?com=$1&id_danhmuc=$2&brand=$4 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)_([a-zA-Z0-9_-]+).html&p=([0-9]+)$ index.php?com=$1&id_danhmuc=$2&p=$4 [L]
+
+
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)_([a-zA-Z0-9_-]+)/([0-9]+)/([a-zA-Z0-9_-]+).html&p=([0-9]+)$ index.php?com=$1&id_danhmuc=$2&id_list=$4 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)_([a-zA-Z0-9_-]+)/([0-9]+)/([a-zA-Z0-9_-]+).html$ index.php?com=$1&id_danhmuc=$2&id_list=$4 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)>([a-zA-Z0-9_-]+).html$ index.php?com=$1&id_list=$2 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)>([a-zA-Z0-9_-]+).html&p=([0-9]+)$ index.php?com=$1&id_list=$2&p=$4 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)-([a-zA-Z0-9_-]+).html$ index.php?com=$1&id_cat=$2 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([0-9]+)-([a-zA-Z0-9_-]+).html&p=([0-9]+)$ index.php?com=$1&id_cat=$2&p=$4 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).html$ index.php?com=$1&act=$2 [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+).html/keyword=(.*)$ index.php?com=$1&keyword=$2  [L]
+RewriteRule ^([a-zA-Z0-9_-]+).html/keyword=(.*)&p=([0-9]+)$ index.php?com=$1&keyword=$2&p=$3  [L]
+
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+).html$ index.php?com=$1&act=$2 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([0-9]+).html$ index.php?com=$1&act=$2&id=$3 [L]
+RewriteRule ^([a-zA-Z0-9_-]+)/([a-zA-Z0-9_-]+)/([0-9]+)/([a-zA-Z0-9_-]+)$ index.php?com=$1&act=$2&id=$3  [L]

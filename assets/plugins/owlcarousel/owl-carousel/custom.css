@@ -1,0 +1,27 @@
+#wrap-slider{/* padding: 13px; */background-color: #F3F2F0;margin-bottom: 10px;}
+#owl-carousel-max .owl-controls{
+}
+#owl-carousel-max:hover .owl-controls div{opacity: 0.9}
+#owl-carousel-max .owl-controls div{-moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+	opacity: 0.6;
+	}
+#owl-carousel-max .owl-controls .owl-prev{
+    position: absolute;
+    left: 10px;
+    top: 42%;
+    background: url(left.png) no-repeat;
+    width: 27px;
+    height: 46px;
+    text-indent: -999em;
+    
+}
+#owl-carousel-max .owl-controls .owl-next{
+    position: absolute;    
+    right: 10px;    
+    top: 42%;    
+    background: url(right.png) no-repeat;    width: 27px;    height: 46px;    text-indent: -999em;
+    
+}
